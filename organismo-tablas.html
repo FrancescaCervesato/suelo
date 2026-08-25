@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>suelo — Tablas</title>
+<meta name="description" content="suelo — Componente para mostrar datos tabulares." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/demo.css" />
+</head>
+<body data-page="organismo-tablas">
+<div class="app-shell">
+  <nav class="sidebar" id="sidebar-root"></nav>
+
+  <main class="main">
+    <div class="main-inner">
+      <div class="breadcrumbs">
+        <a class="brand" href="index.html">suelo</a>
+        <span class="sep">›</span>
+        <span class="current">Organismos</span>
+        <span class="sep">›</span>
+        <span class="current">Tablas</span>
+      </div>
+
+      <div class="page-header">
+        <span class="page-badge page-badge--organismo"><span class="icon-badge icon-badge--sm page-badge--organismo" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-table-cells-large"></i></span> Organismo</span>
+        <h1 class="page-title">Tablas</h1>
+        <p class="page-desc">Componente para mostrar datos tabulares. Soporte para ordenamiento, selección de filas, paginación y acciones por fila. Variantes: simple, con filtros, expandible.</p>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
+          <span class="icon-badge page-badge--organismo"><i class="fa-solid fa-table"></i></span>
+          <h2 class="comp-block__title">Probalo</h2>
+        </div>
+        <div class="playground">
+          <span class="playground__label">Ejemplo interactivo</span>
+          <div class="playground__stage demo-stage" style="justify-content:flex-start;"><table class="demo-table"><thead><tr><th></th><th>Lote</th><th>Cultivo</th><th>Hectáreas</th></tr></thead><tbody><tr><td><input type="checkbox" onclick="pgToggleRow(this)" /></td><td>Lote 4</td><td>Soja</td><td>85</td></tr><tr><td><input type="checkbox" onclick="pgToggleRow(this)" /></td><td>Lote 7</td><td>Maíz</td><td>120</td></tr></tbody></table></div><div class="playground__controls"><span class="control-row__label" style="width:auto;">Tildá una fila para seleccionarla ↑</span></div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
+          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+        </div>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Variante</td><td class="spec-values"><code class="spec-tag">Simple</code><code class="spec-tag">Con filtros</code><code class="spec-tag">Expandible</code></td><td class="spec-desc">Nivel de funcionalidad de la tabla.</td></tr></tbody></table>
+      </div>
+
+      <div class="callout callout--tip">
+        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
+        <div>
+          <div class="callout__title">Tip de uso</div>
+          <div class="callout__body">Fijá la columna de acciones a la derecha y evitá más de una acción visible por fila — el resto va en un desplegable de opciones.</div>
+        </div>
+      </div>
+
+      <div class="callout callout--tech">
+        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
+        <div>
+          <div class="callout__title">Nota técnica</div>
+          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
+        </div>
+      </div>
+
+      <div class="rule" style="margin-top: var(--space-1);"></div>
+      <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+        <a class="card" style="flex:1; min-width:220px; " href="organismo-navbar.html"><div class="card__desc" style="text-transform:uppercase; font-size:11px; letter-spacing:0.04em; font-weight:700;">← Anterior</div><div class="card__title">Navbar / Navegación superior</div></a>
+        <a class="card" style="flex:1; min-width:220px; text-align:right;" href="organismo-grafico-torta.html"><div class="card__desc" style="text-transform:uppercase; font-size:11px; letter-spacing:0.04em; font-weight:700;">Siguiente →</div><div class="card__title">Gráfico de torta</div></a>
+      </div>
+    </div>
+  </main>
+</div>
+<div class="accent-bar" style="position:fixed; bottom:0; left:0; right:0;"></div>
+<script src="js/nav.js"></script>
+<script src="js/playground.js"></script>
+</body>
+</html>

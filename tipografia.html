@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>suelo — Tipografía y Espaciado</title>
+<meta name="description" content="suelo — Escala tipográfica, pesos, jerarquía de textos y sistema de espaciado." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/demo.css" />
+<style>
+  .type-row { display: flex; align-items: baseline; gap: var(--space-2); padding: var(--space-1) 0; border-bottom: 1px solid var(--borde-default); }
+  .type-row:last-child { border-bottom: none; }
+  .type-row__sample { flex: 1; min-width: 0; color: var(--texto-default); }
+  .type-row__meta { width: 220px; flex-shrink: 0; display: flex; flex-direction: column; gap: 2px; }
+  .type-row__name { font-size: 13px; font-weight: 700; color: var(--texto-default); }
+  .type-row__specs { font-size: 12px; color: var(--texto-light-2); font-family: monospace; }
+  .space-row { display: flex; align-items: center; gap: var(--space-1); padding: 8px 0; }
+  .space-row__bar { background: var(--color-primario); height: 16px; border-radius: 4px; }
+  .space-row__label { width: 140px; flex-shrink: 0; font-size: 13px; color: var(--texto-default); font-weight: 600; }
+  .space-row__px { font-family: monospace; font-size: 12px; color: var(--texto-light-2); }
+</style>
+</head>
+<body data-page="tipografia">
+<div class="app-shell">
+  <nav class="sidebar" id="sidebar-root"></nav>
+
+  <main class="main">
+    <div class="main-inner">
+      <div class="breadcrumbs">
+        <a class="brand" href="index.html">suelo</a>
+        <span class="sep">›</span>
+        <span class="current">Tokens</span>
+        <span class="sep">›</span>
+        <span class="current">Tipografía y espaciado</span>
+      </div>
+
+      <div class="page-header">
+        <span class="page-badge" style="background: var(--elevacion-primario-light); color: var(--color-primario-dark);"><span class="icon-badge icon-badge--sm" style="background:transparent; color:var(--color-primario-dark); width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-font"></i></span> Tokens</span>
+        <h1 class="page-title">Tipografía y espaciado</h1>
+        <p class="page-desc">Escala tipográfica y sistema de espaciado relevados de las variables de Figma. Familia base: Noto Sans. Iconografía: Font Awesome 6 Pro (Regular, 14px).</p>
+      </div>
+
+      <div class="callout callout--tech">
+        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
+        <div>
+          <div class="callout__title">Nota técnica</div>
+          <div class="callout__body">Este sitio usa <code>Noto Sans</code> para todo el cuerpo de texto y <code>Space Grotesk</code> (Google Fonts) como reemplazo abierto de "Natom Pro" — la tipografía de marca usada en el cover oficial, que no está disponible públicamente— solo para títulos display (H1/H2/H3 y wordmark).</div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Escala tipográfica</h2>
+        <div class="card" style="padding: var(--space-2);">
+          <div class="type-row">
+            <div class="type-row__sample" style="font-family:var(--font-display); font-weight:700; font-size:56px; line-height:64px;">Aa Título H1</div>
+            <div class="type-row__meta"><span class="type-row__name">Heading 1</span><span class="type-row__specs">56px / 64px · 700</span></div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__sample" style="font-family:var(--font-display); font-weight:700; font-size:32px; line-height:40px;">Aa Título H2</div>
+            <div class="type-row__meta"><span class="type-row__name">Heading 2</span><span class="type-row__specs">32px / 40px · 700</span></div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__sample" style="font-family:var(--font-display); font-weight:700; font-size:24px; line-height:32px;">Aa Título H3</div>
+            <div class="type-row__meta"><span class="type-row__name">Heading 3</span><span class="type-row__specs">24px / 32px · 700</span></div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__sample" style="font-size:16px; line-height:24px; font-weight:600;">Aa Body 1 Semibold</div>
+            <div class="type-row__meta"><span class="type-row__name">Body 1 · Semibold</span><span class="type-row__specs">16px / 24px · 600</span></div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__sample" style="font-size:14px; line-height:16px; font-weight:400;">Aa Body 2 Regular Display</div>
+            <div class="type-row__meta"><span class="type-row__name">Body 2 · Regular</span><span class="type-row__specs">14px / 16px · 400</span></div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__sample" style="font-size:14px; line-height:16px; font-weight:600;">Aa Body 2 Semibold</div>
+            <div class="type-row__meta"><span class="type-row__name">Body 2 · Semibold</span><span class="type-row__specs">14px / 16px · 600</span></div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__sample" style="font-size:12px; line-height:18px; font-weight:400;">Aa Caption Regular Display</div>
+            <div class="type-row__meta"><span class="type-row__name">Caption</span><span class="type-row__specs">12px / 18px · 400</span></div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__sample" style="font-size:12px; line-height:18px; font-weight:700;">Aa Caption Bold</div>
+            <div class="type-row__meta"><span class="type-row__name">Caption · Bold</span><span class="type-row__specs">12px / 18px · 700</span></div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__sample" style="font-size:11px; line-height:14px; font-weight:400;">Aa Caption 2 Regular Display</div>
+            <div class="type-row__meta"><span class="type-row__name">Caption 2</span><span class="type-row__specs">11px / 14px · 400</span></div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__sample" style="font-size:11px; line-height:16px; font-weight:600;">Aa Caption 2 Semibold Display</div>
+            <div class="type-row__meta"><span class="type-row__name">Caption 2 · Semibold</span><span class="type-row__specs">11px / 16px · 600</span></div>
+          </div>
+          <div class="type-row">
+            <div class="type-row__sample" style="font-size:11px; line-height:16px; font-weight:700;">Aa Caption 2 Bold</div>
+            <div class="type-row__meta"><span class="type-row__name">Caption 2 · Bold</span><span class="type-row__specs">11px / 16px · 700</span></div>
+          </div>
+        </div>
+        <p class="section-subtitle">Letter-spacing: 0 en todos los tamaños relevados.</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Espaciado</h2>
+        <p class="section-subtitle">Escala oficial en píxeles, usada para paddings, gaps y márgenes en todo el sistema.</p>
+        <div class="card" style="padding: var(--space-2);">
+          <div class="space-row"><span class="space-row__label">espaciado/0-25</span><div class="space-row__bar" style="width:4px;"></div><span class="space-row__px">4px</span></div>
+          <div class="space-row"><span class="space-row__label">espaciado/0-5</span><div class="space-row__bar" style="width:8px;"></div><span class="space-row__px">8px</span></div>
+          <div class="space-row"><span class="space-row__label">espaciado/0-75</span><div class="space-row__bar" style="width:12px;"></div><span class="space-row__px">12px</span></div>
+          <div class="space-row"><span class="space-row__label">espaciado/1</span><div class="space-row__bar" style="width:16px;"></div><span class="space-row__px">16px</span></div>
+          <div class="space-row"><span class="space-row__label">espaciado/1-125</span><div class="space-row__bar" style="width:20px;"></div><span class="space-row__px">20px</span></div>
+          <div class="space-row"><span class="space-row__label">espaciado/1-5</span><div class="space-row__bar" style="width:24px;"></div><span class="space-row__px">24px</span></div>
+          <div class="space-row"><span class="space-row__label">espaciado/2</span><div class="space-row__bar" style="width:32px;"></div><span class="space-row__px">32px</span></div>
+          <div class="space-row"><span class="space-row__label">espaciado/2-5</span><div class="space-row__bar" style="width:40px;"></div><span class="space-row__px">40px</span></div>
+        </div>
+      </section>
+
+      <div class="callout callout--tip">
+        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
+        <div>
+          <div class="callout__title">Tip de uso</div>
+          <div class="callout__body">Usá siempre un token de espaciado (nunca un valor suelto en px) para separaciones entre elementos — así cualquier ajuste futuro de la escala se propaga automáticamente a toda la interfaz.</div>
+        </div>
+      </div>
+
+      <div class="callout callout--tech">
+        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
+        <div>
+          <div class="callout__title">Pendiente de completar</div>
+          <div class="callout__body">Falta confirmar si "espaciado/3" es un token separado o un duplicado, y relevar la variante Body 1 en Regular Display (solo se documentó Semibold). No se completa con valores estimados hasta confirmarlo con el equipo.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<div class="accent-bar" style="position:fixed; bottom:0; left:0; right:0;"></div>
+<script src="js/nav.js"></script>
+</body>
+</html>

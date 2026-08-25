@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>suelo — Accesibilidad</title>
+<meta name="description" content="suelo — Pautas de accesibilidad (WCAG 2.1 AA) aplicadas a color, foco, contenido y estado de documentación del sistema." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/demo.css" />
+</head>
+<body data-page="accesibilidad">
+<div class="app-shell">
+  <nav class="sidebar" id="sidebar-root"></nav>
+
+  <main class="main">
+    <div class="main-inner">
+      <div class="breadcrumbs">
+        <a class="brand" href="index.html">suelo</a>
+        <span class="sep">›</span>
+        <span class="current">Fundamentos</span>
+        <span class="sep">›</span>
+        <span class="current">Accesibilidad</span>
+      </div>
+
+      <div class="page-header">
+        <span class="page-badge page-badge--fundamento"><span class="icon-badge icon-badge--sm page-badge--fundamento" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-seedling"></i></span> Fundamento</span>
+        <h1 class="page-title">Accesibilidad</h1>
+        <p class="page-desc">Pautas de diseño inclusivo bajo la identidad de suelo, alineadas a WCAG 2.1 AA. Aplican a todos los átomos, moléculas y organismos del catálogo.</p>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Color y contraste</h2>
+        <div class="grid grid--2">
+          <div class="card">
+            <div class="card__title">Nunca color como único indicador</div>
+            <div class="card__desc">Los estados semánticos (error, éxito, advertencia) deben combinar color + ícono + texto. Ejemplos: Tag/Badge, Toast y Trends usan siempre esta combinación.</div>
+          </div>
+          <div class="card">
+            <div class="card__title">Contraste mínimo AA</div>
+            <div class="card__desc">Texto sobre fondo debe alcanzar 4.5:1 (texto normal) o 3:1 (texto grande/íconos). Los tokens de la sección "Texto" en Colores están pensados para cumplirlo sobre fondo claro.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Teclado y foco</h2>
+        <div class="grid grid--2">
+          <div class="card">
+            <div class="card__title">Estado Focus visible</div>
+            <div class="card__desc">Todo elemento interactivo (Botón, Input, Select, Checkbox, Toggle, Tabs) debe tener un estado Focus distinguible, navegable con Tab.</div>
+          </div>
+          <div class="card">
+            <div class="card__title">Cierre accesible en overlays</div>
+            <div class="card__desc">Modal, Toast y Tooltip deben poder cerrarse con teclado (Esc) y devolver el foco al elemento que los disparó.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Contenido</h2>
+        <div class="grid grid--2">
+          <div class="card">
+            <div class="card__title">Mensajes de error accionables</div>
+            <div class="card__desc">Un error de Input o de formulario debe explicar cómo resolverse, no solo señalar que existe.</div>
+          </div>
+          <div class="card">
+            <div class="card__title">Texto alternativo en ilustraciones</div>
+            <div class="card__desc">Las ilustraciones de Empty State deben incluir texto alternativo descriptivo; no son solo decorativas cuando comunican el estado de la pantalla.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="callout callout--tip">
+        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
+        <div>
+          <div class="callout__title">Tip de uso</div>
+          <div class="callout__body">Antes de publicar un componente nuevo, probá su recorrido completo solo con teclado (Tab, Shift+Tab, Enter, Esc) — es la forma más rápida de detectar huecos de accesibilidad sin herramientas adicionales.</div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Estado de documentación</h2>
+        <p class="section-subtitle">Relevamiento honesto del archivo "Sistema de diseño 1.0" — sin completar con supuestos donde falta información.</p>
+        <div class="callout callout--tech">
+          <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
+          <div>
+            <div class="callout__title">Lo que sí está documentado</div>
+            <div class="callout__body">Los 57 componentes del catálogo tienen nombre, categoría (átomo/molécula/organismo) y descripción de uso en la página "📖 Manual de Componentes". El componente <strong>Selector</strong> tiene, además, el detalle completo de estados (Default, Hover, Active, Focus, Empty, Loading, Disabled, Error, Selected), variantes (única/múltiple) y modos (Light/Dark).</div>
+          </div>
+        </div>
+        <div class="callout callout--tech">
+          <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
+          <div>
+            <div class="callout__title">Pendiente de relevar</div>
+            <div class="callout__body">El detalle de estados en profundidad (como el de Selector) todavía no está documentado para el resto del catálogo, ni las reglas de uso específicas por componente (cuándo sí / cuándo no). No se completan estas fichas con estados o variantes supuestas — se amplían a medida que se documenten en Figma.</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<div class="accent-bar" style="position:fixed; bottom:0; left:0; right:0;"></div>
+<script src="js/nav.js"></script>
+</body>
+</html>

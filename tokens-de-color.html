@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>suelo — Tokens de Color</title>
+<meta name="description" content="suelo — Paleta primaria, escala de grises, colores semánticos y de elevación del sistema de diseño." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/demo.css" />
+<style>
+  .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--space-1); }
+  .swatch { display: flex; flex-direction: column; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-card); background: var(--blanco); }
+  .swatch__color { height: 64px; width: 100%; }
+  .swatch__meta { padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; }
+  .swatch__name { font-size: 13px; font-weight: 700; color: var(--texto-default); }
+  .swatch__hex { font-size: 12px; color: var(--texto-light-2); font-family: monospace; }
+</style>
+</head>
+<body data-page="tokens-de-color">
+<div class="app-shell">
+  <nav class="sidebar" id="sidebar-root"></nav>
+
+  <main class="main">
+    <div class="main-inner">
+      <div class="breadcrumbs">
+        <a class="brand" href="index.html">suelo</a>
+        <span class="sep">›</span>
+        <span class="current">Tokens</span>
+        <span class="sep">›</span>
+        <span class="current">Colores</span>
+      </div>
+
+      <div class="page-header">
+        <span class="page-badge" style="background: var(--elevacion-primario-light); color: var(--color-primario-dark);"><span class="icon-badge icon-badge--sm" style="background:transparent; color:var(--color-primario-dark); width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-palette"></i></span> Tokens</span>
+        <h1 class="page-title">Colores</h1>
+        <p class="page-desc">Paleta semántica y escalas de color relevadas 1:1 de las variables de Figma. Usar estos valores literalmente en cualquier implementación — no aproximar ni inventar tonos parecidos.</p>
+      </div>
+
+      <div class="callout callout--tech">
+        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
+        <div>
+          <div class="callout__title">Nota técnica</div>
+          <div class="callout__body">Cada token está disponible como variable CSS en <code>css/tokens.css</code> (ej. <code>var(--color-primario)</code>). Fuente: página "Colores" del archivo Figma <code>Sistema de diseño 1.0</code>. La marca SUELO (wordmark, gradiente) es solo identidad de este sitio web y no forma parte del sistema de tokens documentado.</div>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Color primario</h2>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#1d4a91;"></div><div class="swatch__meta"><span class="swatch__name">Primario / Dark</span><span class="swatch__hex">#1d4a91</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#0077e4;"></div><div class="swatch__meta"><span class="swatch__name">Primario / Default</span><span class="swatch__hex">#0077e4</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#78a8f3;"></div><div class="swatch__meta"><span class="swatch__name">Primario / Light</span><span class="swatch__hex">#78a8f3</span></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Escala de grises</h2>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#1b2431;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 10</span><span class="swatch__hex">#1b2431</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#222c3c;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 9</span><span class="swatch__hex">#222c3c</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#273142;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 8</span><span class="swatch__hex">#273142</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#313d4f;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 7</span><span class="swatch__hex">#313d4f</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#414d5f;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 6</span><span class="swatch__hex">#414d5f</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#778294;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 5</span><span class="swatch__hex">#778294</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#a6aebc;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 4</span><span class="swatch__hex">#a6aebc</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#dadee3;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 3</span><span class="swatch__hex">#dadee3</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#eaecee;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 2</span><span class="swatch__hex">#eaecee</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#f6f7fa;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 1</span><span class="swatch__hex">#f6f7fa</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#ffffff; border-bottom:1px solid var(--borde-default);"></div><div class="swatch__meta"><span class="swatch__name">Blanco</span><span class="swatch__hex">#ffffff</span></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Colores semánticos / de estado</h2>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#c91313;"></div><div class="swatch__meta"><span class="swatch__name">Error</span><span class="swatch__hex">#c91313</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#2abb7f;"></div><div class="swatch__meta"><span class="swatch__name">Éxito</span><span class="swatch__hex">#2abb7f</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#f5cd47;"></div><div class="swatch__meta"><span class="swatch__name">Advertencia</span><span class="swatch__hex">#f5cd47</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#ff7a00;"></div><div class="swatch__meta"><span class="swatch__name">Notificación</span><span class="swatch__hex">#ff7a00</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#c79cff;"></div><div class="swatch__meta"><span class="swatch__name">Violeta SD</span><span class="swatch__hex">#c79cff</span></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Texto</h2>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#1b2431;"></div><div class="swatch__meta"><span class="swatch__name">Texto / Default</span><span class="swatch__hex">#1b2431</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#414d5f;"></div><div class="swatch__meta"><span class="swatch__name">Texto / Light</span><span class="swatch__hex">#414d5f</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#778294;"></div><div class="swatch__meta"><span class="swatch__name">Texto / Light-2</span><span class="swatch__hex">#778294</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#a6aebc;"></div><div class="swatch__meta"><span class="swatch__name">Texto / Light-3</span><span class="swatch__hex">#a6aebc</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1e7350;"></div><div class="swatch__meta"><span class="swatch__name">Texto / Status verde</span><span class="swatch__hex">#1e7350</span></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Bordes y elevación</h2>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#dadee3;"></div><div class="swatch__meta"><span class="swatch__name">Borde / Default</span><span class="swatch__hex">#dadee3</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#78a8f3;"></div><div class="swatch__meta"><span class="swatch__name">Borde / Primario</span><span class="swatch__hex">#78a8f3</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#e4eefd;"></div><div class="swatch__meta"><span class="swatch__name">Elevación / Primario light</span><span class="swatch__hex">#e4eefd</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#d7e6fc;"></div><div class="swatch__meta"><span class="swatch__name">Elevación / Primario light-2</span><span class="swatch__hex">#d7e6fc</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#f3f8f6;"></div><div class="swatch__meta"><span class="swatch__name">Elevación / Verde bg</span><span class="swatch__hex">#f3f8f6</span></div></div>
+        </div>
+      </section>
+
+      <div class="callout callout--tip">
+        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
+        <div>
+          <div class="callout__title">Tip de uso</div>
+          <div class="callout__body">Para texto, usá siempre los tokens de la sección "Texto" en vez de tomar un gris de la escala general — así el contraste queda garantizado en ambos modos.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<div class="accent-bar" style="position:fixed; bottom:0; left:0; right:0;"></div>
+<script src="js/nav.js"></script>
+</body>
+</html>
