@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="atomo-trends">
 <div class="app-shell">
@@ -40,7 +41,14 @@
         </div>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" data-variante="positiva"><span class="demo-trend"><i class="fa-solid fa-arrow-trend-up"></i><i class="fa-solid fa-arrow-trend-down"></i><i class="fa-solid fa-minus"></i> 12,4%</span></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Variante</span><button class="control-btn is-active" onclick="pgSet(this,'variante','positiva')">Positiva</button><button class="control-btn" onclick="pgSet(this,'variante','negativa')">Negativa</button><button class="control-btn" onclick="pgSet(this,'variante','neutral')">Neutral</button></div></div>
+          <div class="playground__stage" style="justify-content:flex-start; gap:12px;">
+            <span class="fg-trend fg-trend-positivo"><i class="fa-solid fa-arrow-trend-up"></i> 11,02%</span>
+            <span class="fg-trend fg-trend-negativo"><i class="fa-solid fa-arrow-trend-down"></i> 11,02%</span>
+            <span class="fg-trend fg-trend-neutro"><i class="fa-solid fa-minus"></i> 0%</span>
+            <span class="fg-trend fg-trend-positivo bg sm"><i class="fa-solid fa-arrow-trend-up"></i> 11,02%</span>
+            <span class="fg-trend fg-trend-negativo bg sm"><i class="fa-solid fa-arrow-trend-down"></i> 11,02%</span>
+            <span class="fg-trend fg-trend-neutro bg sm"><i class="fa-solid fa-minus"></i> 0%</span>
+          </div>
         </div>
       </div>
 

@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="atomo-boton">
 <div class="app-shell">
@@ -40,7 +41,11 @@
         </div>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" data-variante="primario" data-tamano="40" data-disabled="false"><button class="demo-btn">Confirmar acción</button></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Variante</span><button class="control-btn is-active" onclick="pgSet(this,'variante','primario')">Primario</button><button class="control-btn" onclick="pgSet(this,'variante','default')">Default</button><button class="control-btn" onclick="pgSet(this,'variante','sutil')">Sutil</button><button class="control-btn" onclick="pgSet(this,'variante','sutil-danger')">Sutil danger</button></div><div class="control-row"><span class="control-row__label">Tamaño</span><button class="control-btn is-active" onclick="pgSet(this,'tamano','40')">40px</button><button class="control-btn" onclick="pgSet(this,'tamano','32')">32px</button><button class="control-btn" onclick="pgSet(this,'tamano','24')">24px</button></div><div class="control-row"><span class="control-row__label">Estado</span><button class="control-btn is-active" onclick="pgSet(this,'disabled','false')">Habilitado</button><button class="control-btn" onclick="pgSet(this,'disabled','true')">Deshabilitado</button></div></div>
+          <div class="playground__stage" style="flex-direction:column; align-items:flex-start; gap:16px;">
+            <div class="fg-row"><button class="fg-btn fg-btn-40 fg-btn-primario">Primario 40</button><button class="fg-btn fg-btn-32 fg-btn-primario">Primario 32</button><button class="fg-btn fg-btn-24 fg-btn-primario">Primario 24</button></div>
+            <div class="fg-row"><button class="fg-btn fg-btn-40 fg-btn-default">Default</button><button class="fg-btn fg-btn-40 fg-btn-sutil">Sutil</button><button class="fg-btn fg-btn-40 fg-btn-sutil-danger">Sutil danger</button><button class="fg-btn fg-btn-40 fg-btn-disabled">Deshabilitado</button></div>
+            <div class="fg-row"><button class="fg-btn fg-btn-40 fg-btn-vender">Vender</button><button class="fg-btn fg-btn-40 fg-btn-comprar">Comprar</button></div>
+          </div>
         </div>
       </div>
 

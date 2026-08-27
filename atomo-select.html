@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="atomo-select">
 <div class="app-shell">
@@ -40,7 +41,12 @@
         </div>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" data-estado="default" style="justify-content:flex-start;"><div class="demo-select"><span>Seleccioná una provincia</span><i class="fa-solid fa-chevron-down"></i></div><div class="demo-select-menu"><span>Buenos Aires</span><span>Córdoba</span><span>Santa Fe</span></div></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Estado</span><button class="control-btn is-active" onclick="pgSet(this,'estado','default')">Default</button><button class="control-btn" onclick="pgSet(this,'estado','abierto')">Abierto</button><button class="control-btn" onclick="pgSet(this,'estado','con-valor')">Con valor</button><button class="control-btn" onclick="pgSet(this,'estado','deshabilitado')">Deshabilitado</button></div></div>
+          <div class="playground__stage" style="justify-content:flex-start; flex-wrap:wrap;">
+            <div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box">Seleccioná una provincia <span class="fg-ic">⌄</span></div></div>
+            <div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box activo">Buenos Aires <span class="fg-ic">⌄</span></div></div>
+            <div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box noeditable">Seleccioná una provincia <span class="fg-ic">⌄</span></div></div>
+            <div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box error">Seleccioná una provincia <span class="fg-ic">⌄</span></div><span class="fg-field-hint-error">Este campo es obligatorio.</span></div>
+          </div>
         </div>
       </div>
 

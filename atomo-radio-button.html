@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="atomo-radio-button">
 <div class="app-shell">
@@ -40,7 +41,12 @@
         </div>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" data-estado="default"><span class="demo-radio"><span class="ring"></span><i class="fa-solid fa-circle-dot"></i></span></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Estado</span><button class="control-btn is-active" onclick="pgSet(this,'estado','default')">Default</button><button class="control-btn" onclick="pgSet(this,'estado','seleccionado')">Seleccionado</button><button class="control-btn" onclick="pgSet(this,'estado','deshabilitado')">Deshabilitado</button></div></div>
+          <div class="playground__stage" style="justify-content:flex-start; gap:28px;">
+            <div class="fg-grid-cell"><span class="fg-label-sm">Default</span><div class="fg-cb-box"><div class="fg-radio-empty"></div></div></div>
+            <div class="fg-grid-cell"><span class="fg-label-sm">Seleccionado</span><div class="fg-cb-box"><svg class="fg-icon-marcado" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="currentColor"/><circle cx="8" cy="8" r="6.7" fill="#fff"/><circle cx="8" cy="8" r="5.7" fill="currentColor"/></svg></div></div>
+            <div class="fg-grid-cell"><span class="fg-label-sm">Deshabilitado</span><div class="fg-cb-box"><div class="fg-radio-empty" style="border-color:var(--fg-elev-4)"></div></div></div>
+            <div class="fg-grid-cell"><span class="fg-label-sm">Deshabilitado + Seleccionado</span><div class="fg-cb-box"><svg class="fg-icon-marcado disabled" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="currentColor"/><circle cx="8" cy="8" r="6.7" fill="#fff"/><circle cx="8" cy="8" r="5.7" fill="currentColor"/></svg></div></div>
+          </div>
         </div>
       </div>
 

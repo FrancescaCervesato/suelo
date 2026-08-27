@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="atomo-tag">
 <div class="app-shell">
@@ -40,7 +41,10 @@
         </div>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" data-color="success"><span class="demo-tag"><i class="fa-solid fa-circle"></i> Activo</span></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Color</span><button class="control-btn is-active" onclick="pgSet(this,'color','success')">Success</button><button class="control-btn" onclick="pgSet(this,'color','warning')">Warning</button><button class="control-btn" onclick="pgSet(this,'color','danger')">Danger</button><button class="control-btn" onclick="pgSet(this,'color','info')">Info</button></div></div>
+          <div class="playground__stage" style="justify-content:flex-start; gap:24px;">
+            <div class="fg-flex-col"><span class="fg-label-sm">modo light</span><span class="fg-tag">Label ✕</span><span class="fg-tag">Label extenso ✕</span><span class="fg-tag">+2...</span></div>
+            <div class="fg-dark-box"><span class="fg-label-sm" style="color:#d2afff;">modo dark</span><span class="fg-tag fg-tag-dark">Label ✕</span><span class="fg-tag fg-tag-dark">Label extenso ✕</span><span class="fg-tag fg-tag-dark">+2...</span></div>
+          </div>
         </div>
       </div>
 

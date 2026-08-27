@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="atomo-toggle">
 <div class="app-shell">
@@ -40,7 +41,14 @@
         </div>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" data-estado="inactivo"><span class="demo-toggle" onclick="pgToggle(this,'estado','activo','inactivo')" style="cursor:pointer;"></span></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Estado</span><button class="control-btn is-active" onclick="pgSet(this,'estado','inactivo')">Inactivo</button><button class="control-btn" onclick="pgSet(this,'estado','activo')">Activo</button><button class="control-btn" onclick="pgSet(this,'estado','deshabilitado')">Deshabilitado</button></div></div>
+          <div class="playground__stage" style="flex-direction:column; align-items:flex-start; gap:16px;">
+            <div class="fg-row">
+              <div class="fg-grid-cell"><span class="fg-label-sm">off</span><button class="fg-toggle fg-toggle-20 fg-toggle-off"><span class="fg-knob"></span></button></div>
+              <div class="fg-grid-cell"><span class="fg-label-sm">on</span><button class="fg-toggle fg-toggle-20 fg-toggle-on"><span class="fg-knob"></span></button></div>
+              <div class="fg-grid-cell"><span class="fg-label-sm">off deshab.</span><button class="fg-toggle fg-toggle-20 fg-toggle-off-disabled" disabled><span class="fg-knob"></span></button></div>
+              <div class="fg-grid-cell"><span class="fg-label-sm">on deshab.</span><button class="fg-toggle fg-toggle-20 fg-toggle-on-disabled" disabled><span class="fg-knob"></span></button></div>
+            </div>
+          </div>
         </div>
       </div>
 

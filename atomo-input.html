@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="atomo-input">
 <div class="app-shell">
@@ -40,7 +41,12 @@
         </div>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" data-variante="default"><div class="demo-input-wrap"><label>Correo electrónico</label><input class="demo-input" placeholder="nombre@suelo.com" /><span class="demo-input-hint">Te vamos a enviar la confirmación acá.</span></div></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Variante</span><button class="control-btn is-active" onclick="pgSet(this,'variante','default')">Default</button><button class="control-btn" onclick="pgSet(this,'variante','focus')">Focus</button><button class="control-btn" onclick="pgSet(this,'variante','error')">Error</button><button class="control-btn" onclick="pgSet(this,'variante','deshabilitado')">Deshabilitado</button></div></div>
+          <div class="playground__stage" style="justify-content:flex-start; flex-wrap:wrap;">
+            <div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box">nombre@suelo.com</div></div>
+            <div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box activo">nombre@suelo.com</div></div>
+            <div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box noeditable">nombre@suelo.com</div></div>
+            <div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box error">nombre@suelo.com</div><span class="fg-field-hint-error">Ingresá un correo válido.</span></div>
+          </div>
         </div>
       </div>
 

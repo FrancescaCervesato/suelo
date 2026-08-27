@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="atomo-spinner">
 <div class="app-shell">
@@ -40,7 +41,11 @@
         </div>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" data-tamano="24"><span class="demo-spinner"></span></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Tamaño</span><button class="control-btn" onclick="pgSet(this,'tamano','16')">16px</button><button class="control-btn is-active" onclick="pgSet(this,'tamano','24')">24px</button><button class="control-btn" onclick="pgSet(this,'tamano','32')">32px</button></div></div>
+          <div class="playground__stage" style="justify-content:flex-start; align-items:center; gap:20px;">
+            <div class="fg-spinner s40"></div><div class="fg-spinner s24"></div><div class="fg-spinner s16"></div>
+            <div class="fg-spinner s24 gris"></div><div class="fg-spinner s16 gris"></div>
+            <div class="fg-spinner s24 danger"></div><div class="fg-spinner s16 danger"></div>
+          </div>
         </div>
       </div>
 
