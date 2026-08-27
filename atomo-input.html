@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Captura un dato de texto libre ingresado por la persona, con retroalimentación clara sobre su validez mientras completa el formulario.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Mostrar el error apenas se pueda validar el campo, no recién al enviar todo el formulario.</li>
+              <li>Explicar en el mensaje de error cómo resolver el problema, no solo que existe.</li>
+              <li>Usar el estado "no editable" para datos de solo lectura dentro de un formulario editable.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Usar el placeholder como reemplazo del label — desaparece apenas la persona empieza a escribir.</li>
+              <li>Dejar un campo en estado de error sin ningún mensaje que lo acompañe.</li>
+              <li>Usarlo para elegir entre opciones de una lista cerrada — ahí corresponde un Select.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-i-cursor"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -55,22 +81,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Variante</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Focus</code><code class="spec-tag">Error</code><code class="spec-tag">Deshabilitado</code></td><td class="spec-desc">Estado visual del campo.</td></tr><tr><td class="spec-prop">Contenido</td><td class="spec-values"><code class="spec-tag">Label</code><code class="spec-tag">Hint</code><code class="spec-tag">Ícono</code><code class="spec-tag">Mensaje de error</code></td><td class="spec-desc">Elementos opcionales que puede incluir.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">El mensaje de error debe explicar cómo resolver el problema, no solo señalar que existe (evitar "Campo inválido" a secas).</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

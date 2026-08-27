@@ -36,6 +36,34 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Dispara una acción inmediata y de un solo paso (guardar, confirmar, navegar). La jerarquía visual entre variantes comunica cuál es la acción más importante de la pantalla.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Usar un solo botón Primario por vista — la acción que más querés que tome la persona.</li>
+              <li>Usar verbos claros en el label ("Guardar cambios", no "Aceptar").</li>
+              <li>Elegir Sutil danger solo para acciones destructivas (eliminar, dar de baja).</li>
+              <li>Mostrar el estado de carga cuando la acción tarda más de un instante.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Poner dos botones Primario en la misma vista — compiten por la atención.</li>
+              <li>Usar Sutil danger para acciones que no son irreversibles.</li>
+              <li>Deshabilitar un botón sin explicar por qué en un texto de ayuda cercano.</li>
+              <li>Usarlo para navegar entre secciones de un mismo flujo — para eso están Tabs o Stepper.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-hand-pointer"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -54,22 +82,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Variante</td><td class="spec-values"><code class="spec-tag">Primario</code><code class="spec-tag">Default</code><code class="spec-tag">Sutil</code><code class="spec-tag">Sutil danger</code></td><td class="spec-desc">Estilo visual según jerarquía de la acción.</td></tr><tr><td class="spec-prop">Tamaño</td><td class="spec-values"><code class="spec-tag">40px</code><code class="spec-tag">32px</code><code class="spec-tag">24px</code></td><td class="spec-desc">Alto del botón según la densidad de la pantalla.</td></tr><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">Habilitado</code><code class="spec-tag">Deshabilitado</code></td><td class="spec-desc">Disponibilidad de la acción.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Reservá la variante Primario para una sola acción por vista — la acción que más querés que tome la persona usuaria. El resto de las acciones va en Default o Sutil.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

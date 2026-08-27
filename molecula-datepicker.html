@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Permite elegir una fecha (o un rango) desde un calendario visual, evitando errores de formato que aparecen al tipear la fecha a mano.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Usar el tipo Individual para una fecha única y Rango para períodos (ej. un estado de cuenta).</li>
+              <li>Marcar siempre visualmente el día actual y el día seleccionado.</li>
+              <li>Permitir también escribir la fecha en el campo de texto para quienes prefieren tipear.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Usarlo para seleccionar solo una hora sin fecha — el selector de hora es un campo aparte.</li>
+              <li>Forzar el calendario abierto como único método de carga de fecha.</li>
+              <li>Inventar un estado visual para los días intermedios de un rango — Figma solo documenta Inicio y Fin.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-calendar-days"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -92,22 +118,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Individual</code><code class="spec-tag">Rango</code></td><td class="spec-desc">Rango usa dos calendarios uno al lado del otro, con los mismos estados de día.</td></tr><tr><td class="spec-prop">Estado de día</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Hover</code><code class="spec-tag">Press</code><code class="spec-tag">Deshabilitado</code><code class="spec-tag">Inicio rango</code><code class="spec-tag">Fin rango</code></td><td class="spec-desc">Deshabilitado también se usa para los días de meses adyacentes.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Usá el tipo Rango para filtros de fechas (ej. estados de cuenta) y el tipo Individual para campos de fecha únicos, como una fecha de nacimiento.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". Figma no documenta un estado visual propio para los días intermedios de un rango seleccionado (solo Inicio y Fin rango) — no se inventó uno para esta ficha. El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

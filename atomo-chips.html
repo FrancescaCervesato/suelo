@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Muestra de forma compacta un filtro o valor activo que la persona puede quitar con un clic, sin abrir ningún menú.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Usarlos para mostrar los filtros que ya se aplicaron sobre una lista o tabla.</li>
+              <li>Permitir quitar el filtro directamente desde el ícono de cierre del chip.</li>
+              <li>Agruparlos cerca del control que los generó.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Usarlos como botones de acción — no ejecutan comandos, solo representan un valor o filtro activo.</li>
+              <li>Amontonar más de una fila completa — con muchos filtros activos, sumá un botón "Limpiar todo".</li>
+              <li>Usarlos para navegación — para eso están los Tabs.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-tags"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -57,22 +83,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Variante</td><td class="spec-values"><code class="spec-tag">Seleccionado</code><code class="spec-tag">No seleccionado</code></td><td class="spec-desc">Si el filtro que representa está activo o no.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Agrupá los chips activos cerca del filtro que los generó, para que la relación causa-efecto sea clara de un vistazo.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

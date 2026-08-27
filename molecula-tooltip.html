@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Agrega una aclaración breve y contextual sobre un elemento, visible solo al pasar el mouse o enfocar, sin ocupar espacio permanente en la pantalla.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Usar el tipo Default para una aclaración corta de una línea.</li>
+              <li>Usar el tipo Compuesto cuando necesite título, más de una línea o una acción asociada.</li>
+              <li>Mantener el texto breve — si no entra en dos líneas, es señal de que necesitás otro componente.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Poner información crítica solo en un tooltip — en mobile o touch no siempre es accesible.</li>
+              <li>Usarlo para una acción que requiere algo más que leer — para eso está el Compuesto con botón, o un Modal.</li>
+              <li>Encadenar tooltips sobre tooltips.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-comment"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -63,22 +89,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Compuesto</code></td><td class="spec-desc">Default es solo texto; Compuesto agrega ícono, título, cierre y un link de acción.</td></tr><tr><td class="spec-prop">Flecha (solo Default)</td><td class="spec-values"><code class="spec-tag">Arriba</code><code class="spec-tag">Abajo</code></td><td class="spec-desc">Apunta hacia el elemento anclado.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Si el contenido no entra en dos líneas, es una señal de que necesitás otro componente (un Modal o un texto de ayuda inline), no un tooltip más grande.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

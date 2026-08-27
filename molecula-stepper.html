@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Muestra el avance a través de un proceso de varios pasos con un orden fijo, indicando qué se completó, cuál es el paso actual y qué falta.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Usarlo cuando los pasos tienen un orden obligatorio (no se puede saltar del paso 1 al 3).</li>
+              <li>Permitir volver a un paso anterior sin perder los datos ya cargados.</li>
+              <li>Marcar con el check los pasos completados para dar sensación de progreso.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Usarlo para navegación entre secciones sin orden ni dependencia — para eso están los Tabs.</li>
+              <li>Inventar un estado visual "en progreso parcial" que Figma no documenta entre pasos.</li>
+              <li>Usarlo con un solo paso — si no hay secuencia, no aporta valor.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-list-ol"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -85,22 +111,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">Done</code><code class="spec-tag">Active</code><code class="spec-tag">Inactive</code></td><td class="spec-desc">Done = check azul; Active = anillo con punto azul; Inactive = anillo gris.</td></tr><tr><td class="spec-prop">Elemento</td><td class="spec-values"><code class="spec-tag">Left</code><code class="spec-tag">End</code></td><td class="spec-desc">"Left" incluye la línea conectora hacia el siguiente paso; "End" es el último paso, sin conector saliente.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Permití volver a un paso anterior siempre que los datos ya ingresados no se pierdan — el stepper debe reducir fricción, no generarla.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

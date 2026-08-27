@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--organismo"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Organiza datos estructurados en filas y columnas, permitiendo comparar, ordenar, filtrar y actuar sobre múltiples registros a la vez.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Elegir el tipo de campo (Texto, Número, Link, Chip, Editable) según el dato real que representa cada columna.</li>
+              <li>Usar los niveles de indentación solo cuando los datos tienen una jerarquía real (ej. cartera → instrumento).</li>
+              <li>Fijar la columna de acciones y evitar más de una acción visible por fila — el resto va en un desplegable.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Usar el tipo Chip para un valor que en realidad es un estado semántico — para eso ya existe el átomo Tag.</li>
+              <li>Usar el tipo Editable sin un indicador claro de que el campo se puede modificar.</li>
+              <li>Usar una tabla para mostrar un solo registro — ahí una Card comunica mejor.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--organismo"><i class="fa-solid fa-table"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -90,22 +116,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo de campo</td><td class="spec-values"><code class="spec-tag">Texto</code><code class="spec-tag">Número</code><code class="spec-tag">Link</code><code class="spec-tag">Chip</code><code class="spec-tag">Editable</code><code class="spec-tag">Checkbox</code><code class="spec-tag">Icono</code><code class="spec-tag">Vacío</code></td><td class="spec-desc">Texto admite avatar, ícono, chevron de expansión y descripción secundaria opcionales.</td></tr><tr><td class="spec-prop">Nivel</td><td class="spec-values"><code class="spec-tag">0</code><code class="spec-tag">1</code><code class="spec-tag">2</code><code class="spec-tag">3</code></td><td class="spec-desc">Indentación creciente (8 / 24 / 48 / 64px) para representar filas anidadas.</td></tr><tr><td class="spec-prop">Header</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Hover ícono</code><code class="spec-tag">Hover header</code><code class="spec-tag">Checkbox</code></td><td class="spec-desc">Hover ícono resalta los botones de orden/filtro; Hover header los muestra sin resaltar.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Fijá la columna de acciones a la derecha y evitá más de una acción visible por fila — el resto va en un desplegable de opciones.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

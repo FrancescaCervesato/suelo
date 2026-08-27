@@ -36,6 +36,34 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Agrupa entre 2 y 6 opciones mutuamente excluyentes en un solo control compacto, para que la persona usuaria compare alternativas y cambie de vista o filtro sin perder el contexto de la pantalla actual.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Usarlo para alternar entre pocas vistas o filtros estrechamente relacionados (ej. Lista / Grilla / Mapa).</li>
+              <li>Elegir el grupo bordeado para etiquetas de texto más largas.</li>
+              <li>Reservar el grupo con relleno (pastillas, tamaño 24) para opciones cortas y compactas, como códigos de moneda.</li>
+              <li>Mostrar siempre de forma clara cuál opción está activa.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Usarlo con más de 6 opciones — a partir de ahí, un Select o Tabs comunican mejor.</li>
+              <li>Confundirlo con Tabs: acá el cambio es inmediato sobre el mismo contenido, no una navegación a otra sección.</li>
+              <li>Combinar los dos patrones (bordeado y con relleno) dentro de un mismo grupo.</li>
+              <li>Usarlo para disparar acciones (como "Guardar" o "Cancelar") — es para alternar estados, no para ejecutar comandos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-table-cells"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -82,22 +110,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Patrón</td><td class="spec-values"><code class="spec-tag">Grupo bordeado</code><code class="spec-tag">Grupo con relleno</code></td><td class="spec-desc">El bordeado usa divisores entre opciones; el de relleno usa pastillas independientes.</td></tr><tr><td class="spec-prop">Tamaño</td><td class="spec-values"><code class="spec-tag">40px</code><code class="spec-tag">24px</code></td><td class="spec-desc">El grupo con relleno solo está documentado en 24px.</td></tr><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">No seleccionado</code><code class="spec-tag">Hover</code><code class="spec-tag">Seleccionado</code></td><td class="spec-desc">Hover solo existe documentado en el grupo con relleno.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Usalo cuando las opciones sean pocas (2 a 4) y el cambio deba reflejarse de inmediato en el contenido, como un toggle de vista Lista/Grilla.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

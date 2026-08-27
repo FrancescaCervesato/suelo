@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Divide un conjunto grande de resultados en páginas manejables y permite moverse entre ellas sin cargar todo de una vez.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Mostrar siempre cuántos ítems y páginas hay en total, no solo la página actual.</li>
+              <li>Permitir cambiar la cantidad de resultados por página cuando el contenido lo justifique.</li>
+              <li>Deshabilitar visualmente la flecha que no tiene a dónde ir (anterior en la página 1).</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Usarlo cuando el scroll infinito resuelve mejor el caso (por ejemplo, un feed).</li>
+              <li>Ocultar el total de páginas o resultados — la persona necesita ese contexto para orientarse.</li>
+              <li>Combinarlo con carga automática al hacer scroll — elegí un solo patrón por vista.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-ellipsis"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -61,22 +87,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Elementos</td><td class="spec-values"><code class="spec-tag">Cantidad por página</code><code class="spec-tag">Conteo de ítems</code><code class="spec-tag">Flecha anterior</code><code class="spec-tag">Página actual (input)</code><code class="spec-tag">Total de páginas</code><code class="spec-tag">Flecha siguiente</code></td><td class="spec-desc">La flecha anterior se muestra deshabilitada (gris) cuando ya se está en la primera página.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Combinalo con un selector de cantidad de filas por página cuando la tabla lo permita, para que la persona usuaria controle la densidad de información.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

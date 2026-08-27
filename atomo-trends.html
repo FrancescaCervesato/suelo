@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Muestra la variación porcentual de una métrica combinando color e ícono de dirección, para comunicar de un vistazo si algo mejoró, empeoró o se mantuvo estable.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Combinar siempre el color con un ícono de dirección (↑ ↓) para no depender solo de la percepción de color.</li>
+              <li>Usarlo junto a un KPI o número para dar contexto de evolución.</li>
+              <li>Elegir la variante con fondo cuando necesites más énfasis visual en una card.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Usar solo el color para indicar la tendencia.</li>
+              <li>Usarlo para valores que no son una variación — ahí un número simple alcanza.</li>
+              <li>Aplicar verde/rojo con un significado distinto al de mejora/empeoramiento en ese contexto.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-arrow-trend-up"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -57,22 +83,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Variante</td><td class="spec-values"><code class="spec-tag">Positiva</code><code class="spec-tag">Negativa</code><code class="spec-tag">Neutral</code></td><td class="spec-desc">Dirección de la tendencia mostrada.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">No uses solo color para indicar la tendencia: el ícono de dirección (↑ ↓) es lo que garantiza que también se entienda sin depender de la percepción de color.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

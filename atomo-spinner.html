@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Comunica que una acción está en proceso y todavía no hay contenido para mostrar, evitando que la persona interprete la pantalla como congelada.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Usarlo para esperas cortas dentro de un botón o un campo.</li>
+              <li>Sumar un texto breve ("Cargando…") cuando la espera puede ser más larga.</li>
+              <li>Elegir el tamaño acorde al elemento que reemplaza (16px en botones, 40px en pantallas completas).</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Dejarlo girando indefinidamente sin manejar el caso de que la carga falle.</li>
+              <li>Usarlo para procesos con progreso medible — para eso está la Progress bar.</li>
+              <li>Combinarlo con contenido interactivo que la persona podría intentar tocar mientras carga.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-spinner"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -54,22 +80,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tamaño</td><td class="spec-values"><code class="spec-tag">16px</code><code class="spec-tag">24px</code><code class="spec-tag">32px</code></td><td class="spec-desc">Diámetro del indicador.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Si la carga puede tardar más de unos segundos, considerá acompañar el spinner con un texto breve ("Cargando datos…") para reducir la incertidumbre.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

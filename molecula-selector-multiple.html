@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Aparece al seleccionar varias filas o tarjetas a la vez, para aplicar una acción sobre todo el grupo en lugar de repetirla una por una.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Mostrar siempre la cantidad de elementos seleccionados.</li>
+              <li>Usar el tipo Flotante sobre una grilla de tarjetas, y Grilla cuando se integra dentro de una tabla.</li>
+              <li>Ofrecer "Seleccionar todos" cuando la lista completa sea razonablemente chica.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Mostrar más de 3-4 acciones en la barra — el resto conviene agruparlo en un menú de opciones.</li>
+              <li>Dejarla visible cuando no hay ningún elemento seleccionado.</li>
+              <li>Usarla para una selección única — ahí no hace falta una barra de acciones masivas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-list-check"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -73,22 +99,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Flotante</code><code class="spec-tag">Grilla</code></td><td class="spec-desc">Flotante es una barra oscura con el contador como chip; Grilla es clara e integrada, con las acciones alineadas a la derecha.</td></tr><tr><td class="spec-prop">Acciones</td><td class="spec-values"><code class="spec-tag">Seleccionar todos</code><code class="spec-tag">Habilitar instrumentos</code><code class="spec-tag">Deshabilitar instrumentos</code></td><td class="spec-desc">Acciones de ejemplo documentadas en Figma — el copy se adapta al contexto real.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Usá el tipo Flotante cuando la barra debe superponerse al contenido (ej. sobre una grilla de tarjetas) y el tipo Grilla cuando puede integrarse como una fila más dentro de una tabla.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

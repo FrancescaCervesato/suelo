@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Comunica un aviso, error o confirmación dentro del flujo de la página, con un color y un ícono que anticipan la severidad del mensaje.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Elegir el color según la severidad real (Rojo error, Amarillo advertencia, Verde confirmación, Default/Primario información).</li>
+              <li>Redactar el mensaje explicando qué pasó y, si aplica, qué hacer al respecto.</li>
+              <li>Ubicarlo cerca del elemento o la sección a la que hace referencia.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Usarlo como notificación flotante que se autocierra — este componente vive dentro del flujo, no en una esquina.</li>
+              <li>Usar el color Rojo para algo que no es realmente un error.</li>
+              <li>Apilar muchos avisos de este tipo en la misma vista — priorizá el más importante.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-bell"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -56,22 +82,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Rojo</code><code class="spec-tag">Default</code><code class="spec-tag">Verde</code><code class="spec-tag">Primario</code><code class="spec-tag">Amarillo</code></td><td class="spec-desc">Cada tipo define su propio color de fondo, borde, texto e ícono.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Un error crítico que impide continuar merece más jerarquía que un Toast (por ejemplo, un mensaje inline o un Modal) — reservalo para avisos que no bloquean el flujo.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

@@ -36,6 +36,32 @@
 
       <div class="comp-block">
         <div class="comp-block__head">
+          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
+          <h2 class="comp-block__title">Cómo usarlo</h2>
+        </div>
+        <p class="comp-block__desc" style="max-width:none;">Permite importar un archivo arrastrándolo directamente a la pantalla o seleccionándolo manualmente, mostrando el progreso de la carga en tiempo real.</p>
+        <div class="usage-grid">
+          <div class="usage-card usage-card--si">
+            <span class="usage-card__label">✓ Hacer</span>
+            <ul>
+              <li>Indicar el formato y tamaño máximo de archivo permitido antes de que la persona intente subirlo.</li>
+              <li>Dar feedback visual claro cuando se está arrastrando un archivo sobre la zona (estado Activo).</li>
+              <li>Mostrar el progreso de carga y permitir cancelar o quitar el archivo mientras sube.</li>
+            </ul>
+          </div>
+          <div class="usage-card usage-card--no">
+            <span class="usage-card__label">✕ Evitar</span>
+            <ul>
+              <li>Comunicar el tipo o tamaño permitido recién después de un error.</li>
+              <li>Dejar el archivo cargado sin la opción de reemplazarlo o quitarlo.</li>
+              <li>Ocultar el nombre o peso del archivo una vez cargado.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
           <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-cloud-arrow-up"></i></span>
           <h2 class="comp-block__title">Probalo</h2>
         </div>
@@ -92,22 +118,6 @@
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
         <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado de la zona</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Activo</code></td><td class="spec-desc">Activo es el estado mientras se arrastra un archivo sobre la zona.</td></tr><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Horizontal</code><code class="spec-tag">Vertical</code></td><td class="spec-desc">Misma zona de drop, proporción vertical (388px) u horizontal (1046px).</td></tr><tr><td class="spec-prop">Card de archivo</td><td class="spec-values"><code class="spec-tag">Grande</code><code class="spec-tag">Chico</code></td><td class="spec-desc">Muestra nombre, tamaño, progreso y acción de quitar el archivo.</td></tr></tbody></table>
-      </div>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Comunicá siempre el tipo y tamaño máximo permitido antes de que la persona intente subir el archivo, no solo después de un error.</div>
-        </div>
-      </div>
-
-      <div class="callout callout--tech">
-        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
-        <div>
-          <div class="callout__title">Nota técnica</div>
-          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
-        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>
