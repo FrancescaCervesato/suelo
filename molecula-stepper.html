@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="molecula-stepper">
 <div class="app-shell">
@@ -39,8 +40,43 @@
           <h2 class="comp-block__title">Probalo</h2>
         </div>
         <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage"><div class="demo-stepper"><span class="demo-stepper__dot is-done"><i class="fa-solid fa-check"></i></span><span class="demo-stepper__line"></span><span class="demo-stepper__dot is-current">2</span><span class="demo-stepper__line"></span><span class="demo-stepper__dot">3</span></div></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Navegar</span><button class="control-btn" onclick="pgStep(this,-1)">← Anterior</button><button class="control-btn" onclick="pgStep(this,1)">Siguiente →</button></div></div>
+          <span class="playground__label">Flujo de 4 pasos</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-stepper">
+              <div class="fg-stepper-step">
+                <span class="fg-stepper-circle done"><i class="fa-solid fa-check"></i></span>
+                <span class="fg-stepper-stub fg-stepper-color-done"></span>
+                <span class="fg-stepper-label done">Datos</span>
+                <span class="fg-stepper-line fg-stepper-color-done"></span>
+              </div>
+              <div class="fg-stepper-step">
+                <span class="fg-stepper-circle done"><i class="fa-solid fa-check"></i></span>
+                <span class="fg-stepper-stub fg-stepper-color-done"></span>
+                <span class="fg-stepper-label done">Documentación</span>
+                <span class="fg-stepper-line fg-stepper-color-done"></span>
+              </div>
+              <div class="fg-stepper-step">
+                <span class="fg-stepper-circle active"></span>
+                <span class="fg-stepper-stub fg-stepper-color-active"></span>
+                <span class="fg-stepper-label active">Revisión</span>
+                <span class="fg-stepper-line fg-stepper-color-inactive"></span>
+              </div>
+              <div class="fg-stepper-step">
+                <span class="fg-stepper-circle inactive"></span>
+                <span class="fg-stepper-stub fg-stepper-color-inactive"></span>
+                <span class="fg-stepper-label inactive">Confirmación</span>
+              </div>
+            </div>
+          </div>
+          <div class="playground__controls"><span class="control-row__label" style="width:auto;">Completado (check, azul) · Actual (anillo con punto, azul) · Pendiente (anillo gris)</span></div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Hover</span>
+          <div class="playground__stage" style="justify-content:flex-start; gap:32px;">
+            <div style="display:flex; align-items:center; gap:8px;"><span class="fg-stepper-circle done hover"><i class="fa-solid fa-check"></i></span><span class="fg-stepper-label done hover">Datos</span></div>
+            <div style="display:flex; align-items:center; gap:8px;"><span class="fg-stepper-circle inactive hover"></span><span class="fg-stepper-label inactive">Confirmación</span></div>
+          </div>
+          <div class="playground__controls"><span class="control-row__label" style="width:auto;">Completado + hover oscurece a azul oscuro · Pendiente + hover agrega un punto interior</span></div>
         </div>
       </div>
 
@@ -48,7 +84,7 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado del paso</td><td class="spec-values"><code class="spec-tag">Completado</code><code class="spec-tag">Actual</code><code class="spec-tag">Pendiente</code></td><td class="spec-desc">Progreso dentro del flujo secuencial.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">Done</code><code class="spec-tag">Active</code><code class="spec-tag">Inactive</code></td><td class="spec-desc">Done = check azul; Active = anillo con punto azul; Inactive = anillo gris.</td></tr><tr><td class="spec-prop">Elemento</td><td class="spec-values"><code class="spec-tag">Left</code><code class="spec-tag">End</code></td><td class="spec-desc">"Left" incluye la línea conectora hacia el siguiente paso; "End" es el último paso, sin conector saliente.</td></tr></tbody></table>
       </div>
 
       <div class="callout callout--tip">

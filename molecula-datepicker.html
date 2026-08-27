@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>suelo — Datepicker</title>
+<meta name="description" content="suelo — Selector de fecha en formato calendario, individual o de rango." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
+</head>
+<body data-page="molecula-datepicker">
+<div class="app-shell">
+  <nav class="sidebar" id="sidebar-root"></nav>
+
+  <main class="main">
+    <div class="main-inner">
+      <div class="breadcrumbs">
+        <a class="brand" href="index.html">suelo</a>
+        <span class="sep">›</span>
+        <span class="current">Moléculas</span>
+        <span class="sep">›</span>
+        <span class="current">Datepicker</span>
+      </div>
+
+      <div class="page-header">
+        <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
+        <h1 class="page-title">Datepicker</h1>
+        <p class="page-desc">Selector de fecha en formato calendario. Existen dos tipos: Individual (una sola fecha, con selector de hora opcional) y Rango (fecha de inicio y fin). Marca el día actual con una línea debajo del número.</p>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
+          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-calendar-days"></i></span>
+          <h2 class="comp-block__title">Probalo</h2>
+        </div>
+        <div class="playground">
+          <span class="playground__label">Tipo Individual — con selector de hora y acciones</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-dp">
+              <div class="fg-dp-header">
+                <span class="fg-dp-nav"><i class="fa-solid fa-chevron-left" style="font-size:12px;"></i></span>
+                <span class="fg-dp-title">Junio 2026</span>
+                <span class="fg-dp-nav"><i class="fa-solid fa-chevron-right" style="font-size:12px;"></i></span>
+              </div>
+              <hr class="fg-dp-hr" />
+              <div class="fg-dp-week"><span>DOM</span><span>LUN</span><span>MAR</span><span>MIE</span><span>JUE</span><span>VIE</span><span>SAB</span></div>
+              <div class="fg-dp-grid">
+                <div class="fg-dp-day disabled">30</div><div class="fg-dp-day default">1</div><div class="fg-dp-day default">2</div><div class="fg-dp-day default">3</div><div class="fg-dp-day default">4</div><div class="fg-dp-day default">5</div><div class="fg-dp-day default">6</div>
+                <div class="fg-dp-day default">7</div><div class="fg-dp-day default">8</div><div class="fg-dp-day default">9</div><div class="fg-dp-day default">10</div><div class="fg-dp-day default">11</div><div class="fg-dp-day default">12</div><div class="fg-dp-day default">13</div>
+                <div class="fg-dp-day default">14</div><div class="fg-dp-day default">15</div><div class="fg-dp-day default">16</div><div class="fg-dp-day default">17</div><div class="fg-dp-day press hoy">18</div><div class="fg-dp-day hover">19</div><div class="fg-dp-day default">20</div>
+                <div class="fg-dp-day default">21</div><div class="fg-dp-day default">22</div><div class="fg-dp-day default">23</div><div class="fg-dp-day default">24</div><div class="fg-dp-day default">25</div><div class="fg-dp-day default">26</div><div class="fg-dp-day default">27</div>
+                <div class="fg-dp-day default">28</div><div class="fg-dp-day default">29</div><div class="fg-dp-day default">30</div><div class="fg-dp-day default">31</div><div></div><div></div><div></div>
+              </div>
+              <div class="fg-dp-fields">
+                <div class="fg-field" style="width:auto; flex:1;">
+                  <label>Fecha</label>
+                  <div class="fg-field-box"><i class="fa-solid fa-calendar" style="color:#525252; font-size:12px;"></i><span>18/12/2025</span></div>
+                </div>
+                <div class="fg-field" style="width:auto; flex:1;">
+                  <label>Hora</label>
+                  <div class="fg-field-box"><i class="fa-solid fa-clock" style="color:#525252; font-size:12px;"></i><span>08:45</span></div>
+                </div>
+              </div>
+              <div class="fg-dp-actions">
+                <button class="fg-btn fg-btn-24 fg-btn-sutil">Cancelar</button>
+                <button class="fg-btn fg-btn-24 fg-btn-primario">Aceptar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Estados de un día (componente "Dia")</span>
+          <div class="playground__stage" style="justify-content:flex-start; gap:16px;">
+            <div class="fg-dp-day default">14</div>
+            <div class="fg-dp-day hover">14</div>
+            <div class="fg-dp-day press">14</div>
+            <div class="fg-dp-day disabled">14</div>
+            <div style="display:flex;"><div class="fg-dp-day rango-inicio">14</div><div class="fg-dp-day rango-fin">18</div></div>
+          </div>
+          <div class="playground__controls"><span class="control-row__label" style="width:auto;">default · hover · press (seleccionado) · deshabilitado · inicio/fin de rango</span></div>
+        </div>
+      </div>
+
+      <div class="comp-block">
+        <div class="comp-block__head">
+          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+        </div>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Individual</code><code class="spec-tag">Rango</code></td><td class="spec-desc">Rango usa dos calendarios uno al lado del otro, con los mismos estados de día.</td></tr><tr><td class="spec-prop">Estado de día</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Hover</code><code class="spec-tag">Press</code><code class="spec-tag">Deshabilitado</code><code class="spec-tag">Inicio rango</code><code class="spec-tag">Fin rango</code></td><td class="spec-desc">Deshabilitado también se usa para los días de meses adyacentes.</td></tr></tbody></table>
+      </div>
+
+      <div class="callout callout--tip">
+        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
+        <div>
+          <div class="callout__title">Tip de uso</div>
+          <div class="callout__body">Usá el tipo Rango para filtros de fechas (ej. estados de cuenta) y el tipo Individual para campos de fecha únicos, como una fecha de nacimiento.</div>
+        </div>
+      </div>
+
+      <div class="callout callout--tech">
+        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
+        <div>
+          <div class="callout__title">Nota técnica</div>
+          <div class="callout__body">Documentado en <code>Sistema de diseño 1.0</code> · Figma, página "Manual de Componentes". Figma no documenta un estado visual propio para los días intermedios de un rango seleccionado (solo Inicio y Fin rango) — no se inventó uno para esta ficha. El ejemplo interactivo de esta ficha es una implementación de referencia para navegar el sistema — no reemplaza al componente productivo de la librería de Figma.</div>
+        </div>
+      </div>
+
+      <div class="rule" style="margin-top: var(--space-1);"></div>
+      <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+        <a class="card" style="flex:1; min-width:220px; " href="molecula-desplegable.html"><div class="card__desc" style="text-transform:uppercase; font-size:11px; letter-spacing:0.04em; font-weight:700;">← Anterior</div><div class="card__title">Desplegable</div></a>
+        <a class="card" style="flex:1; min-width:220px; text-align:right;" href="molecula-empty-state.html"><div class="card__desc" style="text-transform:uppercase; font-size:11px; letter-spacing:0.04em; font-weight:700;">Siguiente →</div><div class="card__title">Empty State</div></a>
+      </div>
+    </div>
+  </main>
+</div>
+<div class="accent-bar" style="position:fixed; bottom:0; left:0; right:0;"></div>
+<script src="js/nav.js"></script>
+<script src="js/playground.js"></script>
+</body>
+</html>

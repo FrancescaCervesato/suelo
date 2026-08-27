@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="organismo-sidebar">
 <div class="app-shell">
@@ -30,7 +31,7 @@
       <div class="page-header">
         <span class="page-badge page-badge--organismo"><span class="icon-badge icon-badge--sm page-badge--organismo" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-table-cells-large"></i></span> Organismo</span>
         <h1 class="page-title">Sidebar / Navegación lateral</h1>
-        <p class="page-desc">Menú de navegación principal de la aplicación. Variantes: expandido (con labels) y colapsado (solo íconos). Soporta grupos, ítems activos y submenús.</p>
+        <p class="page-desc">Ítem de navegación del menú lateral. Estados Default / Hover / Select, tamaño expandido (224px) o colapsado (60px, solo ícono), y variante Subcategoría para submenús indentados.</p>
       </div>
 
       <div class="comp-block">
@@ -39,8 +40,28 @@
           <h2 class="comp-block__title">Probalo</h2>
         </div>
         <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage demo-stage--dark playground__stage--dark" data-variante="expandido"><div class="demo-sidebar"><span class="is-active"><i class="fa-solid fa-house"></i><em>Inicio</em></span><span><i class="fa-solid fa-seedling"></i><em>Campos</em></span><span><i class="fa-solid fa-chart-pie"></i><em>Reportes</em></span></div></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Variante</span><button class="control-btn is-active" onclick="pgSet(this,'variante','expandido')">Expandido</button><button class="control-btn" onclick="pgSet(this,'variante','colapsado')">Colapsado</button></div></div>
+          <span class="playground__label">Expandido — Default · Hover · Select</span>
+          <div class="playground__stage" style="justify-content:flex-start; align-items:flex-start;">
+            <div class="fg-side">
+              <div class="fg-side-item default"><span class="fg-side-caret"><i class="fa-solid fa-caret-right"></i></span><span class="fg-side-icon"><i class="fa-solid fa-pen"></i></span><span class="fg-side-label">Ofertas de entrega</span></div>
+              <div class="fg-side-item hover"><span class="fg-side-caret"><i class="fa-solid fa-caret-right"></i></span><span class="fg-side-icon"><i class="fa-solid fa-pen"></i></span><span class="fg-side-label">Ofertas de entrega</span></div>
+              <div class="fg-side-item select"><span class="fg-side-caret"><i class="fa-solid fa-caret-right"></i></span><span class="fg-side-icon"><i class="fa-solid fa-pen"></i></span><span class="fg-side-label">Ofertas de entrega</span><span class="fg-side-chip rojo">2</span></div>
+              <div class="fg-side-divider"></div>
+              <div class="fg-side-item subcategoria"><span class="fg-side-tick"></span><span class="fg-side-icon"><i class="fa-solid fa-pen"></i></span><span class="fg-side-label">Ofertas de entrega</span><span class="fg-side-chip gris">2</span></div>
+            </div>
+          </div>
+          <div class="playground__controls"><span class="control-row__label" style="width:auto;">default (blanco) · hover (celeste + borde) · select (celeste más oscuro + borde) · subcategoría (indentada, con marca de selección)</span></div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Colapsado (60px) — Default · Hover · Select</span>
+          <div class="playground__stage" style="justify-content:flex-start; align-items:flex-start;">
+            <div class="fg-side" style="width:auto;">
+              <div class="fg-side-item default collapsed"><span class="fg-side-icon"><i class="fa-solid fa-pen"></i></span></div>
+              <div class="fg-side-item hover collapsed"><span class="fg-side-icon"><i class="fa-solid fa-pen"></i></span></div>
+              <div class="fg-side-item select collapsed"><span class="fg-side-icon"><i class="fa-solid fa-pen"></i></span></div>
+              <div class="fg-side-divider collapsed"></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -48,7 +69,7 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Variante</td><td class="spec-values"><code class="spec-tag">Expandido</code><code class="spec-tag">Colapsado</code></td><td class="spec-desc">Ancho y presencia de labels de texto.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Hover</code><code class="spec-tag">Select</code></td><td class="spec-desc">Hover y Select usan el mismo tono celeste con borde; Select es más saturado.</td></tr><tr><td class="spec-prop">Tamaño</td><td class="spec-values"><code class="spec-tag">224px (expandido)</code><code class="spec-tag">60px (colapsado)</code></td><td class="spec-desc">Colapsado oculta el label y centra el ícono.</td></tr><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Con flecha</code><code class="spec-tag">Sin flecha</code><code class="spec-tag">Subcategoría</code><code class="spec-tag">Divisor</code></td><td class="spec-desc">"Sin flecha" es igual a Default/Hover/Select pero sin el caret — se usa en ítems sin submenú. Subcategoría indenta el ítem y agrega una marca de selección vertical.</td></tr></tbody></table>
       </div>
 
       <div class="callout callout--tip">

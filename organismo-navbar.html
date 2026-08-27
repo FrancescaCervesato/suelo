@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="organismo-navbar">
 <div class="app-shell">
@@ -30,7 +31,7 @@
       <div class="page-header">
         <span class="page-badge page-badge--organismo"><span class="icon-badge icon-badge--sm page-badge--organismo" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-table-cells-large"></i></span> Organismo</span>
         <h1 class="page-title">Navbar / Navegación superior</h1>
-        <p class="page-desc">Barra superior global de la aplicación. Incluye logo, acciones rápidas (notificaciones, perfil) y puede contener breadcrumbs o el título de la sección.</p>
+        <p class="page-desc">Barra superior global de la aplicación, fondo azul oscuro. Incluye botón de menú, logo, selector de empresa, empresa y persona activas, notificaciones y avatar.</p>
       </div>
 
       <div class="comp-block">
@@ -40,7 +41,22 @@
         </div>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage demo-stage--dark playground__stage--dark"><div class="demo-navbar"><span>Campos › Lote 4</span><div class="demo-navbar-actions"><i class="fa-solid fa-bell"></i><i class="fa-solid fa-circle-user"></i></div></div></div><div class="playground__controls"></div>
+          <div class="playground__stage" style="padding:0;">
+            <div class="fg-navbar-scroll"><div class="fg-navbar">
+              <span class="fg-navbar-icon-btn"><i class="fa-solid fa-table-columns"></i></span>
+              <div class="fg-navbar-brand">
+                <span class="fg-navbar-brand-name">one clearing</span>
+                <span class="fg-navbar-by">by <b>Primary</b></span>
+              </div>
+              <div class="fg-navbar-content">
+                <div class="fg-navbar-select"><i class="fa-solid fa-building"></i><span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">GRANAR S.A.</span><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="fg-navbar-pill"><span class="fg-navbar-pill-icon"><i class="fa-solid fa-building"></i></span><span class="fg-navbar-pill-text">GRANAR S.A.</span></div>
+                <div class="fg-navbar-pill"><span class="fg-navbar-pill-icon"><i class="fa-solid fa-user"></i></span><span class="fg-navbar-pill-text">Juan Perez</span></div>
+                <span class="fg-navbar-notif"><i class="fa-solid fa-bell"></i><span class="fg-navbar-dot"></span></span>
+                <span class="fg-navbar-avatar"><span>F</span></span>
+              </div>
+            </div></div>
+          </div>
         </div>
       </div>
 
@@ -48,7 +64,7 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Elemento</td><td class="spec-values"><code class="spec-tag">Logo</code><code class="spec-tag">Título de sección</code><code class="spec-tag">Notificaciones</code><code class="spec-tag">Perfil</code></td><td class="spec-desc">Partes que componen la barra.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Elementos</td><td class="spec-values"><code class="spec-tag">Menú hamburguesa</code><code class="spec-tag">Logo + "by Primary"</code><code class="spec-tag">Selector de empresa</code><code class="spec-tag">Empresa activa</code><code class="spec-tag">Persona activa</code><code class="spec-tag">Notificaciones</code><code class="spec-tag">Avatar</code></td><td class="spec-desc">Todos configurables como visibles/ocultos de forma independiente.</td></tr><tr><td class="spec-prop">Color de fondo</td><td class="spec-values"><code class="spec-tag">Azul oscuro</code></td><td class="spec-desc">Único color de fondo documentado para la barra ("Navegacion superior/Azul").</td></tr></tbody></table>
       </div>
 
       <div class="callout callout--tip">

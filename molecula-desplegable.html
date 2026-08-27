@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="molecula-desplegable">
 <div class="app-shell">
@@ -30,7 +31,7 @@
       <div class="page-header">
         <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
         <h1 class="page-title">Desplegable</h1>
-        <p class="page-desc">Menú contextual que aparece al interactuar con un trigger. Puede contener ítems de texto, checkboxes o elementos de carga. Variantes de 1 a 12 líneas.</p>
+        <p class="page-desc">Menú contextual que aparece al interactuar con un trigger. Lista de ítems de texto con estado de carga, de 1 a 12 líneas.</p>
       </div>
 
       <div class="comp-block">
@@ -39,8 +40,33 @@
           <h2 class="comp-block__title">Probalo</h2>
         </div>
         <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" data-estado="cerrado" style="justify-content:flex-start;"><div class="demo-dropdown-trigger">Acciones <i class="fa-solid fa-chevron-down"></i></div><div class="demo-dropdown-menu"><span>Editar</span><span>Duplicar</span><span>Archivar</span></div></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Estado</span><button class="control-btn is-active" onclick="pgSet(this,'estado','cerrado')">Cerrado</button><button class="control-btn" onclick="pgSet(this,'estado','abierto')">Abierto</button></div></div>
+          <span class="playground__label">Ítem — estados</span>
+          <div class="playground__stage" style="justify-content:flex-start; gap:24px;">
+            <div class="fg-dd-item default"><div class="fg-dd-txt"><span class="fg-dd-main">All</span></div></div>
+            <div class="fg-dd-item hover"><div class="fg-dd-txt"><span class="fg-dd-main">All</span></div></div>
+            <div class="fg-dd-item select"><div class="fg-dd-txt"><span class="fg-dd-main">All</span></div></div>
+          </div>
+          <div class="playground__controls"><span class="control-row__label" style="width:auto;">default · hover · select</span></div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Ítem con línea de detalle</span>
+          <div class="playground__stage" style="justify-content:flex-start; gap:24px;">
+            <div class="fg-dd-item default"><div class="fg-dd-txt"><span class="fg-dd-main">All</span><span class="fg-dd-detail">All</span></div></div>
+            <div class="fg-dd-item hover"><div class="fg-dd-txt"><span class="fg-dd-main">All</span><span class="fg-dd-detail">All</span></div></div>
+            <div class="fg-dd-item select"><div class="fg-dd-txt"><span class="fg-dd-main">All</span><span class="fg-dd-detail">All</span></div></div>
+          </div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Menú contenedor y estado de carga</span>
+          <div class="playground__stage" style="justify-content:flex-start; gap:24px;">
+            <div class="fg-dd-menu">
+              <div class="fg-dd-item default"><div class="fg-dd-txt"><span class="fg-dd-main">All</span></div></div>
+              <div class="fg-dd-item default"><div class="fg-dd-txt"><span class="fg-dd-main">All</span></div></div>
+              <div class="fg-dd-item default"><div class="fg-dd-txt"><span class="fg-dd-main">All</span></div></div>
+              <div class="fg-dd-item default"><div class="fg-dd-txt"><span class="fg-dd-main">All</span></div></div>
+            </div>
+            <div class="fg-dd-loading"><span class="fg-spinner s16"></span><span>Cargando...</span></div>
+          </div>
         </div>
       </div>
 
@@ -48,7 +74,7 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">Cerrado</code><code class="spec-tag">Abierto</code></td><td class="spec-desc">Visibilidad del menú contextual.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado de ítem</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Hover</code><code class="spec-tag">Select</code></td><td class="spec-desc">Cada ítem puede tener una línea de detalle secundaria opcional.</td></tr><tr><td class="spec-prop">Cantidad de líneas</td><td class="spec-values"><code class="spec-tag">1 a 12</code></td><td class="spec-desc">Cantidad de ítems apilados en el menú.</td></tr><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Texto</code><code class="spec-tag">Loading</code></td><td class="spec-desc">Loading muestra un spinner y "Cargando..." mientras se resuelve el contenido.</td></tr></tbody></table>
       </div>
 
       <div class="callout callout--tip">
@@ -70,7 +96,7 @@
       <div class="rule" style="margin-top: var(--space-1);"></div>
       <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
         <a class="card" style="flex:1; min-width:220px; " href="molecula-cards.html"><div class="card__desc" style="text-transform:uppercase; font-size:11px; letter-spacing:0.04em; font-weight:700;">← Anterior</div><div class="card__title">Cards</div></a>
-        <a class="card" style="flex:1; min-width:220px; text-align:right;" href="molecula-empty-state.html"><div class="card__desc" style="text-transform:uppercase; font-size:11px; letter-spacing:0.04em; font-weight:700;">Siguiente →</div><div class="card__title">Empty State</div></a>
+        <a class="card" style="flex:1; min-width:220px; text-align:right;" href="molecula-datepicker.html"><div class="card__desc" style="text-transform:uppercase; font-size:11px; letter-spacing:0.04em; font-weight:700;">Siguiente →</div><div class="card__title">Datepicker</div></a>
       </div>
     </div>
   </main>

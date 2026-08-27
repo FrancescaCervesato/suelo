@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="molecula-boton-segmentado">
 <div class="app-shell">
@@ -30,7 +31,7 @@
       <div class="page-header">
         <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
         <h1 class="page-title">Botón segmentado</h1>
-        <p class="page-desc">Grupo de botones mutuamente excluyentes para cambiar vistas o filtros. Reemplaza a un conjunto de radio buttons en contextos de navegación.</p>
+        <p class="page-desc">Grupo de botones mutuamente excluyentes para cambiar vistas o filtros. En Figma existen dos patrones bajo este mismo nombre: un grupo bordeado de selección única, y un grupo con relleno tipo toggle.</p>
       </div>
 
       <div class="comp-block">
@@ -39,8 +40,40 @@
           <h2 class="comp-block__title">Probalo</h2>
         </div>
         <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage"><div class="demo-segmented"><span class="is-active" onclick="pgSelectSegment(this)">Lista</span><span onclick="pgSelectSegment(this)">Grilla</span><span onclick="pgSelectSegment(this)">Mapa</span></div></div><div class="playground__controls"><span class="control-row__label" style="width:auto;">Hacé clic en las opciones del ejemplo ↑</span></div>
+          <span class="playground__label">Grupo bordeado — Tamaño 40</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-seg-wrap">
+              <span class="fg-seg-label">Label</span>
+              <div class="fg-segmented fg-segmented--40">
+                <div class="fg-segmented__seg is-selected">Botón</div>
+                <div class="fg-segmented__seg">Botón</div>
+                <div class="fg-segmented__seg">Botón</div>
+                <div class="fg-segmented__seg">Botón</div>
+                <div class="fg-segmented__seg">Botón</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Grupo bordeado — Tamaño 24</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-segmented fg-segmented--24">
+              <div class="fg-segmented__seg is-selected">Botón</div>
+              <div class="fg-segmented__seg">Botón</div>
+              <div class="fg-segmented__seg">Botón</div>
+            </div>
+          </div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Grupo con relleno (toggle) — solo Tamaño 24</span>
+          <div class="playground__stage" style="justify-content:flex-start; flex-direction:column; align-items:flex-start; gap:8px;">
+            <div class="fg-segmented-toggle">
+              <div class="fg-segmented-toggle__seg unselected">ARS</div>
+              <div class="fg-segmented-toggle__seg hover">EUR</div>
+              <div class="fg-segmented-toggle__seg selected">USD</div>
+            </div>
+            <span class="fg-label-sm">ARS = no seleccionado · EUR = hover · USD = seleccionado</span>
+          </div>
         </div>
       </div>
 
@@ -48,7 +81,7 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Uso</td><td class="spec-values"><code class="spec-tag">Selección única</code><code class="spec-tag">Cambio inmediato</code></td><td class="spec-desc">Reemplaza radio buttons en navegación de vistas.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Patrón</td><td class="spec-values"><code class="spec-tag">Grupo bordeado</code><code class="spec-tag">Grupo con relleno</code></td><td class="spec-desc">El bordeado usa divisores entre opciones; el de relleno usa pastillas independientes.</td></tr><tr><td class="spec-prop">Tamaño</td><td class="spec-values"><code class="spec-tag">40px</code><code class="spec-tag">24px</code></td><td class="spec-desc">El grupo con relleno solo está documentado en 24px.</td></tr><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">No seleccionado</code><code class="spec-tag">Hover</code><code class="spec-tag">Seleccionado</code></td><td class="spec-desc">Hover solo existe documentado en el grupo con relleno.</td></tr></tbody></table>
       </div>
 
       <div class="callout callout--tip">

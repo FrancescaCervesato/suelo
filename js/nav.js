@@ -31,6 +31,7 @@
     { label: "Breadcrumbs", href: "molecula-breadcrumbs.html", page: "molecula-breadcrumbs" },
     { label: "Cards", href: "molecula-cards.html", page: "molecula-cards" },
     { label: "Desplegable", href: "molecula-desplegable.html", page: "molecula-desplegable" },
+    { label: "Datepicker", href: "molecula-datepicker.html", page: "molecula-datepicker" },
     { label: "Empty state", href: "molecula-empty-state.html", page: "molecula-empty-state" },
     { label: "Modal", href: "molecula-modal.html", page: "molecula-modal" },
     { label: "Paginador", href: "molecula-paginador.html", page: "molecula-paginador" },

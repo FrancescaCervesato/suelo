@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="molecula-tooltip">
 <div class="app-shell">
@@ -30,7 +31,7 @@
       <div class="page-header">
         <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
         <h1 class="page-title">Tooltip</h1>
-        <p class="page-desc">Texto de ayuda contextual que aparece al hacer hover sobre un elemento. Posiciones: arriba, abajo, izquierda, derecha. Máximo 2 líneas de texto.</p>
+        <p class="page-desc">Texto de ayuda contextual que aparece al hacer hover sobre un elemento. Tipo Default para un texto corto, o Compuesto para título, descripción y acción.</p>
       </div>
 
       <div class="comp-block">
@@ -39,8 +40,21 @@
           <h2 class="comp-block__title">Probalo</h2>
         </div>
         <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" data-posicion="arriba"><span class="demo-tooltip-anchor"><i class="fa-solid fa-circle-info" style="font-size:20px; color:var(--gris-5);"></i><span class="demo-tooltip-bubble">Suma de hectáreas activas</span></span></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Posición</span><button class="control-btn is-active" onclick="pgSet(this,'posicion','arriba')">Arriba</button><button class="control-btn" onclick="pgSet(this,'posicion','abajo')">Abajo</button><button class="control-btn" onclick="pgSet(this,'posicion','izquierda')">Izquierda</button><button class="control-btn" onclick="pgSet(this,'posicion','derecha')">Derecha</button></div></div>
+          <span class="playground__label">Tipo Default</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-tt-default">Solicitar pronta aplicación</div>
+          </div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Tipo Compuesto</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-tt-compuesto">
+              <span class="fg-tt-close"><i class="fa-solid fa-xmark"></i></span>
+              <div class="fg-tt-header"><i class="fa-solid fa-triangle-exclamation"></i><span class="fg-tt-title">Atención</span></div>
+              <div class="fg-tt-desc">La fecha del sistema es distinta de la fecha actual.</div>
+              <span class="fg-tt-link">Actualizar fecha</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -48,7 +62,7 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Posición</td><td class="spec-values"><code class="spec-tag">Arriba</code><code class="spec-tag">Abajo</code><code class="spec-tag">Izquierda</code><code class="spec-tag">Derecha</code></td><td class="spec-desc">Ubicación relativa al elemento anclado.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Compuesto</code></td><td class="spec-desc">Default es solo texto; Compuesto agrega ícono, título, cierre y un link de acción.</td></tr><tr><td class="spec-prop">Flecha (solo Default)</td><td class="spec-values"><code class="spec-tag">Arriba</code><code class="spec-tag">Abajo</code></td><td class="spec-desc">Apunta hacia el elemento anclado.</td></tr></tbody></table>
       </div>
 
       <div class="callout callout--tip">

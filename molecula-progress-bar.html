@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="molecula-progress-bar">
 <div class="app-shell">
@@ -30,7 +31,7 @@
       <div class="page-header">
         <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
         <h1 class="page-title">Progress Bar</h1>
-        <p class="page-desc">Barra de progreso lineal. Muestra el avance de un proceso de 0 a 100%. Variantes: con porcentaje visible, con label y sin indicadores.</p>
+        <p class="page-desc">Barra de progreso lineal. Muestra el avance de un proceso de 0 a 100%. El detalle (etiqueta y porcentaje) puede mostrarse u ocultarse por separado.</p>
       </div>
 
       <div class="comp-block">
@@ -39,8 +40,21 @@
           <h2 class="comp-block__title">Probalo</h2>
         </div>
         <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" style="flex-direction:column; gap:10px;"><div class="demo-progress-track"><div class="demo-progress-fill" style="width:60%;"></div></div><span class="demo-progress-label" style="font-size:13px; font-weight:700; color:var(--texto-default);">60%</span></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Progreso</span><input type="range" min="0" max="100" value="60" oninput="pgSetProgress(this)" style="flex:1;" /></div></div>
+          <span class="playground__label">Con etiqueta y porcentaje</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-progress">
+              <div class="fg-progress-track"><div class="fg-progress-fill" style="width:64%;"></div></div>
+              <div class="fg-progress-detail"><span>Importando archivos -</span><span>50%</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Sin detalle</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-progress">
+              <div class="fg-progress-track"><div class="fg-progress-fill" style="width:64%;"></div></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -48,7 +62,7 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Variante</td><td class="spec-values"><code class="spec-tag">Con porcentaje</code><code class="spec-tag">Con label</code><code class="spec-tag">Sin indicadores</code></td><td class="spec-desc">Nivel de detalle mostrado junto a la barra.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Detalle</td><td class="spec-values"><code class="spec-tag">Etiqueta</code><code class="spec-tag">Porcentaje</code></td><td class="spec-desc">Ambos textos son independientes y opcionales, ubicados debajo de la barra.</td></tr></tbody></table>
       </div>
 
       <div class="callout callout--tip">

@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="organismo-grafico-torta">
 <div class="app-shell">
@@ -30,7 +31,7 @@
       <div class="page-header">
         <span class="page-badge page-badge--organismo"><span class="icon-badge icon-badge--sm page-badge--organismo" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-table-cells-large"></i></span> Organismo</span>
         <h1 class="page-title">Gráfico de torta</h1>
-        <p class="page-desc">Visualización de datos en formato circular. Muestra proporciones de un total. Incluye leyenda lateral con colores, etiquetas y porcentajes de cada segmento.</p>
+        <p class="page-desc">Visualización de datos en formato circular (dona). Combina el gráfico con una lista de referencias (color, porcentaje y etiqueta). Dos tamaños (S/M) y dos orientaciones (Horizontal/Vertical).</p>
       </div>
 
       <div class="comp-block">
@@ -39,8 +40,33 @@
           <h2 class="comp-block__title">Probalo</h2>
         </div>
         <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage"><div class="demo-pie"></div><div class="demo-pie-legend"><span><i style="background:var(--color-primario);"></i>Soja — 45%</span><span><i style="background:#9747ff;"></i>Maíz — 25%</span><span><i style="background:var(--color-advertencia);"></i>Trigo — 30%</span></div></div><div class="playground__controls"></div>
+          <span class="playground__label">Orientación Horizontal — Tamaño M</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-pie-wrap horizontal">
+              <div class="fg-pie m"></div>
+              <div class="fg-pie-legend m">
+                <div class="fg-pie-item"><span class="fg-pie-dot" style="background:#cccccc;"></span><span class="fg-pie-text">42% - Referencia externa</span></div>
+                <div class="fg-pie-item"><span class="fg-pie-dot" style="background:#6d6d6d;"></span><span class="fg-pie-text">42% - Referencia externa</span></div>
+                <div class="fg-pie-item"><span class="fg-pie-dot" style="background:#aaaaaa;"></span><span class="fg-pie-text">42% - Referencia externa</span></div>
+                <div class="fg-pie-item"><span class="fg-pie-dot" style="background:#e4e4e4;"></span><span class="fg-pie-text">42% - Referencia externa</span></div>
+                <div class="fg-pie-item"><span class="fg-pie-dot" style="background:#a4a4a4;"></span><span class="fg-pie-text">42% - Referencia externa</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Orientación Vertical — Tamaño S</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-pie-wrap vertical">
+              <div class="fg-pie s"></div>
+              <div class="fg-pie-legend s" style="width:100%;">
+                <div class="fg-pie-item"><span class="fg-pie-dot" style="background:#cccccc;"></span><span class="fg-pie-text">42% - Referencia externa</span></div>
+                <div class="fg-pie-item"><span class="fg-pie-dot" style="background:#6d6d6d;"></span><span class="fg-pie-text">42% - Referencia externa</span></div>
+                <div class="fg-pie-item"><span class="fg-pie-dot" style="background:#aaaaaa;"></span><span class="fg-pie-text">42% - Referencia externa</span></div>
+                <div class="fg-pie-item"><span class="fg-pie-dot" style="background:#e4e4e4;"></span><span class="fg-pie-text">42% - Referencia externa</span></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -48,7 +74,15 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Elemento</td><td class="spec-values"><code class="spec-tag">Segmento</code><code class="spec-tag">Leyenda</code><code class="spec-tag">Etiqueta de porcentaje</code></td><td class="spec-desc">Partes que componen la visualización.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Orientación</td><td class="spec-values"><code class="spec-tag">Horizontal</code><code class="spec-tag">Vertical</code></td><td class="spec-desc">Horizontal ubica la leyenda al lado; Vertical la ubica debajo.</td></tr><tr><td class="spec-prop">Tamaño</td><td class="spec-values"><code class="spec-tag">S — 140px</code><code class="spec-tag">M — 210px</code></td><td class="spec-desc">También cambia el tamaño de fuente y el punto de color de la leyenda.</td></tr><tr><td class="spec-prop">Referencia</td><td class="spec-values"><code class="spec-tag">Color</code><code class="spec-tag">Porcentaje</code><code class="spec-tag">Descripción</code></td><td class="spec-desc">Cada elemento de la leyenda puede ocultar el color, el porcentaje o la descripción por separado.</td></tr></tbody></table>
+      </div>
+
+      <div class="callout callout--tech">
+        <span class="icon-badge icon-badge--sm icon-badge--tech"><i class="fa-solid fa-wrench"></i></span>
+        <div>
+          <div class="callout__title">Sobre los colores y porcentajes</div>
+          <div class="callout__body">En Figma el componente usa una escala de grises (#CCCCCC, #6D6D6D, #AAAAAA, #E4E4E4, #A4A4A4) como placeholder y el mismo "42%" repetido en cada referencia — los colores y valores reales se asignan por dataset en cada implementación, no están fijados por el sistema de diseño.</div>
+        </div>
       </div>
 
       <div class="callout callout--tip">

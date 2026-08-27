@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="molecula-paginador">
 <div class="app-shell">
@@ -30,7 +31,7 @@
       <div class="page-header">
         <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
         <h1 class="page-title">Paginador</h1>
-        <p class="page-desc">Control de navegación entre páginas de una lista o tabla. Muestra página actual, total de páginas y flechas de anterior/siguiente.</p>
+        <p class="page-desc">Control de navegación entre páginas de una grilla o tabla. Combina un selector de cantidad por página, el conteo de resultados y un campo de página actual sobre el total.</p>
       </div>
 
       <div class="comp-block">
@@ -40,7 +41,18 @@
         </div>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage"><div class="demo-pager"><button onclick="pgSetPage(this)"><i class="fa-solid fa-chevron-left"></i></button><button class="is-active" onclick="pgSetPage(this)">1</button><button onclick="pgSetPage(this)">2</button><button onclick="pgSetPage(this)">3</button><button onclick="pgSetPage(this)"><i class="fa-solid fa-chevron-right"></i></button></div></div><div class="playground__controls"><span class="control-row__label" style="width:auto;">Hacé clic en una página ↑</span></div>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-pag">
+              <div class="fg-pag-size"><span>10</span><i class="fa-solid fa-caret-down"></i></div>
+              <div class="fg-pag-info">Página 1 de 1 (1 ítems)</div>
+              <div class="fg-pag-nav">
+                <button class="fg-pag-navbtn disabled"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="fg-pag-input">1</div>
+                <span class="fg-pag-de">de</span><span class="fg-pag-total">1</span>
+                <button class="fg-pag-navbtn"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -48,7 +60,7 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Elementos</td><td class="spec-values"><code class="spec-tag">Página actual</code><code class="spec-tag">Flechas prev/next</code><code class="spec-tag">Total de páginas</code></td><td class="spec-desc">Partes que componen el control.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Elementos</td><td class="spec-values"><code class="spec-tag">Cantidad por página</code><code class="spec-tag">Conteo de ítems</code><code class="spec-tag">Flecha anterior</code><code class="spec-tag">Página actual (input)</code><code class="spec-tag">Total de páginas</code><code class="spec-tag">Flecha siguiente</code></td><td class="spec-desc">La flecha anterior se muestra deshabilitada (gris) cuando ya se está en la primera página.</td></tr></tbody></table>
       </div>
 
       <div class="callout callout--tip">

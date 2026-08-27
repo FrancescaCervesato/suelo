@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="molecula-tabs">
 <div class="app-shell">
@@ -30,7 +31,7 @@
       <div class="page-header">
         <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
         <h1 class="page-title">Tabs</h1>
-        <p class="page-desc">Navegación horizontal entre secciones de contenido relacionado. Resalta la pestaña activa. Variantes: con y sin íconos, desbordamiento en scroll.</p>
+        <p class="page-desc">Navegación horizontal entre secciones de contenido relacionado. La pestaña activa se indica solo con el color de la línea inferior — el texto no cambia de color.</p>
       </div>
 
       <div class="comp-block">
@@ -39,8 +40,15 @@
           <h2 class="comp-block__title">Probalo</h2>
         </div>
         <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage"><div class="demo-tabs"><div class="demo-tabs__list"><span class="is-active" data-panel-text="Datos generales del campo: 120 ha, cultivo soja." onclick="pgSelectTab(this)">General</span><span data-panel-text="Historial de cosechas de los últimos 3 años." onclick="pgSelectTab(this)">Historial</span><span data-panel-text="Documentos y comprobantes asociados." onclick="pgSelectTab(this)">Documentos</span></div><p class="demo-tabs__panel">Datos generales del campo: 120 ha, cultivo soja.</p></div></div><div class="playground__controls"><span class="control-row__label" style="width:auto;">Hacé clic en una pestaña ↑</span></div>
+          <span class="playground__label">Estados de una pestaña</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-tabs">
+              <span class="fg-tab select">Botón</span>
+              <span class="fg-tab hover">Botón</span>
+              <span class="fg-tab">Botón</span>
+            </div>
+          </div>
+          <div class="playground__controls"><span class="control-row__label" style="width:auto;">select (línea azul) · hover (línea gris oscura) · default (línea gris clara)</span></div>
         </div>
       </div>
 
@@ -48,7 +56,7 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Variante</td><td class="spec-values"><code class="spec-tag">Con íconos</code><code class="spec-tag">Sin íconos</code></td><td class="spec-desc">Presencia de ícono junto al label de cada tab.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Hover</code><code class="spec-tag">Select</code></td><td class="spec-desc">Solo cambia el color de la línea inferior (3px); el texto siempre es del mismo color.</td></tr></tbody></table>
       </div>
 
       <div class="callout callout--tip">

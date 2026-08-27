@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="molecula-toast">
 <div class="app-shell">
@@ -30,7 +31,7 @@
       <div class="page-header">
         <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
         <h1 class="page-title">Toast / Sticker</h1>
-        <p class="page-desc">Notificación temporal no bloqueante. Tipos: éxito, error, advertencia e información. Aparece en la esquina de la pantalla y se auto-cierra.</p>
+        <p class="page-desc">Banner inline de advertencia o aviso, con borde y fondo del color semántico. A diferencia de un toast flotante, se ubica dentro del flujo de la página (no se auto-cierra ni se posiciona en una esquina).</p>
       </div>
 
       <div class="comp-block">
@@ -40,7 +41,13 @@
         </div>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage"><div class="demo-toast" data-tipo="exito"><i class="fa-solid fa-circle-check" style="color:var(--color-exito);"></i><span>Campo guardado con éxito</span></div></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Disparar</span><button class="control-btn" onclick="pgShowToast(this,'exito')">Éxito</button><button class="control-btn" onclick="pgShowToast(this,'error')">Error</button><button class="control-btn" onclick="pgShowToast(this,'advertencia')">Advertencia</button><button class="control-btn" onclick="pgShowToast(this,'informacion')">Información</button></div></div>
+          <div class="playground__stage" style="flex-direction:column; align-items:flex-start; gap:12px;">
+            <div class="fg-toast rojo"><i class="fa-solid fa-triangle-exclamation"></i><span>El total de los gastos supera el importe bruto de la operación.</span></div>
+            <div class="fg-toast default"><i class="fa-solid fa-circle-info"></i><span>La posición de hoy muestra cantidades en tiempo real y precio de cierre del día anterior.</span></div>
+            <div class="fg-toast verde"><i class="fa-solid fa-circle-check"></i><span>La posición de hoy muestra cantidades en tiempo real y precio de cierre del día anterior.</span></div>
+            <div class="fg-toast primario"><i class="fa-solid fa-circle-info"></i><span>La posición de hoy muestra cantidades en tiempo real y precio de cierre del día anterior.</span></div>
+            <div class="fg-toast amarillo"><i class="fa-solid fa-clock"></i><span>No es posible operar en este horario. El mercado abre el próximo día hábil.</span></div>
+          </div>
         </div>
       </div>
 
@@ -48,7 +55,7 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Éxito</code><code class="spec-tag">Error</code><code class="spec-tag">Advertencia</code><code class="spec-tag">Información</code></td><td class="spec-desc">Semántica de la notificación mostrada.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Rojo</code><code class="spec-tag">Default</code><code class="spec-tag">Verde</code><code class="spec-tag">Primario</code><code class="spec-tag">Amarillo</code></td><td class="spec-desc">Cada tipo define su propio color de fondo, borde, texto e ícono.</td></tr></tbody></table>
       </div>
 
       <div class="callout callout--tip">

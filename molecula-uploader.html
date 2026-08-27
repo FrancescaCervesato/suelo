@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="css/tokens.css" />
 <link rel="stylesheet" href="css/base.css" />
 <link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
 </head>
 <body data-page="molecula-uploader">
 <div class="app-shell">
@@ -30,7 +31,7 @@
       <div class="page-header">
         <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
         <h1 class="page-title">Uploader</h1>
-        <p class="page-desc">Área de drag & drop para carga de archivos. Muestra estado de carga, errores y lista de archivos subidos. Configurable por tipo y tamaño máximo de archivo.</p>
+        <p class="page-desc">Área de drag &amp; drop para importar un archivo. Al soltar o seleccionar un archivo, se agrega una card con su progreso de carga debajo de la zona de drop.</p>
       </div>
 
       <div class="comp-block">
@@ -39,8 +40,50 @@
           <h2 class="comp-block__title">Probalo</h2>
         </div>
         <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage demo-stage" data-estado="default"><div class="demo-uploader"><i class="fa-solid fa-cloud-arrow-up"></i><span>Arrastrá un archivo o hacé clic para subirlo</span><span style="font-size:11px; color:var(--texto-light-2);">PDF o imagen, máx. 10MB</span></div></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Simular</span><button class="control-btn" onclick="pgSimulateUpload(this)">Subir archivo</button></div></div>
+          <span class="playground__label">Estado Default</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-upl-drop">
+              <img src="img/uploader-illustration.png" alt="" />
+              <div class="fg-upl-text">
+                <p class="fg-upl-title">Para importar un archivo arrastralo hasta acá o presiona el botón.</p>
+                <p class="fg-upl-sub">Selecciona un archivo en formato .JSON</p>
+              </div>
+              <button class="fg-upl-btn">+ Seleccionar archivo</button>
+            </div>
+          </div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Estado Activo (arrastrando un archivo encima)</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-upl-drop activo">
+              <img src="img/uploader-illustration.png" alt="" />
+              <div class="fg-upl-text">
+                <p class="fg-upl-title">Para importar un archivo arrastralo hasta acá o presiona el botón.</p>
+                <p class="fg-upl-sub">Selecciona un archivo en formato .JSON</p>
+              </div>
+              <button class="fg-upl-btn">+ Seleccionar archivo</button>
+            </div>
+          </div>
+          <div class="playground__controls"><span class="control-row__label" style="width:auto;">El fondo pasa a celeste y el botón se ve atenuado mientras se arrastra el archivo.</span></div>
+        </div>
+        <div class="playground" style="margin-top:16px;">
+          <span class="playground__label">Archivo cargando</span>
+          <div class="playground__stage" style="justify-content:flex-start;">
+            <div class="fg-upl-card">
+              <div class="fg-upl-card-top">
+                <div class="fg-upl-card-file">
+                  <span class="fg-upl-card-icon"><i class="fa-solid fa-file"></i></span>
+                  <div><div class="fg-upl-card-name">customers_Q5_2024.json</div><div class="fg-upl-card-size">200 KB</div></div>
+                </div>
+                <span class="fg-upl-card-close"><i class="fa-solid fa-xmark"></i></span>
+              </div>
+              <div class="fg-progress">
+                <div class="fg-progress-track"><div class="fg-progress-fill" style="width:64%;"></div></div>
+                <div class="fg-progress-detail"><span>Importando archivos -</span><span>50%</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="playground__controls"><span class="control-row__label" style="width:auto;">Reutiliza el componente Progress Bar. El botón (x) muestra el tooltip "Quitar archivo" en hover.</span></div>
         </div>
       </div>
 
@@ -48,7 +91,7 @@
         <div class="comp-block__head">
           <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Cargando</code><code class="spec-tag">Completo</code><code class="spec-tag">Error</code></td><td class="spec-desc">Estado del proceso de carga del archivo.</td></tr></tbody></table>
+        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado de la zona</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Activo</code></td><td class="spec-desc">Activo es el estado mientras se arrastra un archivo sobre la zona.</td></tr><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Horizontal</code><code class="spec-tag">Vertical</code></td><td class="spec-desc">Misma zona de drop, proporción vertical (388px) u horizontal (1046px).</td></tr><tr><td class="spec-prop">Card de archivo</td><td class="spec-values"><code class="spec-tag">Grande</code><code class="spec-tag">Chico</code></td><td class="spec-desc">Muestra nombre, tamaño, progreso y acción de quitar el archivo.</td></tr></tbody></table>
       </div>
 
       <div class="callout callout--tip">
