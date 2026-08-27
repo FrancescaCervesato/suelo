@@ -6,13 +6,14 @@
   var NAV_ITEMS = [
     { label: "Inicio", href: "index.html", page: "inicio" },
 
+    { group: "FUNDAMENTOS" },
+    { label: "Accesibilidad", href: "accesibilidad.html", page: "accesibilidad" },
+    { label: "Iconos e ilustraciones", href: "iconos-e-ilustraciones.html", page: "iconos-e-ilustraciones" },
+
     { group: "TOKENS" },
     { label: "Colores", href: "tokens-de-color.html", page: "tokens-de-color" },
-    { label: "Tipografía y espaciado", href: "tipografia.html", page: "tipografia" },
-
-    { group: "FUNDAMENTOS" },
-    { label: "Marca", href: "marca.html", page: "marca" },
-    { label: "Accesibilidad", href: "accesibilidad.html", page: "accesibilidad" },
+    { label: "Tipografía", href: "tipografia.html", page: "tipografia" },
+    { label: "Espaciado", href: "espaciado.html", page: "espaciado" },
 
     { group: "ÁTOMOS" },
     { label: "Botón", href: "atomo-boton.html", page: "atomo-boton" },
