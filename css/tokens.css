@@ -25,8 +25,7 @@
   /* Color / Semántico */
   --color-error: #c91313;
   --color-exito: #2abb7f;
-  --color-advertencia: #f5cd47;
-  --color-notificacion: #ff7a00;
+  --color-advertencia: #65562a;
   --color-violeta: #c79cff;
 
   /* Color / Texto */
@@ -34,7 +33,7 @@
   --texto-light: #414d5f;
   --texto-light-2: #778294;
   --texto-light-3: #a6aebc;
-  --texto-invertido: #ffffff;
+  --texto-invertido: #f6f7fa;
   --texto-status-verde: #1e7350;
 
   /* Color / Bordes */
