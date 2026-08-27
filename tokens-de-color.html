@@ -19,6 +19,10 @@
   .swatch__meta { padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; }
   .swatch__name { font-size: 13px; font-weight: 700; color: var(--texto-default); }
   .swatch__hex { font-size: 12px; color: var(--texto-light-2); font-family: monospace; }
+  .section-sub { font-size: var(--body2-size); font-weight: 400; color: var(--texto-light-2); }
+  .subsection-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--texto-default); margin: var(--space-1) 0 0; }
+  .swatch-grid--sm { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+  .swatch--sm .swatch__color { height: 40px; }
 </style>
 </head>
 <body data-page="tokens-de-color">
@@ -42,60 +46,217 @@
       </div>
 
       <section class="section">
-        <h2 class="section-title">Color primario</h2>
+        <h2 class="section-title">Tokens primitivos <span class="section-sub">(tokenColores)</span></h2>
+
+        <h3 class="subsection-title">Gris</h3>
         <div class="swatch-grid">
-          <div class="swatch"><div class="swatch__color" style="background:#1d4a91;"></div><div class="swatch__meta"><span class="swatch__name">Primario / Dark</span><span class="swatch__hex">#1d4a91</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#0077e4;"></div><div class="swatch__meta"><span class="swatch__name">Primario / Default</span><span class="swatch__hex">#0077e4</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#78a8f3;"></div><div class="swatch__meta"><span class="swatch__name">Primario / Light</span><span class="swatch__hex">#78a8f3</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#FFFFFF; border-bottom:1px solid var(--borde-default);"></div><div class="swatch__meta"><span class="swatch__name">Blanco</span><span class="swatch__hex">#FFFFFF</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#F6F7FA;"></div><div class="swatch__meta"><span class="swatch__name">1</span><span class="swatch__hex">#F6F7FA</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#EAECEE;"></div><div class="swatch__meta"><span class="swatch__name">2</span><span class="swatch__hex">#EAECEE</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#DADEE3;"></div><div class="swatch__meta"><span class="swatch__name">3</span><span class="swatch__hex">#DADEE3</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#A6AEBC;"></div><div class="swatch__meta"><span class="swatch__name">4</span><span class="swatch__hex">#A6AEBC</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#778294;"></div><div class="swatch__meta"><span class="swatch__name">5</span><span class="swatch__hex">#778294</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#414D5F;"></div><div class="swatch__meta"><span class="swatch__name">6</span><span class="swatch__hex">#414D5F</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#313D4F;"></div><div class="swatch__meta"><span class="swatch__name">7</span><span class="swatch__hex">#313D4F</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#273142;"></div><div class="swatch__meta"><span class="swatch__name">8</span><span class="swatch__hex">#273142</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#222C3C;"></div><div class="swatch__meta"><span class="swatch__name">9</span><span class="swatch__hex">#222C3C</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1B2431;"></div><div class="swatch__meta"><span class="swatch__name">10</span><span class="swatch__hex">#1B2431</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#000000;"></div><div class="swatch__meta"><span class="swatch__name">Negro</span><span class="swatch__hex">#000000</span></div></div>
+        </div>
+
+        <h3 class="subsection-title">Primario</h3>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#1C2F4D;"></div><div class="swatch__meta"><span class="swatch__name">Dark 3</span><span class="swatch__hex">#1C2F4D</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1C2C44;"></div><div class="swatch__meta"><span class="swatch__name">Dark 2</span><span class="swatch__hex">#1C2C44</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1D4A91;"></div><div class="swatch__meta"><span class="swatch__name">Dark</span><span class="swatch__hex">#1D4A91</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#0077E4;"></div><div class="swatch__meta"><span class="swatch__name">Default</span><span class="swatch__hex">#0077E4</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#78A8F3;"></div><div class="swatch__meta"><span class="swatch__name">Light</span><span class="swatch__hex">#78A8F3</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#D7E6FC;"></div><div class="swatch__meta"><span class="swatch__name">Light 2</span><span class="swatch__hex">#D7E6FC</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#E4EEFD;"></div><div class="swatch__meta"><span class="swatch__name">Light 3</span><span class="swatch__hex">#E4EEFD</span></div></div>
+        </div>
+
+        <h3 class="subsection-title">Verde</h3>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#1B3036;"></div><div class="swatch__meta"><span class="swatch__name">Dark 2</span><span class="swatch__hex">#1B3036</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#164532;"></div><div class="swatch__meta"><span class="swatch__name">Dark</span><span class="swatch__hex">#164532</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1E7350;"></div><div class="swatch__meta"><span class="swatch__name">Default</span><span class="swatch__hex">#1E7350</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#50A381;"></div><div class="swatch__meta"><span class="swatch__name">Medio 2</span><span class="swatch__hex">#50A381</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#2ABB7F;"></div><div class="swatch__meta"><span class="swatch__name">Medio</span><span class="swatch__hex">#2ABB7F</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#54D9A2;"></div><div class="swatch__meta"><span class="swatch__name">Light 2</span><span class="swatch__hex">#54D9A2</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#F3F8F6;"></div><div class="swatch__meta"><span class="swatch__name">Light</span><span class="swatch__hex">#F3F8F6</span></div></div>
+        </div>
+
+        <h3 class="subsection-title">Rojo</h3>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#F5ECEC;"></div><div class="swatch__meta"><span class="swatch__name">Light</span><span class="swatch__hex">#F5ECEC</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#F1DFDF;"></div><div class="swatch__meta"><span class="swatch__name">Light 2</span><span class="swatch__hex">#F1DFDF</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#FF8080;"></div><div class="swatch__meta"><span class="swatch__name">Medio</span><span class="swatch__hex">#FF8080</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#E07171;"></div><div class="swatch__meta"><span class="swatch__name">Medio 2</span><span class="swatch__hex">#E07171</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#C91313;"></div><div class="swatch__meta"><span class="swatch__name">Base</span><span class="swatch__hex">#C91313</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#302328;"></div><div class="swatch__meta"><span class="swatch__name">Dark 2</span><span class="swatch__hex">#302328</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#21191C;"></div><div class="swatch__meta"><span class="swatch__name">Dark</span><span class="swatch__hex">#21191C</span></div></div>
+        </div>
+
+        <h3 class="subsection-title">Amarillo</h3>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#FDF5DB;"></div><div class="swatch__meta"><span class="swatch__name">Light</span><span class="swatch__hex">#FDF5DB</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#FFECB2;"></div><div class="swatch__meta"><span class="swatch__name">Light 2</span><span class="swatch__hex">#FFECB2</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#FFC107;"></div><div class="swatch__meta"><span class="swatch__name">Default</span><span class="swatch__hex">#FFC107</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#65562A;"></div><div class="swatch__meta"><span class="swatch__name">Dark</span><span class="swatch__hex">#65562A</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#2B2A27;"></div><div class="swatch__meta"><span class="swatch__name">Dark 2</span><span class="swatch__hex">#2B2A27</span></div></div>
+        </div>
+
+        <h3 class="subsection-title">Colores categóricos <span class="section-sub">(usados en instrumento financiero / gráficos)</span></h3>
+        <div class="swatch-grid swatch-grid--sm">
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#97EFC8;"></div><div class="swatch__meta"><span class="swatch__name">Verde2 · Default</span><span class="swatch__hex">#97EFC8</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#0ACE79;"></div><div class="swatch__meta"><span class="swatch__name">Verde2 · Dark</span><span class="swatch__hex">#0ACE79</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#F382BC;"></div><div class="swatch__meta"><span class="swatch__name">Magenta · Default</span><span class="swatch__hex">#F382BC</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#EB3693;"></div><div class="swatch__meta"><span class="swatch__name">Magenta · Dark</span><span class="swatch__hex">#EB3693</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#F286FE;"></div><div class="swatch__meta"><span class="swatch__name">Rosa · Default</span><span class="swatch__hex">#F286FE</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#D602EE;"></div><div class="swatch__meta"><span class="swatch__name">Rosa · Dark</span><span class="swatch__hex">#D602EE</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#C671D4;"></div><div class="swatch__meta"><span class="swatch__name">Rosa-Purpura · Default</span><span class="swatch__hex">#C671D4</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#9C27B0;"></div><div class="swatch__meta"><span class="swatch__name">Rosa-Purpura · Dark</span><span class="swatch__hex">#9C27B0</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#D5B8FF;"></div><div class="swatch__meta"><span class="swatch__name">Purpura · Default</span><span class="swatch__hex">#D5B8FF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#AB79F0;"></div><div class="swatch__meta"><span class="swatch__name">Purpura · Dark</span><span class="swatch__hex">#AB79F0</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#A365EF;"></div><div class="swatch__meta"><span class="swatch__name">Purpura-Azulado · Default</span><span class="swatch__hex">#A365EF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#6200EE;"></div><div class="swatch__meta"><span class="swatch__name">Purpura-Azulado · Dark</span><span class="swatch__hex">#6200EE</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#B8A1FF;"></div><div class="swatch__meta"><span class="swatch__name">Violeta · Default</span><span class="swatch__hex">#B8A1FF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#794DFE;"></div><div class="swatch__meta"><span class="swatch__name">Violeta · Dark</span><span class="swatch__hex">#794DFE</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#7D52FF;"></div><div class="swatch__meta"><span class="swatch__name">Azul-Violeta · Default</span><span class="swatch__hex">#7D52FF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#3B00ED;"></div><div class="swatch__meta"><span class="swatch__name">Azul-Violeta · Dark</span><span class="swatch__hex">#3B00ED</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#79ACFF;"></div><div class="swatch__meta"><span class="swatch__name">Azul · Default</span><span class="swatch__hex">#79ACFF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#4285F4;"></div><div class="swatch__meta"><span class="swatch__name">Azul · Dark</span><span class="swatch__hex">#4285F4</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#B0EAFF;"></div><div class="swatch__meta"><span class="swatch__name">Celeste · Default</span><span class="swatch__hex">#B0EAFF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#00BBFF;"></div><div class="swatch__meta"><span class="swatch__name">Celeste · Dark</span><span class="swatch__hex">#00BBFF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#73CCC3;"></div><div class="swatch__meta"><span class="swatch__name">Celeste-Verde · Default</span><span class="swatch__hex">#73CCC3</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#26A69A;"></div><div class="swatch__meta"><span class="swatch__name">Celeste-Verde · Dark</span><span class="swatch__hex">#26A69A</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#E7EDA9;"></div><div class="swatch__meta"><span class="swatch__name">Verde-Amarillo · Default</span><span class="swatch__hex">#E7EDA9</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#C0CA33;"></div><div class="swatch__meta"><span class="swatch__name">Verde-Amarillo · Dark</span><span class="swatch__hex">#C0CA33</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#FDD8A3;"></div><div class="swatch__meta"><span class="swatch__name">Amarillo-Naranja · Default</span><span class="swatch__hex">#FDD8A3</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#FF9800;"></div><div class="swatch__meta"><span class="swatch__name">Amarillo-Naranja · Dark</span><span class="swatch__hex">#FF9800</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#EBB592;"></div><div class="swatch__meta"><span class="swatch__name">Naranja · Default</span><span class="swatch__hex">#EBB592</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#EE6002;"></div><div class="swatch__meta"><span class="swatch__name">Naranja · Dark</span><span class="swatch__hex">#EE6002</span></div></div>
         </div>
       </section>
 
       <section class="section">
-        <h2 class="section-title">Escala de grises</h2>
-        <div class="swatch-grid">
-          <div class="swatch"><div class="swatch__color" style="background:#1b2431;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 10</span><span class="swatch__hex">#1b2431</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#222c3c;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 9</span><span class="swatch__hex">#222c3c</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#273142;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 8</span><span class="swatch__hex">#273142</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#313d4f;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 7</span><span class="swatch__hex">#313d4f</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#414d5f;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 6</span><span class="swatch__hex">#414d5f</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#778294;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 5</span><span class="swatch__hex">#778294</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#a6aebc;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 4</span><span class="swatch__hex">#a6aebc</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#dadee3;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 3</span><span class="swatch__hex">#dadee3</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#eaecee;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 2</span><span class="swatch__hex">#eaecee</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#f6f7fa;"></div><div class="swatch__meta"><span class="swatch__name">Gris / 1</span><span class="swatch__hex">#f6f7fa</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#ffffff; border-bottom:1px solid var(--borde-default);"></div><div class="swatch__meta"><span class="swatch__name">Blanco</span><span class="swatch__hex">#ffffff</span></div></div>
-        </div>
-      </section>
+        <h2 class="section-title">Tokens semánticos <span class="section-sub">(modoColor — valores modo claro)</span></h2>
 
-      <section class="section">
-        <h2 class="section-title">Colores semánticos / de estado</h2>
+        <h3 class="subsection-title">Colores de estado</h3>
         <div class="swatch-grid">
-          <div class="swatch"><div class="swatch__color" style="background:#c91313;"></div><div class="swatch__meta"><span class="swatch__name">Error</span><span class="swatch__hex">#c91313</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#2abb7f;"></div><div class="swatch__meta"><span class="swatch__name">Éxito</span><span class="swatch__hex">#2abb7f</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#65562a;"></div><div class="swatch__meta"><span class="swatch__name">Advertencia</span><span class="swatch__hex">#65562a</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#c79cff;"></div><div class="swatch__meta"><span class="swatch__name">Violeta SD</span><span class="swatch__hex">#c79cff</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#C91313;"></div><div class="swatch__meta"><span class="swatch__name">Rojo · Default</span><span class="swatch__hex">#C91313</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#164532;"></div><div class="swatch__meta"><span class="swatch__name">Verde · Sobrebg Verde</span><span class="swatch__hex">#164532</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1E7350;"></div><div class="swatch__meta"><span class="swatch__name">Verde · Sobrebg Default</span><span class="swatch__hex">#1E7350</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#65562A;"></div><div class="swatch__meta"><span class="swatch__name">Amarillo · Sobrebg Amarillo</span><span class="swatch__hex">#65562A</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#65562A;"></div><div class="swatch__meta"><span class="swatch__name">Amarillo · Sobrebg Default</span><span class="swatch__hex">#65562A</span></div></div>
         </div>
-      </section>
 
-      <section class="section">
-        <h2 class="section-title">Texto</h2>
+        <h3 class="subsection-title">Texto</h3>
         <div class="swatch-grid">
-          <div class="swatch"><div class="swatch__color" style="background:#1b2431;"></div><div class="swatch__meta"><span class="swatch__name">Texto / Default</span><span class="swatch__hex">#1b2431</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#414d5f;"></div><div class="swatch__meta"><span class="swatch__name">Texto / Light</span><span class="swatch__hex">#414d5f</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#778294;"></div><div class="swatch__meta"><span class="swatch__name">Texto / Light-2</span><span class="swatch__hex">#778294</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#a6aebc;"></div><div class="swatch__meta"><span class="swatch__name">Texto / Light-3</span><span class="swatch__hex">#a6aebc</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#1e7350;"></div><div class="swatch__meta"><span class="swatch__name">Texto / Status verde</span><span class="swatch__hex">#1e7350</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1B2431;"></div><div class="swatch__meta"><span class="swatch__name">Default</span><span class="swatch__hex">#1B2431</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#414D5F;"></div><div class="swatch__meta"><span class="swatch__name">Light</span><span class="swatch__hex">#414D5F</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#778294;"></div><div class="swatch__meta"><span class="swatch__name">Light 2</span><span class="swatch__hex">#778294</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#A6AEBC;"></div><div class="swatch__meta"><span class="swatch__name">Light 3</span><span class="swatch__hex">#A6AEBC</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#F6F7FA; border-bottom:1px solid var(--borde-default);"></div><div class="swatch__meta"><span class="swatch__name">Default Invertido</span><span class="swatch__hex">#F6F7FA</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#78A8F3;"></div><div class="swatch__meta"><span class="swatch__name">Color</span><span class="swatch__hex">#78A8F3</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#0077E4;"></div><div class="swatch__meta"><span class="swatch__name">Color Primario</span><span class="swatch__hex">#0077E4</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1D4A91;"></div><div class="swatch__meta"><span class="swatch__name">Color Invertido</span><span class="swatch__hex">#1D4A91</span></div></div>
         </div>
-      </section>
 
-      <section class="section">
-        <h2 class="section-title">Bordes y elevación</h2>
+        <h3 class="subsection-title">Texto / Link</h3>
         <div class="swatch-grid">
-          <div class="swatch"><div class="swatch__color" style="background:#dadee3;"></div><div class="swatch__meta"><span class="swatch__name">Borde / Default</span><span class="swatch__hex">#dadee3</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#78a8f3;"></div><div class="swatch__meta"><span class="swatch__name">Borde / Primario</span><span class="swatch__hex">#78a8f3</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#e4eefd;"></div><div class="swatch__meta"><span class="swatch__name">Elevación / Primario light</span><span class="swatch__hex">#e4eefd</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#d7e6fc;"></div><div class="swatch__meta"><span class="swatch__name">Elevación / Primario light-2</span><span class="swatch__hex">#d7e6fc</span></div></div>
-          <div class="swatch"><div class="swatch__color" style="background:#f3f8f6;"></div><div class="swatch__meta"><span class="swatch__name">Elevación / Verde bg</span><span class="swatch__hex">#f3f8f6</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#0077E4;"></div><div class="swatch__meta"><span class="swatch__name">Default</span><span class="swatch__hex">#0077E4</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#D7E6FC;"></div><div class="swatch__meta"><span class="swatch__name">Tooltip</span><span class="swatch__hex">#D7E6FC</span></div></div>
+        </div>
+
+        <h3 class="subsection-title">Bordes</h3>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#DADEE3;"></div><div class="swatch__meta"><span class="swatch__name">Default</span><span class="swatch__hex">#DADEE3</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#E07171;"></div><div class="swatch__meta"><span class="swatch__name">Rojo</span><span class="swatch__hex">#E07171</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#50A381;"></div><div class="swatch__meta"><span class="swatch__name">Verde</span><span class="swatch__hex">#50A381</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#FFC107;"></div><div class="swatch__meta"><span class="swatch__name">Amarillo</span><span class="swatch__hex">#FFC107</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#78A8F3;"></div><div class="swatch__meta"><span class="swatch__name">Primario</span><span class="swatch__hex">#78A8F3</span></div></div>
+        </div>
+
+        <h3 class="subsection-title">Elevación</h3>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#FFFFFF; border-bottom:1px solid var(--borde-default);"></div><div class="swatch__meta"><span class="swatch__name">Default</span><span class="swatch__hex">#FFFFFF</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#F6F7FA;"></div><div class="swatch__meta"><span class="swatch__name">1</span><span class="swatch__hex">#F6F7FA</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#EAECEE;"></div><div class="swatch__meta"><span class="swatch__name">2</span><span class="swatch__hex">#EAECEE</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#DADEE3;"></div><div class="swatch__meta"><span class="swatch__name">3</span><span class="swatch__hex">#DADEE3</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#A6AEBC;"></div><div class="swatch__meta"><span class="swatch__name">4</span><span class="swatch__hex">#A6AEBC</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#778294;"></div><div class="swatch__meta"><span class="swatch__name">5</span><span class="swatch__hex">#778294</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#0077E4;"></div><div class="swatch__meta"><span class="swatch__name">Primario</span><span class="swatch__hex">#0077E4</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#78A8F3;"></div><div class="swatch__meta"><span class="swatch__name">Color Primario</span><span class="swatch__hex">#78A8F3</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1D4A91;"></div><div class="swatch__meta"><span class="swatch__name">Color Primario Invertido</span><span class="swatch__hex">#1D4A91</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#E4EEFD;"></div><div class="swatch__meta"><span class="swatch__name">Color Primario Light</span><span class="swatch__hex">#E4EEFD</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#D7E6FC;"></div><div class="swatch__meta"><span class="swatch__name">Color Primario Light 2</span><span class="swatch__hex">#D7E6FC</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1C2F4D;"></div><div class="swatch__meta"><span class="swatch__name">Color Primario Dark 2</span><span class="swatch__hex">#1C2F4D</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1C2C44;"></div><div class="swatch__meta"><span class="swatch__name">Color Primario Dark</span><span class="swatch__hex">#1C2C44</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#414D5F;"></div><div class="swatch__meta"><span class="swatch__name">Tooltip</span><span class="swatch__hex">#414D5F</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1B2431;"></div><div class="swatch__meta"><span class="swatch__name">Shadow</span><span class="swatch__hex">#1B2431</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#C0CA33;"></div><div class="swatch__meta"><span class="swatch__name">Acento</span><span class="swatch__hex">#C0CA33</span></div></div>
+        </div>
+
+        <h3 class="subsection-title">Superficies por estado</h3>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#F5ECEC;"></div><div class="swatch__meta"><span class="swatch__name">Rojo · Background</span><span class="swatch__hex">#F5ECEC</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#F1DFDF;"></div><div class="swatch__meta"><span class="swatch__name">Rojo · Press</span><span class="swatch__hex">#F1DFDF</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#C91313;"></div><div class="swatch__meta"><span class="swatch__name">Rojo · Base</span><span class="swatch__hex">#C91313</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1E7350;"></div><div class="swatch__meta"><span class="swatch__name">Verde · Base</span><span class="swatch__hex">#1E7350</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#F3F8F6;"></div><div class="swatch__meta"><span class="swatch__name">Verde · Background</span><span class="swatch__hex">#F3F8F6</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1E7350;"></div><div class="swatch__meta"><span class="swatch__name">Verde · Boton Compra</span><span class="swatch__hex">#1E7350</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#164532;"></div><div class="swatch__meta"><span class="swatch__name">Verde · Boton Compra Hover</span><span class="swatch__hex">#164532</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#1B3036;"></div><div class="swatch__meta"><span class="swatch__name">Verde · Boton Compra Press</span><span class="swatch__hex">#1B3036</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#FFC107;"></div><div class="swatch__meta"><span class="swatch__name">Amarillo · Base</span><span class="swatch__hex">#FFC107</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#FDF5DB;"></div><div class="swatch__meta"><span class="swatch__name">Amarillo · Background</span><span class="swatch__hex">#FDF5DB</span></div></div>
+        </div>
+
+        <h3 class="subsection-title">Categorías de instrumento financiero</h3>
+        <div class="swatch-grid swatch-grid--sm">
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#97EFC8;"></div><div class="swatch__meta"><span class="swatch__name">Moneda</span><span class="swatch__hex">#97EFC8</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#79ACFF;"></div><div class="swatch__meta"><span class="swatch__name">Plazo Fijo</span><span class="swatch__hex">#79ACFF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#E7EDA9;"></div><div class="swatch__meta"><span class="swatch__name">Caucion</span><span class="swatch__hex">#E7EDA9</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#F286FE;"></div><div class="swatch__meta"><span class="swatch__name">Titulos Publicos</span><span class="swatch__hex">#F286FE</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#C671D4;"></div><div class="swatch__meta"><span class="swatch__name">Obligacion Negociable</span><span class="swatch__hex">#C671D4</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#F382BC;"></div><div class="swatch__meta"><span class="swatch__name">Cheque Pago Diferido</span><span class="swatch__hex">#F382BC</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#EBB592;"></div><div class="swatch__meta"><span class="swatch__name">Pagare</span><span class="swatch__hex">#EBB592</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#A2C2D1;"></div><div class="swatch__meta"><span class="swatch__name">Deuda Privada</span><span class="swatch__hex">#A2C2D1</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#C8E6C9;"></div><div class="swatch__meta"><span class="swatch__name">Aportes SGR</span><span class="swatch__hex">#C8E6C9</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#A365EF;"></div><div class="swatch__meta"><span class="swatch__name">Accion</span><span class="swatch__hex">#A365EF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#B8A1FF;"></div><div class="swatch__meta"><span class="swatch__name">Cedear</span><span class="swatch__hex">#B8A1FF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#B0EAFF;"></div><div class="swatch__meta"><span class="swatch__name">FCI</span><span class="swatch__hex">#B0EAFF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#73CCC3;"></div><div class="swatch__meta"><span class="swatch__name">Fideicomiso</span><span class="swatch__hex">#73CCC3</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#B2DFDB;"></div><div class="swatch__meta"><span class="swatch__name">Capital Privado</span><span class="swatch__hex">#B2DFDB</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#B3E5FC;"></div><div class="swatch__meta"><span class="swatch__name">ETFs</span><span class="swatch__hex">#B3E5FC</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#D5B8FF;"></div><div class="swatch__meta"><span class="swatch__name">Futuro</span><span class="swatch__hex">#D5B8FF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#7D52FF;"></div><div class="swatch__meta"><span class="swatch__name">Opciones</span><span class="swatch__hex">#7D52FF</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#C5CAE9;"></div><div class="swatch__meta"><span class="swatch__name">Warrant</span><span class="swatch__hex">#C5CAE9</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#FFCCBC;"></div><div class="swatch__meta"><span class="swatch__name">Bienes Raices</span><span class="swatch__hex">#FFCCBC</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#FFECB2;"></div><div class="swatch__meta"><span class="swatch__name">Bienes Moviles</span><span class="swatch__hex">#FFECB2</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#D7CCC8;"></div><div class="swatch__meta"><span class="swatch__name">Arte Coleccion</span><span class="swatch__hex">#D7CCC8</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#FDD8A3;"></div><div class="swatch__meta"><span class="swatch__name">Metales Preciosos</span><span class="swatch__hex">#FDD8A3</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#DCEDC8;"></div><div class="swatch__meta"><span class="swatch__name">Commodities Agricolas</span><span class="swatch__hex">#DCEDC8</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#F8BBD0;"></div><div class="swatch__meta"><span class="swatch__name">Criptoactivos</span><span class="swatch__hex">#F8BBD0</span></div></div>
+          <div class="swatch swatch--sm"><div class="swatch__color" style="background:#CFD8DC;"></div><div class="swatch__meta"><span class="swatch__name">Seguros</span><span class="swatch__hex">#CFD8DC</span></div></div>
+        </div>
+
+        <h3 class="subsection-title">Producto agropecuario</h3>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#6C4B00;"></div><div class="swatch__meta"><span class="swatch__name">Trigo</span><span class="swatch__hex">#6C4B00</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#996F05;"></div><div class="swatch__meta"><span class="swatch__name">Girasol</span><span class="swatch__hex">#996F05</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#AE5D11;"></div><div class="swatch__meta"><span class="swatch__name">Maiz</span><span class="swatch__hex">#AE5D11</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#406D2A;"></div><div class="swatch__meta"><span class="swatch__name">Soja</span><span class="swatch__hex">#406D2A</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#BD421C;"></div><div class="swatch__meta"><span class="swatch__name">Sorgo</span><span class="swatch__hex">#BD421C</span></div></div>
+        </div>
+
+        <h3 class="subsection-title">Marca, gráficos y otros</h3>
+        <div class="swatch-grid">
+          <div class="swatch"><div class="swatch__color" style="background:#1D1482;"></div><div class="swatch__meta"><span class="swatch__name">Brand · Primary</span><span class="swatch__hex">#1D1482</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#FFFFFF; border-bottom:1px solid var(--borde-default);"></div><div class="swatch__meta"><span class="swatch__name">Brand · Primary Invertido</span><span class="swatch__hex">#FFFFFF</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#9747FF;"></div><div class="swatch__meta"><span class="swatch__name">Violeta SD</span><span class="swatch__hex">#9747FF</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#414D5F;"></div><div class="swatch__meta"><span class="swatch__name">Gráfico · Gris</span><span class="swatch__hex">#414D5F</span></div></div>
+          <div class="swatch"><div class="swatch__color" style="background:#778294;"></div><div class="swatch__meta"><span class="swatch__name">Gráfico · Gris 2</span><span class="swatch__hex">#778294</span></div></div>
         </div>
       </section>
 
@@ -103,7 +264,7 @@
         <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
         <div>
           <div class="callout__title">Tip de uso</div>
-          <div class="callout__body">Para texto, usá siempre los tokens de la sección "Texto" en vez de tomar un gris de la escala general — así el contraste queda garantizado en ambos modos.</div>
+          <div class="callout__body">Para texto, usá siempre los tokens de la sección "Texto" en vez de tomar un gris de la escala general — así el contraste queda garantizado en ambos modos. Los valores de "Tokens semánticos" corresponden al modo claro (Light); en Figma cada uno tiene también un valor equivalente para modo oscuro.</div>
         </div>
       </div>
     </div>
