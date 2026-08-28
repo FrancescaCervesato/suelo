@@ -44,12 +44,18 @@
     background: var(--gradient-marca); -webkit-background-clip: text; background-clip: text; color: transparent;
     margin-left: 3px;
   }
-  .hero-intro { display: flex; flex-direction: column; gap: var(--space-1); padding: 0 var(--space-05); }
-  .hero-actions { display: flex; gap: var(--space-1); flex-wrap: wrap; }
-  .hero-credit { color: var(--texto-light-2); font-size: var(--caption-size); }
+  .hero-intro { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-05) var(--space-05) 0; max-width: 600px; }
+  .hero-intro__lede { font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.35; letter-spacing: -0.01em; color: var(--texto-default); margin: 0; }
+  .hero-intro__lede em { font-style: normal; background: var(--gradient-marca); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero-desc { font-size: var(--body1-size); line-height: var(--body1-lh); color: var(--texto-light); margin: 0; }
+  .hero-credit { display: flex; align-items: center; gap: var(--space-05); margin-top: 2px; }
+  .hero-credit__rule { width: 28px; height: 1px; background: var(--gris-4); flex-shrink: 0; }
+  .hero-credit__text { color: var(--gris-5); font-size: var(--caption-size); }
+  .hero-credit__text strong { color: var(--texto-light); font-weight: 600; }
   @media (max-width: 640px) {
     .hero-cover__wordmark { font-size: 56px; }
     .hero-cover__subtitle { font-size: 13px; letter-spacing: 0.3em; }
+    .hero-intro__lede { font-size: 21px; }
   }
 </style>
 </head>
@@ -71,21 +77,13 @@
       </section>
 
       <section class="hero-intro">
-        <p class="hero-desc">Sistema de diseño que unifica la experiencia visual y funcional de los productos digitales de SUELO. Organizado con Atomic Design para que diseño y desarrollo compartan un mismo lenguaje: tokens, átomos, moléculas y organismos.</p>
-        <div class="hero-actions">
-          <a class="btn btn--primario" href="tokens-de-color.html"><i class="fa-solid fa-palette"></i> Explorar tokens</a>
-          <a class="btn btn--secundario" href="https://github.com/FrancescaCervesato/suelo-sistema-diseno" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Ver repositorio</a>
+        <p class="hero-intro__lede">Un mismo idioma para <em>diseño y desarrollo</em>.</p>
+        <p class="hero-desc">suelo documenta cada token, átomo, molécula y organismo de los productos de SUELO — con sus reglas de uso — para que cualquier persona del equipo construya interfaces consistentes sin tener que adivinar.</p>
+        <div class="hero-credit">
+          <span class="hero-credit__rule"></span>
+          <span class="hero-credit__text">Diseñado por <strong>Milagros, Florencia y Francesca</strong> · Figma "Sistema de diseño 1.0"</span>
         </div>
-        <p class="hero-credit">Diseñado por Milagros, Florencia y Francesca · basado en el archivo Figma "Sistema de diseño 1.0"</p>
       </section>
-
-      <div class="callout callout--tip">
-        <span class="icon-badge icon-badge--sm icon-badge--tip"><i class="fa-solid fa-lightbulb"></i></span>
-        <div>
-          <div class="callout__title">Cómo navegar este sitio</div>
-          <div class="callout__body">Cada página de componente incluye un ejemplo interactivo y sus propiedades documentadas — con recomendaciones de cuándo sí y cuándo no aplicarlo. Empezá por <a href="tokens-de-color.html" style="color:var(--texto-tip); text-decoration:underline;">Tokens</a> si vas a definir estilos, o por <a href="atomo-boton.html" style="color:var(--texto-tip); text-decoration:underline;">Átomos</a> si ya estás armando pantallas.</div>
-        </div>
-      </div>
 
       <section class="section">
         <h2 class="section-title">Fundamentos</h2>
