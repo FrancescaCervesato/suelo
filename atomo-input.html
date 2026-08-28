@@ -28,59 +28,55 @@
         <span class="current">Input</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--atomo"><span class="icon-badge icon-badge--sm page-badge--atomo" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-atom"></i></span> Átomo</span>
-        <h1 class="page-title">Input</h1>
-        <p class="page-desc">Campo de texto para ingreso de datos. Variantes: default, focus, error, deshabilitado. Puede incluir label, hint, icono izquierdo/derecho y mensaje de error.</p>
+      <div class="head-band head-band--atomo">
+        <span class="head-badge head-badge--atomo"><i class="fa-solid fa-atom"></i> Átomo</span>
+        <h1 class="head-title">Input</h1>
+        <p class="head-desc">Campo de texto para ingreso de datos. Variantes: default, focus, error, deshabilitado. Puede incluir label, hint, icono izquierdo/derecho y mensaje de error.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Captura un dato de texto libre ingresado por la persona, con retroalimentación clara sobre su validez mientras completa el formulario.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Mostrar el error apenas se pueda validar el campo, no recién al enviar todo el formulario.</li>
-              <li>Explicar en el mensaje de error cómo resolver el problema, no solo que existe.</li>
-              <li>Usar el estado "no editable" para datos de solo lectura dentro de un formulario editable.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Usar el placeholder como reemplazo del label — desaparece apenas la persona empieza a escribir.</li>
-              <li>Dejar un campo en estado de error sin ningún mensaje que lo acompañe.</li>
-              <li>Usarlo para elegir entre opciones de una lista cerrada — ahí corresponde un Select.</li>
-            </ul>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Estado por defecto</p>
+        <div class="preview-box"><div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box">nombre@suelo.com</div></div></div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Grilla de variantes</h2>
+        <p class="sec-sub">Los estados documentados</p>
+        <div class="variant-family">
+          <span class="variant-family__label">Estado</span>
+          <div class="variant-row">
+            <div class="variant-item"><div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box">nombre@suelo.com</div></div><span class="variant-item__cap">Default</span></div>
+            <div class="variant-item"><div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box activo">nombre@suelo.com</div></div><span class="variant-item__cap">Focus</span></div>
+            <div class="variant-item"><div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box noeditable">nombre@suelo.com</div></div><span class="variant-item__cap">No editable</span></div>
+            <div class="variant-item"><div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box error">nombre@suelo.com</div><span class="fg-field-hint-error">Ingresá un correo válido.</span></div><span class="variant-item__cap">Error</span></div>
           </div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-i-cursor"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mostrar el error apenas se pueda validar el campo, no recién al enviar todo el formulario.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Explicar en el mensaje de error cómo resolver el problema, no solo que existe.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar el estado "no editable" para datos de solo lectura dentro de un formulario editable.</p></div>
         </div>
-        <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage" style="justify-content:flex-start; flex-wrap:wrap;">
-            <div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box">nombre@suelo.com</div></div>
-            <div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box activo">nombre@suelo.com</div></div>
-            <div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box noeditable">nombre@suelo.com</div></div>
-            <div class="fg-field"><label>Correo electrónico<span class="fg-req">*</span></label><div class="fg-field-box error">nombre@suelo.com</div><span class="fg-field-hint-error">Ingresá un correo válido.</span></div>
-          </div>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usar el placeholder como reemplazo del label — desaparece apenas la persona empieza a escribir.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Dejar un campo en estado de error sin ningún mensaje que lo acompañe.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo para elegir entre opciones de una lista cerrada — ahí corresponde un Select.</p></div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--atomo">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--atomo">Propiedad</span><span class="anatomy-row__value">Variante</span><span class="anatomy-row__desc">Valores: Default, Focus, Error, Deshabilitado — Estado visual del campo.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--atomo">Propiedad</span><span class="anatomy-row__value">Contenido</span><span class="anatomy-row__desc">Valores: Label, Hint, Ícono, Mensaje de error — Elementos opcionales que puede incluir.</span></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Variante</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Focus</code><code class="spec-tag">Error</code><code class="spec-tag">Deshabilitado</code></td><td class="spec-desc">Estado visual del campo.</td></tr><tr><td class="spec-prop">Contenido</td><td class="spec-values"><code class="spec-tag">Label</code><code class="spec-tag">Hint</code><code class="spec-tag">Ícono</code><code class="spec-tag">Mensaje de error</code></td><td class="spec-desc">Elementos opcionales que puede incluir.</td></tr></tbody></table>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

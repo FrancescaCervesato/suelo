@@ -28,65 +28,51 @@
         <span class="current">Paginador</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
-        <h1 class="page-title">Paginador</h1>
-        <p class="page-desc">Control de navegación entre páginas de una grilla o tabla. Combina un selector de cantidad por página, el conteo de resultados y un campo de página actual sobre el total.</p>
+      <div class="head-band head-band--molecula">
+        <span class="head-badge head-badge--molecula"><i class="fa-solid fa-diagram-project"></i> Molécula</span>
+        <h1 class="head-title">Paginador</h1>
+        <p class="head-desc">Control de navegación entre páginas de una grilla o tabla. Combina un selector de cantidad por página, el conteo de resultados y un campo de página actual sobre el total.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Divide un conjunto grande de resultados en páginas manejables y permite moverse entre ellas sin cargar todo de una vez.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Mostrar siempre cuántos ítems y páginas hay en total, no solo la página actual.</li>
-              <li>Permitir cambiar la cantidad de resultados por página cuando el contenido lo justifique.</li>
-              <li>Deshabilitar visualmente la flecha que no tiene a dónde ir (anterior en la página 1).</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Usarlo cuando el scroll infinito resuelve mejor el caso (por ejemplo, un feed).</li>
-              <li>Ocultar el total de páginas o resultados — la persona necesita ese contexto para orientarse.</li>
-              <li>Combinarlo con carga automática al hacer scroll — elegí un solo patrón por vista.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-ellipsis"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
-        </div>
-        <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage" style="justify-content:flex-start;">
-            <div class="fg-pag">
-              <div class="fg-pag-size"><span>10</span><i class="fa-solid fa-caret-down"></i></div>
-              <div class="fg-pag-info">Página 1 de 1 (1 ítems)</div>
-              <div class="fg-pag-nav">
-                <button class="fg-pag-navbtn disabled"><i class="fa-solid fa-chevron-left"></i></button>
-                <div class="fg-pag-input">1</div>
-                <span class="fg-pag-de">de</span><span class="fg-pag-total">1</span>
-                <button class="fg-pag-navbtn"><i class="fa-solid fa-chevron-right"></i></button>
-              </div>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Ejemplo interactivo</p>
+        <div class="preview-box">
+          <div class="fg-pag">
+            <div class="fg-pag-size"><span>10</span><i class="fa-solid fa-caret-down"></i></div>
+            <div class="fg-pag-info">Página 1 de 1 (1 ítems)</div>
+            <div class="fg-pag-nav">
+              <button class="fg-pag-navbtn disabled"><i class="fa-solid fa-chevron-left"></i></button>
+              <div class="fg-pag-input">1</div>
+              <span class="fg-pag-de">de</span><span class="fg-pag-total">1</span>
+              <button class="fg-pag-navbtn"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mostrar siempre cuántos ítems y páginas hay en total, no solo la página actual.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Permitir cambiar la cantidad de resultados por página cuando el contenido lo justifique.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Deshabilitar visualmente la flecha que no tiene a dónde ir (anterior en la página 1).</p></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Elementos</td><td class="spec-values"><code class="spec-tag">Cantidad por página</code><code class="spec-tag">Conteo de ítems</code><code class="spec-tag">Flecha anterior</code><code class="spec-tag">Página actual (input)</code><code class="spec-tag">Total de páginas</code><code class="spec-tag">Flecha siguiente</code></td><td class="spec-desc">La flecha anterior se muestra deshabilitada (gris) cuando ya se está en la primera página.</td></tr></tbody></table>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo cuando el scroll infinito resuelve mejor el caso (por ejemplo, un feed).</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Ocultar el total de páginas o resultados — la persona necesita ese contexto para orientarse.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Combinarlo con carga automática al hacer scroll — elegí un solo patrón por vista.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--molecula">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Elementos</span><span class="anatomy-row__desc">Valores: Cantidad por página, Conteo de ítems, Flecha anterior, Página actual (input), Total de páginas, Flecha siguiente — La flecha anterior se muestra deshabilitada (gris) cuando ya se está en la primera página.</span></div>
+        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

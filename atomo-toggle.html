@@ -28,61 +28,54 @@
         <span class="current">Toggle</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--atomo"><span class="icon-badge icon-badge--sm page-badge--atomo" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-atom"></i></span> Átomo</span>
-        <h1 class="page-title">Toggle</h1>
-        <p class="page-desc">Interruptor binario ON/OFF. Usado para activar/desactivar configuraciones o filtros de manera inmediata. Estados: activo, inactivo y deshabilitado.</p>
+      <div class="head-band head-band--atomo">
+        <span class="head-badge head-badge--atomo"><i class="fa-solid fa-atom"></i> Átomo</span>
+        <h1 class="head-title">Toggle</h1>
+        <p class="head-desc">Interruptor binario ON/OFF. Usado para activar/desactivar configuraciones o filtros de manera inmediata. Estados: activo, inactivo y deshabilitado.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Activa o desactiva una configuración de forma inmediata, sin necesidad de confirmar con un botón adicional.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Aplicar el cambio al instante, apenas se togglea.</li>
-              <li>Usarlo para una única opción binaria (activado/desactivado).</li>
-              <li>Dar feedback inmediato del nuevo estado (color, posición del knob).</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Sumar un botón de "Guardar" después de tocarlo — rompe la expectativa de cambio inmediato.</li>
-              <li>Usarlo si la acción necesita confirmación previa — ahí conviene un Modal de confirmación.</li>
-              <li>Usarlo para selección múltiple entre varias opciones — para eso está el Checkbox.</li>
-            </ul>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Estado off</p>
+        <div class="preview-box"><button class="fg-toggle fg-toggle-20 fg-toggle-off"><span class="fg-knob"></span></button></div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Grilla de variantes</h2>
+        <p class="sec-sub">Los 4 estados documentados</p>
+        <div class="variant-family">
+          <span class="variant-family__label">Estado</span>
+          <div class="variant-row">
+            <div class="variant-item"><button class="fg-toggle fg-toggle-20 fg-toggle-off"><span class="fg-knob"></span></button><span class="variant-item__cap">off</span></div>
+            <div class="variant-item"><button class="fg-toggle fg-toggle-20 fg-toggle-on"><span class="fg-knob"></span></button><span class="variant-item__cap">on</span></div>
+            <div class="variant-item"><button class="fg-toggle fg-toggle-20 fg-toggle-off-disabled" disabled><span class="fg-knob"></span></button><span class="variant-item__cap">off deshab.</span></div>
+            <div class="variant-item"><button class="fg-toggle fg-toggle-20 fg-toggle-on-disabled" disabled><span class="fg-knob"></span></button><span class="variant-item__cap">on deshab.</span></div>
           </div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-toggle-on"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Aplicar el cambio al instante, apenas se togglea.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usarlo para una única opción binaria (activado/desactivado).</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Dar feedback inmediato del nuevo estado (color, posición del knob).</p></div>
         </div>
-        <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage" style="flex-direction:column; align-items:flex-start; gap:16px;">
-            <div class="fg-row">
-              <div class="fg-grid-cell"><span class="fg-label-sm">off</span><button class="fg-toggle fg-toggle-20 fg-toggle-off"><span class="fg-knob"></span></button></div>
-              <div class="fg-grid-cell"><span class="fg-label-sm">on</span><button class="fg-toggle fg-toggle-20 fg-toggle-on"><span class="fg-knob"></span></button></div>
-              <div class="fg-grid-cell"><span class="fg-label-sm">off deshab.</span><button class="fg-toggle fg-toggle-20 fg-toggle-off-disabled" disabled><span class="fg-knob"></span></button></div>
-              <div class="fg-grid-cell"><span class="fg-label-sm">on deshab.</span><button class="fg-toggle fg-toggle-20 fg-toggle-on-disabled" disabled><span class="fg-knob"></span></button></div>
-            </div>
-          </div>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Sumar un botón de "Guardar" después de tocarlo — rompe la expectativa de cambio inmediato.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo si la acción necesita confirmación previa — ahí conviene un Modal de confirmación.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo para selección múltiple entre varias opciones — para eso está el Checkbox.</p></div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--atomo">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--atomo">Propiedad</span><span class="anatomy-row__value">Estado</span><span class="anatomy-row__desc">Valores: Activo, Inactivo, Deshabilitado — Estado del interruptor.</span></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">Activo</code><code class="spec-tag">Inactivo</code><code class="spec-tag">Deshabilitado</code></td><td class="spec-desc">Estado del interruptor.</td></tr></tbody></table>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

@@ -28,84 +28,78 @@
         <span class="current">Empty State</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
-        <h1 class="page-title">Empty State</h1>
-        <p class="page-desc">Pantalla vacía cuando no hay contenido disponible. Incluye ilustración, título, subtítulo y hasta dos botones, todos opcionales. Dos tamaños: Default y Chico.</p>
+      <div class="head-band head-band--molecula">
+        <span class="head-badge head-badge--molecula"><i class="fa-solid fa-diagram-project"></i> Molécula</span>
+        <h1 class="head-title">Empty State</h1>
+        <p class="head-desc">Pantalla vacía cuando no hay contenido disponible. Incluye ilustración, título, subtítulo y hasta dos botones, todos opcionales. Dos tamaños: Default y Chico.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Reemplaza una pantalla o sección vacía por un mensaje que explica por qué no hay contenido y qué acción tomar a continuación, en vez de dejar un espacio en blanco.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Explicar la causa puntual de la ausencia de datos ("Todavía no cargaste ningún campo").</li>
-              <li>Ofrecer un botón primario que resuelva la causa (ej. "Agregar campo").</li>
-              <li>Usar el tamaño Chico dentro de componentes más pequeños y Default para pantallas completas.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Reusar el mismo texto genérico para causas distintas ("no hay datos" vs "sin resultados de tu búsqueda").</li>
-              <li>Mostrarlo sin ninguna acción cuando sí existe una forma de resolver el estado vacío.</li>
-              <li>Usarlo para errores del sistema — para eso está el Toast de advertencia.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-inbox"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
-        </div>
-        <div class="playground">
-          <span class="playground__label">Tamaño Default</span>
-          <div class="playground__stage" style="justify-content:flex-start;">
-            <div class="fg-empty default">
-              <i class="fa-solid fa-xmark fg-empty-close"></i>
-              <img src="img/empty-state-inbox.png" width="102" height="102" alt="" />
-              <div class="fg-empty-text">
-                <p class="fg-empty-title">No hay operaciones para entrega</p>
-                <p class="fg-empty-sub">Las operaciones ya fueron presentadas en ofertas de entrega.</p>
-              </div>
-              <div class="fg-empty-actions">
-                <button class="fg-empty-btn secundario">Ver ofertas presentadas</button>
-                <button class="fg-empty-btn primario">Botón</button>
-              </div>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Tamaño Default</p>
+        <div class="preview-box">
+          <div class="fg-empty default">
+            <i class="fa-solid fa-xmark fg-empty-close"></i>
+            <img src="img/empty-state-inbox.png" width="102" height="102" alt="" />
+            <div class="fg-empty-text">
+              <p class="fg-empty-title">No hay operaciones para entrega</p>
+              <p class="fg-empty-sub">Las operaciones ya fueron presentadas en ofertas de entrega.</p>
+            </div>
+            <div class="fg-empty-actions">
+              <button class="fg-empty-btn secundario">Ver ofertas presentadas</button>
+              <button class="fg-empty-btn primario">Botón</button>
             </div>
           </div>
         </div>
-        <div class="playground" style="margin-top:16px;">
-          <span class="playground__label">Tamaño Chico</span>
-          <div class="playground__stage" style="justify-content:flex-start;">
-            <div class="fg-empty chico">
-              <i class="fa-solid fa-xmark fg-empty-close"></i>
-              <img src="img/empty-state-documento.png" width="50" height="50" alt="" />
-              <div class="fg-empty-text">
-                <p class="fg-empty-title">No hay operaciones para entrega</p>
-                <p class="fg-empty-sub">Las operaciones ya fueron presentadas en ofertas de entrega.</p>
-              </div>
-              <div class="fg-empty-actions">
-                <button class="fg-empty-btn secundario">Ver ofertas presentadas</button>
-                <button class="fg-empty-btn primario">Botón</button>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Grilla de variantes</h2>
+        <p class="sec-sub">Los 2 tamaños documentados</p>
+        <div class="variant-family">
+          <span class="variant-family__label">Chico</span>
+          <div class="variant-row">
+            <div class="variant-item">
+              <div class="fg-empty chico">
+                <i class="fa-solid fa-xmark fg-empty-close"></i>
+                <img src="img/empty-state-documento.png" width="50" height="50" alt="" />
+                <div class="fg-empty-text">
+                  <p class="fg-empty-title">No hay operaciones para entrega</p>
+                  <p class="fg-empty-sub">Las operaciones ya fueron presentadas en ofertas de entrega.</p>
+                </div>
+                <div class="fg-empty-actions">
+                  <button class="fg-empty-btn secundario">Ver ofertas presentadas</button>
+                  <button class="fg-empty-btn primario">Botón</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Explicar la causa puntual de la ausencia de datos ("Todavía no cargaste ningún campo").</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Ofrecer un botón primario que resuelva la causa (ej. "Agregar campo").</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar el tamaño Chico dentro de componentes más pequeños y Default para pantallas completas.</p></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tamaño</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Chico</code></td><td class="spec-desc">Chico reduce el padding vertical, la ilustración y la tipografía del texto.</td></tr><tr><td class="spec-prop">Elementos opcionales</td><td class="spec-values"><code class="spec-tag">Imagen</code><code class="spec-tag">Título</code><code class="spec-tag">Subtítulo</code><code class="spec-tag">Botón primario</code><code class="spec-tag">Botón secundario</code><code class="spec-tag">Cerrar (x)</code></td><td class="spec-desc">Todos los elementos pueden mostrarse u ocultarse de forma independiente.</td></tr></tbody></table>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Reusar el mismo texto genérico para causas distintas ("no hay datos" vs "sin resultados de tu búsqueda").</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Mostrarlo sin ninguna acción cuando sí existe una forma de resolver el estado vacío.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo para errores del sistema — para eso está el Toast de advertencia.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--molecula">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Tamaño</span><span class="anatomy-row__desc">Valores: Default, Chico — Chico reduce el padding vertical, la ilustración y la tipografía del texto.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Elementos opcionales</span><span class="anatomy-row__desc">Valores: Imagen, Título, Subtítulo, Botón primario, Botón secundario, Cerrar (x) — Todos los elementos pueden mostrarse u ocultarse de forma independiente.</span></div>
+        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

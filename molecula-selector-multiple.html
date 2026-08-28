@@ -28,77 +28,71 @@
         <span class="current">Selector múltiple</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
-        <h1 class="page-title">Selector múltiple</h1>
-        <p class="page-desc">Barra de acciones masivas que aparece al seleccionar varias filas o tarjetas. Muestra la cantidad de seleccionados y acciones sobre ese grupo (seleccionar todos, habilitar, deshabilitar).</p>
+      <div class="head-band head-band--molecula">
+        <span class="head-badge head-badge--molecula"><i class="fa-solid fa-diagram-project"></i> Molécula</span>
+        <h1 class="head-title">Selector múltiple</h1>
+        <p class="head-desc">Barra de acciones masivas que aparece al seleccionar varias filas o tarjetas. Muestra la cantidad de seleccionados y acciones sobre ese grupo (seleccionar todos, habilitar, deshabilitar).</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Aparece al seleccionar varias filas o tarjetas a la vez, para aplicar una acción sobre todo el grupo en lugar de repetirla una por una.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Mostrar siempre la cantidad de elementos seleccionados.</li>
-              <li>Usar el tipo Flotante sobre una grilla de tarjetas, y Grilla cuando se integra dentro de una tabla.</li>
-              <li>Ofrecer "Seleccionar todos" cuando la lista completa sea razonablemente chica.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Mostrar más de 3-4 acciones en la barra — el resto conviene agruparlo en un menú de opciones.</li>
-              <li>Dejarla visible cuando no hay ningún elemento seleccionado.</li>
-              <li>Usarla para una selección única — ahí no hace falta una barra de acciones masivas.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-list-check"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
-        </div>
-        <div class="playground">
-          <span class="playground__label">Tipo Flotante — sobre tarjetas/grilla de cards</span>
-          <div class="playground__stage" style="justify-content:flex-start;">
-            <div class="fg-selmul flotante">
-              <span class="fg-selmul-close"><i class="fa-solid fa-xmark"></i></span>
-              <div class="fg-selmul-count-wrap"><span class="fg-selmul-chip">23</span><span class="fg-selmul-label">Seleccionados</span></div>
-              <div class="fg-selmul-actions">
-                <span class="fg-selmul-action"><i class="fa-solid fa-hand-pointer"></i>Seleccionar todos</span>
-                <span class="fg-selmul-action"><i class="fa-solid fa-check"></i>Habilitar instrumentos</span>
-                <span class="fg-selmul-action"><i class="fa-solid fa-xmark"></i>Deshabilitar instrumentos</span>
-              </div>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Tipo Flotante — sobre tarjetas/grilla de cards</p>
+        <div class="preview-box">
+          <div class="fg-selmul flotante">
+            <span class="fg-selmul-close"><i class="fa-solid fa-xmark"></i></span>
+            <div class="fg-selmul-count-wrap"><span class="fg-selmul-chip">23</span><span class="fg-selmul-label">Seleccionados</span></div>
+            <div class="fg-selmul-actions">
+              <span class="fg-selmul-action"><i class="fa-solid fa-hand-pointer"></i>Seleccionar todos</span>
+              <span class="fg-selmul-action"><i class="fa-solid fa-check"></i>Habilitar instrumentos</span>
+              <span class="fg-selmul-action"><i class="fa-solid fa-xmark"></i>Deshabilitar instrumentos</span>
             </div>
           </div>
         </div>
-        <div class="playground" style="margin-top:16px;">
-          <span class="playground__label">Tipo Grilla — dentro de una tabla</span>
-          <div class="playground__stage" style="justify-content:flex-start;">
-            <div class="fg-selmul grilla">
-              <div class="fg-selmul-count-wrap"><span class="fg-selmul-close"><i class="fa-solid fa-xmark"></i></span><span class="fg-selmul-label">2 seleccionados</span></div>
-              <div class="fg-selmul-actions">
-                <span class="fg-selmul-action"><i class="fa-solid fa-hand-pointer"></i>Seleccionar todos</span>
-                <span class="fg-selmul-action"><i class="fa-solid fa-check"></i>Habilitar instrumentos</span>
-                <span class="fg-selmul-action"><i class="fa-solid fa-xmark"></i>Deshabilitar instrumentos</span>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Grilla de variantes</h2>
+        <p class="sec-sub">Los 2 tipos documentados</p>
+        <div class="variant-family">
+          <span class="variant-family__label">Grilla — dentro de una tabla</span>
+          <div class="variant-row">
+            <div class="variant-item">
+              <div class="fg-selmul grilla">
+                <div class="fg-selmul-count-wrap"><span class="fg-selmul-close"><i class="fa-solid fa-xmark"></i></span><span class="fg-selmul-label">2 seleccionados</span></div>
+                <div class="fg-selmul-actions">
+                  <span class="fg-selmul-action"><i class="fa-solid fa-hand-pointer"></i>Seleccionar todos</span>
+                  <span class="fg-selmul-action"><i class="fa-solid fa-check"></i>Habilitar instrumentos</span>
+                  <span class="fg-selmul-action"><i class="fa-solid fa-xmark"></i>Deshabilitar instrumentos</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mostrar siempre la cantidad de elementos seleccionados.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar el tipo Flotante sobre una grilla de tarjetas, y Grilla cuando se integra dentro de una tabla.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Ofrecer "Seleccionar todos" cuando la lista completa sea razonablemente chica.</p></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Flotante</code><code class="spec-tag">Grilla</code></td><td class="spec-desc">Flotante es una barra oscura con el contador como chip; Grilla es clara e integrada, con las acciones alineadas a la derecha.</td></tr><tr><td class="spec-prop">Acciones</td><td class="spec-values"><code class="spec-tag">Seleccionar todos</code><code class="spec-tag">Habilitar instrumentos</code><code class="spec-tag">Deshabilitar instrumentos</code></td><td class="spec-desc">Acciones de ejemplo documentadas en Figma — el copy se adapta al contexto real.</td></tr></tbody></table>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Mostrar más de 3-4 acciones en la barra — el resto conviene agruparlo en un menú de opciones.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Dejarla visible cuando no hay ningún elemento seleccionado.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarla para una selección única — ahí no hace falta una barra de acciones masivas.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--molecula">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Tipo</span><span class="anatomy-row__desc">Valores: Flotante, Grilla — Flotante es una barra oscura con el contador como chip; Grilla es clara e integrada, con las acciones alineadas a la derecha.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Acciones</span><span class="anatomy-row__desc">Valores: Seleccionar todos, Habilitar instrumentos, Deshabilitar instrumentos — Acciones de ejemplo documentadas en Figma — el copy se adapta al contexto real.</span></div>
+        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

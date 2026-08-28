@@ -28,59 +28,54 @@
         <span class="current">Radio Button</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--atomo"><span class="icon-badge icon-badge--sm page-badge--atomo" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-atom"></i></span> Átomo</span>
-        <h1 class="page-title">Radio Button</h1>
-        <p class="page-desc">Control de selección única dentro de un grupo. Estados: default, seleccionado y deshabilitado. Indicado para opciones mutuamente excluyentes.</p>
+      <div class="head-band head-band--atomo">
+        <span class="head-badge head-badge--atomo"><i class="fa-solid fa-atom"></i> Átomo</span>
+        <h1 class="head-title">Radio Button</h1>
+        <p class="head-desc">Control de selección única dentro de un grupo. Estados: default, seleccionado y deshabilitado. Indicado para opciones mutuamente excluyentes.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Obliga a elegir exactamente una opción entre un conjunto pequeño y siempre visible de alternativas mutuamente excluyentes.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Usarlo cuando todas las opciones deben estar visibles a la vez para poder compararlas.</li>
-              <li>Preseleccionar una opción cuando exista un valor recomendado o más común.</li>
-              <li>Mantener el grupo entre 2 y 4 opciones.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Usarlo con 5 opciones o más — a esa altura, un Select ordena mejor la información.</li>
-              <li>Dejar el grupo sin ninguna opción marcada cuando el contexto exige un valor.</li>
-              <li>Usarlo si se puede elegir más de una opción — para eso está el Checkbox.</li>
-            </ul>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Estado por defecto</p>
+        <div class="preview-box"><div class="fg-cb-box"><div class="fg-radio-empty"></div></div></div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Grilla de variantes</h2>
+        <p class="sec-sub">Los 4 estados documentados</p>
+        <div class="variant-family">
+          <span class="variant-family__label">Estado</span>
+          <div class="variant-row">
+            <div class="variant-item"><div class="fg-cb-box"><div class="fg-radio-empty"></div></div><span class="variant-item__cap">Default</span></div>
+            <div class="variant-item"><div class="fg-cb-box"><svg class="fg-icon-marcado" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="currentColor"/><circle cx="8" cy="8" r="6.7" fill="#fff"/><circle cx="8" cy="8" r="5.7" fill="currentColor"/></svg></div><span class="variant-item__cap">Seleccionado</span></div>
+            <div class="variant-item"><div class="fg-cb-box"><div class="fg-radio-empty" style="border-color:var(--fg-elev-4)"></div></div><span class="variant-item__cap">Deshabilitado</span></div>
+            <div class="variant-item"><div class="fg-cb-box"><svg class="fg-icon-marcado disabled" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="currentColor"/><circle cx="8" cy="8" r="6.7" fill="#fff"/><circle cx="8" cy="8" r="5.7" fill="currentColor"/></svg></div><span class="variant-item__cap">Deshabilitado + Seleccionado</span></div>
           </div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--atomo"><i class="fa-solid fa-circle-dot"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usarlo cuando todas las opciones deben estar visibles a la vez para poder compararlas.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Preseleccionar una opción cuando exista un valor recomendado o más común.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mantener el grupo entre 2 y 4 opciones.</p></div>
         </div>
-        <div class="playground">
-          <span class="playground__label">Ejemplo interactivo</span>
-          <div class="playground__stage" style="justify-content:flex-start; gap:28px;">
-            <div class="fg-grid-cell"><span class="fg-label-sm">Default</span><div class="fg-cb-box"><div class="fg-radio-empty"></div></div></div>
-            <div class="fg-grid-cell"><span class="fg-label-sm">Seleccionado</span><div class="fg-cb-box"><svg class="fg-icon-marcado" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="currentColor"/><circle cx="8" cy="8" r="6.7" fill="#fff"/><circle cx="8" cy="8" r="5.7" fill="currentColor"/></svg></div></div>
-            <div class="fg-grid-cell"><span class="fg-label-sm">Deshabilitado</span><div class="fg-cb-box"><div class="fg-radio-empty" style="border-color:var(--fg-elev-4)"></div></div></div>
-            <div class="fg-grid-cell"><span class="fg-label-sm">Deshabilitado + Seleccionado</span><div class="fg-cb-box"><svg class="fg-icon-marcado disabled" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="currentColor"/><circle cx="8" cy="8" r="6.7" fill="#fff"/><circle cx="8" cy="8" r="5.7" fill="currentColor"/></svg></div></div>
-          </div>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo con 5 opciones o más — a esa altura, un Select ordena mejor la información.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Dejar el grupo sin ninguna opción marcada cuando el contexto exige un valor.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo si se puede elegir más de una opción — para eso está el Checkbox.</p></div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--atomo">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--atomo">Propiedad</span><span class="anatomy-row__value">Estado</span><span class="anatomy-row__desc">Valores: Default, Seleccionado, Deshabilitado — Estado de selección del control.</span></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Seleccionado</code><code class="spec-tag">Deshabilitado</code></td><td class="spec-desc">Estado de selección del control.</td></tr></tbody></table>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

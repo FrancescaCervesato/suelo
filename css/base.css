@@ -198,9 +198,62 @@ a.card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px)
 .cat-card__count { color: var(--texto-light-2); font-size: var(--body2-size); }
 .cat-card__desc { color: var(--texto-light-2); font-size: var(--body2-size); line-height: 20px; }
 
+/* ---------- Página de componente — header + secciones estructuradas ---------- */
+.head-band { border-radius: var(--radius-lg); padding: var(--space-3); display: flex; flex-direction: column; gap: 14px; color: #fff; }
+.head-band--atomo { background: var(--color-primario); }
+.head-band--molecula { background: #6a2fb0; }
+.head-band--organismo { background: #a3480a; }
+.head-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,.94); font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: var(--radius-pill); width: max-content; }
+.head-badge--atomo { color: var(--color-primario-dark); }
+.head-badge--molecula { color: #6a2fb0; }
+.head-badge--organismo { color: #a3480a; }
+.head-title { font-family: var(--font-display); font-weight: 700; font-size: 40px; margin: 0; color: #fff; }
+.head-desc { font-size: var(--body1-size); line-height: 1.6; color: rgba(255,255,255,.9); margin: 0; max-width: 680px; }
+
+.sec { display: flex; flex-direction: column; gap: var(--space-1125); }
+.sec-title { font-family: var(--font-display); font-weight: 700; font-size: 26px; margin: 0; color: var(--texto-default); }
+.sec-sub { font-size: var(--body2-size); color: var(--texto-light-2); margin: -10px 0 0; }
+
+.preview-box { background: var(--gris-1); border-radius: var(--radius-md); padding: var(--space-3); display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.preview-box.tight { padding: var(--space-15); }
+.preview-cap { font-size: var(--caption-size); color: var(--gris-5); }
+
+.variant-family { display: flex; flex-direction: column; gap: 12px; }
+.variant-family__label { font-weight: 700; font-size: 17px; color: var(--texto-default); }
+.variant-row { background: var(--gris-1); border-radius: var(--radius-md); padding: var(--space-15); display: flex; align-items: flex-start; gap: var(--space-3); flex-wrap: wrap; }
+.variant-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.variant-item__cap { font-size: var(--caption2-size); color: var(--gris-5); }
+
+.dd-label { font-weight: 700; font-size: 17px; margin: 0 0 12px; color: var(--texto-default); }
+.dd-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.dd-grid + .dd-label { margin-top: var(--space-1); }
+.dd-card { border-radius: var(--radius-md); padding: 18px; display: flex; gap: 12px; align-items: flex-start; }
+.dd-card--do { background: var(--elevacion-verde-bg); border: 1px solid #cfe9dd; }
+.dd-card--dont { background: #f5ecec; border: 1px solid #f1d4d4; }
+.dd-card__icon { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; color: #fff; font-weight: 700; }
+.dd-card--do .dd-card__icon { background: #2abb7f; }
+.dd-card--dont .dd-card__icon { background: var(--color-error); }
+.dd-card__text { font-size: var(--body2-size); line-height: 19px; color: var(--texto-light); margin: 0; }
+
+.anatomy { border-radius: var(--radius-lg); padding: var(--space-2) 36px; display: flex; flex-direction: column; gap: var(--space-1125); }
+.anatomy--atomo { background: var(--elevacion-primario-light); }
+.anatomy--molecula { background: #f3ecff; }
+.anatomy--organismo { background: #fff1e6; }
+.anatomy-row { display: flex; flex-direction: column; gap: 5px; padding-bottom: var(--space-1); border-bottom: 1px solid rgba(0,0,0,.06); }
+.anatomy-row:last-child { border-bottom: none; padding-bottom: 0; }
+.anatomy-row__label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+.anatomy-row__label--atomo { color: var(--color-primario-dark); }
+.anatomy-row__label--molecula { color: #6a2fb0; }
+.anatomy-row__label--organismo { color: #a3480a; }
+.anatomy-row__value { font-size: 16px; font-weight: 700; color: var(--texto-default); }
+.anatomy-row__desc { font-size: var(--body2-size); color: var(--texto-light-2); }
+
+.states-row { display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: flex-start; }
+.states-note { font-size: 12.5px; color: var(--texto-light-2); }
+
 @media (max-width: 900px) {
   .app-shell { flex-direction: column; }
   .sidebar { position: relative; height: auto; width: 100%; }
   .main { padding: var(--space-2) var(--space-1) var(--space-3); }
-  .grid--4, .grid--3, .grid--2, .usage-grid { grid-template-columns: 1fr; }
+  .grid--4, .grid--3, .grid--2, .usage-grid, .dd-grid { grid-template-columns: 1fr; }
 }

@@ -28,96 +28,87 @@
         <span class="current">Datepicker</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
-        <h1 class="page-title">Datepicker</h1>
-        <p class="page-desc">Selector de fecha en formato calendario. Existen dos tipos: Individual (una sola fecha, con selector de hora opcional) y Rango (fecha de inicio y fin). Marca el día actual con una línea debajo del número.</p>
+      <div class="head-band head-band--molecula">
+        <span class="head-badge head-badge--molecula"><i class="fa-solid fa-diagram-project"></i> Molécula</span>
+        <h1 class="head-title">Datepicker</h1>
+        <p class="head-desc">Selector de fecha en formato calendario. Existen dos tipos: Individual (una sola fecha, con selector de hora opcional) y Rango (fecha de inicio y fin). Marca el día actual con una línea debajo del número.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Permite elegir una fecha (o un rango) desde un calendario visual, evitando errores de formato que aparecen al tipear la fecha a mano.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Usar el tipo Individual para una fecha única y Rango para períodos (ej. un estado de cuenta).</li>
-              <li>Marcar siempre visualmente el día actual y el día seleccionado.</li>
-              <li>Permitir también escribir la fecha en el campo de texto para quienes prefieren tipear.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Usarlo para seleccionar solo una hora sin fecha — el selector de hora es un campo aparte.</li>
-              <li>Forzar el calendario abierto como único método de carga de fecha.</li>
-              <li>Inventar un estado visual para los días intermedios de un rango — Figma solo documenta Inicio y Fin.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-calendar-days"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
-        </div>
-        <div class="playground">
-          <span class="playground__label">Tipo Individual — con selector de hora y acciones</span>
-          <div class="playground__stage" style="justify-content:flex-start;">
-            <div class="fg-dp">
-              <div class="fg-dp-header">
-                <span class="fg-dp-nav"><i class="fa-solid fa-chevron-left" style="font-size:12px;"></i></span>
-                <span class="fg-dp-title">Junio 2026</span>
-                <span class="fg-dp-nav"><i class="fa-solid fa-chevron-right" style="font-size:12px;"></i></span>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Tipo Individual — con selector de hora y acciones</p>
+        <div class="preview-box tight" style="align-items:stretch;">
+          <div class="fg-dp">
+            <div class="fg-dp-header">
+              <span class="fg-dp-nav"><i class="fa-solid fa-chevron-left" style="font-size:12px;"></i></span>
+              <span class="fg-dp-title">Junio 2026</span>
+              <span class="fg-dp-nav"><i class="fa-solid fa-chevron-right" style="font-size:12px;"></i></span>
+            </div>
+            <hr class="fg-dp-hr" />
+            <div class="fg-dp-week"><span>DOM</span><span>LUN</span><span>MAR</span><span>MIE</span><span>JUE</span><span>VIE</span><span>SAB</span></div>
+            <div class="fg-dp-grid">
+              <div class="fg-dp-day disabled">30</div><div class="fg-dp-day default">1</div><div class="fg-dp-day default">2</div><div class="fg-dp-day default">3</div><div class="fg-dp-day default">4</div><div class="fg-dp-day default">5</div><div class="fg-dp-day default">6</div>
+              <div class="fg-dp-day default">7</div><div class="fg-dp-day default">8</div><div class="fg-dp-day default">9</div><div class="fg-dp-day default">10</div><div class="fg-dp-day default">11</div><div class="fg-dp-day default">12</div><div class="fg-dp-day default">13</div>
+              <div class="fg-dp-day default">14</div><div class="fg-dp-day default">15</div><div class="fg-dp-day default">16</div><div class="fg-dp-day default">17</div><div class="fg-dp-day press hoy">18</div><div class="fg-dp-day hover">19</div><div class="fg-dp-day default">20</div>
+              <div class="fg-dp-day default">21</div><div class="fg-dp-day default">22</div><div class="fg-dp-day default">23</div><div class="fg-dp-day default">24</div><div class="fg-dp-day default">25</div><div class="fg-dp-day default">26</div><div class="fg-dp-day default">27</div>
+              <div class="fg-dp-day default">28</div><div class="fg-dp-day default">29</div><div class="fg-dp-day default">30</div><div class="fg-dp-day default">31</div><div></div><div></div><div></div>
+            </div>
+            <div class="fg-dp-fields">
+              <div class="fg-field" style="width:auto; flex:1;">
+                <label>Fecha</label>
+                <div class="fg-field-box"><i class="fa-solid fa-calendar" style="color:#525252; font-size:12px;"></i><span>18/12/2025</span></div>
               </div>
-              <hr class="fg-dp-hr" />
-              <div class="fg-dp-week"><span>DOM</span><span>LUN</span><span>MAR</span><span>MIE</span><span>JUE</span><span>VIE</span><span>SAB</span></div>
-              <div class="fg-dp-grid">
-                <div class="fg-dp-day disabled">30</div><div class="fg-dp-day default">1</div><div class="fg-dp-day default">2</div><div class="fg-dp-day default">3</div><div class="fg-dp-day default">4</div><div class="fg-dp-day default">5</div><div class="fg-dp-day default">6</div>
-                <div class="fg-dp-day default">7</div><div class="fg-dp-day default">8</div><div class="fg-dp-day default">9</div><div class="fg-dp-day default">10</div><div class="fg-dp-day default">11</div><div class="fg-dp-day default">12</div><div class="fg-dp-day default">13</div>
-                <div class="fg-dp-day default">14</div><div class="fg-dp-day default">15</div><div class="fg-dp-day default">16</div><div class="fg-dp-day default">17</div><div class="fg-dp-day press hoy">18</div><div class="fg-dp-day hover">19</div><div class="fg-dp-day default">20</div>
-                <div class="fg-dp-day default">21</div><div class="fg-dp-day default">22</div><div class="fg-dp-day default">23</div><div class="fg-dp-day default">24</div><div class="fg-dp-day default">25</div><div class="fg-dp-day default">26</div><div class="fg-dp-day default">27</div>
-                <div class="fg-dp-day default">28</div><div class="fg-dp-day default">29</div><div class="fg-dp-day default">30</div><div class="fg-dp-day default">31</div><div></div><div></div><div></div>
+              <div class="fg-field" style="width:auto; flex:1;">
+                <label>Hora</label>
+                <div class="fg-field-box"><i class="fa-solid fa-clock" style="color:#525252; font-size:12px;"></i><span>08:45</span></div>
               </div>
-              <div class="fg-dp-fields">
-                <div class="fg-field" style="width:auto; flex:1;">
-                  <label>Fecha</label>
-                  <div class="fg-field-box"><i class="fa-solid fa-calendar" style="color:#525252; font-size:12px;"></i><span>18/12/2025</span></div>
-                </div>
-                <div class="fg-field" style="width:auto; flex:1;">
-                  <label>Hora</label>
-                  <div class="fg-field-box"><i class="fa-solid fa-clock" style="color:#525252; font-size:12px;"></i><span>08:45</span></div>
-                </div>
-              </div>
-              <div class="fg-dp-actions">
-                <button class="fg-btn fg-btn-24 fg-btn-sutil">Cancelar</button>
-                <button class="fg-btn fg-btn-24 fg-btn-primario">Aceptar</button>
-              </div>
+            </div>
+            <div class="fg-dp-actions">
+              <button class="fg-btn fg-btn-24 fg-btn-sutil">Cancelar</button>
+              <button class="fg-btn fg-btn-24 fg-btn-primario">Aceptar</button>
             </div>
           </div>
         </div>
-        <div class="playground" style="margin-top:16px;">
-          <span class="playground__label">Estados de un día (componente "Dia")</span>
-          <div class="playground__stage" style="justify-content:flex-start; gap:16px;">
-            <div class="fg-dp-day default">14</div>
-            <div class="fg-dp-day hover">14</div>
-            <div class="fg-dp-day press">14</div>
-            <div class="fg-dp-day disabled">14</div>
-            <div style="display:flex;"><div class="fg-dp-day rango-inicio">14</div><div class="fg-dp-day rango-fin">18</div></div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Grilla de variantes</h2>
+        <p class="sec-sub">Estados de un día (componente "Dia")</p>
+        <div class="variant-family">
+          <span class="variant-family__label">Estado de día</span>
+          <div class="variant-row">
+            <div class="variant-item"><div class="fg-dp-day default">14</div><span class="variant-item__cap">Default</span></div>
+            <div class="variant-item"><div class="fg-dp-day hover">14</div><span class="variant-item__cap">Hover</span></div>
+            <div class="variant-item"><div class="fg-dp-day press">14</div><span class="variant-item__cap">Press (seleccionado)</span></div>
+            <div class="variant-item"><div class="fg-dp-day disabled">14</div><span class="variant-item__cap">Deshabilitado</span></div>
+            <div class="variant-item"><div style="display:flex;"><div class="fg-dp-day rango-inicio">14</div><div class="fg-dp-day rango-fin">18</div></div><span class="variant-item__cap">Inicio/fin de rango</span></div>
           </div>
-          <div class="playground__controls"><span class="control-row__label" style="width:auto;">default · hover · press (seleccionado) · deshabilitado · inicio/fin de rango</span></div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar el tipo Individual para una fecha única y Rango para períodos (ej. un estado de cuenta).</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Marcar siempre visualmente el día actual y el día seleccionado.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Permitir también escribir la fecha en el campo de texto para quienes prefieren tipear.</p></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Individual</code><code class="spec-tag">Rango</code></td><td class="spec-desc">Rango usa dos calendarios uno al lado del otro, con los mismos estados de día.</td></tr><tr><td class="spec-prop">Estado de día</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Hover</code><code class="spec-tag">Press</code><code class="spec-tag">Deshabilitado</code><code class="spec-tag">Inicio rango</code><code class="spec-tag">Fin rango</code></td><td class="spec-desc">Deshabilitado también se usa para los días de meses adyacentes.</td></tr></tbody></table>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo para seleccionar solo una hora sin fecha — el selector de hora es un campo aparte.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Forzar el calendario abierto como único método de carga de fecha.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Inventar un estado visual para los días intermedios de un rango — Figma solo documenta Inicio y Fin.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--molecula">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Tipo</span><span class="anatomy-row__desc">Valores: Individual, Rango — Rango usa dos calendarios uno al lado del otro, con los mismos estados de día.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Estado de día</span><span class="anatomy-row__desc">Valores: Default, Hover, Press, Deshabilitado, Inicio rango, Fin rango — Deshabilitado también se usa para los días de meses adyacentes.</span></div>
+        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

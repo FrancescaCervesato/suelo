@@ -27,54 +27,43 @@
         <span class="current">Modal</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
-        <h1 class="page-title">Modal</h1>
-        <p class="page-desc">Ventana de diálogo superpuesta al contenido. Bloquea la interacción con el fondo. Variantes: confirmación, información, formulario. Siempre tiene opción de cierre.</p>
+      <div class="head-band head-band--molecula">
+        <span class="head-badge head-badge--molecula"><i class="fa-solid fa-diagram-project"></i> Molécula</span>
+        <h1 class="head-title">Modal</h1>
+        <p class="head-desc">Ventana de diálogo superpuesta al contenido. Bloquea la interacción con el fondo. Variantes: confirmación, información, formulario. Siempre tiene opción de cierre.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Interrumpe el flujo actual para pedir una decisión o mostrar información que no puede posponerse, bloqueando el resto de la pantalla hasta que se resuelva.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Reservarlo para decisiones que realmente necesitan bloquear el flujo (confirmar una acción destructiva, por ejemplo).</li>
-              <li>Ofrecer siempre una forma clara de cerrarlo sin aplicar cambios (Cancelar, tecla Esc, click afuera).</li>
-              <li>Mantener el contenido breve y centrado en una sola decisión.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Usarlo para avisos simples que no requieren acción — para eso alcanza un Toast.</li>
-              <li>Anidar un modal dentro de otro modal.</li>
-              <li>Poner formularios largos o con muchos pasos — eso funciona mejor como pantalla completa o Stepper.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-window-restore"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
-        </div>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Ejemplo interactivo — probá abrir y cerrar el modal</p>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
           <div class="playground__stage demo-stage" style="position:relative;"><button class="btn btn--primario" onclick="pgOpen(this,'.demo-modal-overlay')">Eliminar campo</button><div class="demo-modal-overlay"><div class="demo-modal-box"><h4>¿Eliminar este campo?</h4><p>Esta acción no se puede deshacer.</p><div style="display:flex; gap:8px; justify-content:flex-end;"><button class="control-btn" onclick="pgClose(this,'.demo-modal-overlay')">Cancelar</button><button class="btn btn--primario" style="height:32px; padding:0 12px; font-size:13px;" onclick="pgClose(this,'.demo-modal-overlay')">Eliminar</button></div></div></div></div><div class="playground__controls"><span class="control-row__label" style="width:auto;">Probá abrir y cerrar el modal ↑</span></div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Reservarlo para decisiones que realmente necesitan bloquear el flujo (confirmar una acción destructiva, por ejemplo).</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Ofrecer siempre una forma clara de cerrarlo sin aplicar cambios (Cancelar, tecla Esc, click afuera).</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mantener el contenido breve y centrado en una sola decisión.</p></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Variante</td><td class="spec-values"><code class="spec-tag">Confirmación</code><code class="spec-tag">Información</code><code class="spec-tag">Formulario</code></td><td class="spec-desc">Tipo de contenido que aloja el modal.</td></tr></tbody></table>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo para avisos simples que no requieren acción — para eso alcanza un Toast.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Anidar un modal dentro de otro modal.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Poner formularios largos o con muchos pasos — eso funciona mejor como pantalla completa o Stepper.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--molecula">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Variante</span><span class="anatomy-row__desc">Valores: Confirmación, Información, Formulario — Tipo de contenido que aloja el modal.</span></div>
+        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

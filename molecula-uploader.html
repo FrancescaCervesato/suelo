@@ -28,96 +28,93 @@
         <span class="current">Uploader</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
-        <h1 class="page-title">Uploader</h1>
-        <p class="page-desc">Área de drag &amp; drop para importar un archivo. Al soltar o seleccionar un archivo, se agrega una card con su progreso de carga debajo de la zona de drop.</p>
+      <div class="head-band head-band--molecula">
+        <span class="head-badge head-badge--molecula"><i class="fa-solid fa-diagram-project"></i> Molécula</span>
+        <h1 class="head-title">Uploader</h1>
+        <p class="head-desc">Área de drag &amp; drop para importar un archivo. Al soltar o seleccionar un archivo, se agrega una card con su progreso de carga debajo de la zona de drop.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Permite importar un archivo arrastrándolo directamente a la pantalla o seleccionándolo manualmente, mostrando el progreso de la carga en tiempo real.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Indicar el formato y tamaño máximo de archivo permitido antes de que la persona intente subirlo.</li>
-              <li>Dar feedback visual claro cuando se está arrastrando un archivo sobre la zona (estado Activo).</li>
-              <li>Mostrar el progreso de carga y permitir cancelar o quitar el archivo mientras sube.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Comunicar el tipo o tamaño permitido recién después de un error.</li>
-              <li>Dejar el archivo cargado sin la opción de reemplazarlo o quitarlo.</li>
-              <li>Ocultar el nombre o peso del archivo una vez cargado.</li>
-            </ul>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Estado Default</p>
+        <div class="preview-box">
+          <div class="fg-upl-drop">
+            <img src="img/uploader-illustration.png" alt="" />
+            <div class="fg-upl-text">
+              <p class="fg-upl-title">Para importar un archivo arrastralo hasta acá o presiona el botón.</p>
+              <p class="fg-upl-sub">Selecciona un archivo en formato .JSON</p>
+            </div>
+            <button class="fg-upl-btn">+ Seleccionar archivo</button>
           </div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-cloud-arrow-up"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
-        </div>
-        <div class="playground">
-          <span class="playground__label">Estado Default</span>
-          <div class="playground__stage" style="justify-content:flex-start;">
-            <div class="fg-upl-drop">
-              <img src="img/uploader-illustration.png" alt="" />
-              <div class="fg-upl-text">
-                <p class="fg-upl-title">Para importar un archivo arrastralo hasta acá o presiona el botón.</p>
-                <p class="fg-upl-sub">Selecciona un archivo en formato .JSON</p>
-              </div>
-              <button class="fg-upl-btn">+ Seleccionar archivo</button>
-            </div>
-          </div>
-        </div>
-        <div class="playground" style="margin-top:16px;">
-          <span class="playground__label">Estado Activo (arrastrando un archivo encima)</span>
-          <div class="playground__stage" style="justify-content:flex-start;">
-            <div class="fg-upl-drop activo">
-              <img src="img/uploader-illustration.png" alt="" />
-              <div class="fg-upl-text">
-                <p class="fg-upl-title">Para importar un archivo arrastralo hasta acá o presiona el botón.</p>
-                <p class="fg-upl-sub">Selecciona un archivo en formato .JSON</p>
-              </div>
-              <button class="fg-upl-btn">+ Seleccionar archivo</button>
-            </div>
-          </div>
-          <div class="playground__controls"><span class="control-row__label" style="width:auto;">El fondo pasa a celeste y el botón se ve atenuado mientras se arrastra el archivo.</span></div>
-        </div>
-        <div class="playground" style="margin-top:16px;">
-          <span class="playground__label">Archivo cargando</span>
-          <div class="playground__stage" style="justify-content:flex-start;">
-            <div class="fg-upl-card">
-              <div class="fg-upl-card-top">
-                <div class="fg-upl-card-file">
-                  <span class="fg-upl-card-icon"><i class="fa-solid fa-file"></i></span>
-                  <div><div class="fg-upl-card-name">customers_Q5_2024.json</div><div class="fg-upl-card-size">200 KB</div></div>
+      <div class="sec">
+        <h2 class="sec-title">Grilla de variantes</h2>
+        <p class="sec-sub">Estado de la zona y card de archivo cargando</p>
+        <div class="variant-family">
+          <span class="variant-family__label">Estado Activo (arrastrando un archivo encima)</span>
+          <div class="variant-row">
+            <div class="variant-item">
+              <div class="fg-upl-drop activo">
+                <img src="img/uploader-illustration.png" alt="" />
+                <div class="fg-upl-text">
+                  <p class="fg-upl-title">Para importar un archivo arrastralo hasta acá o presiona el botón.</p>
+                  <p class="fg-upl-sub">Selecciona un archivo en formato .JSON</p>
                 </div>
-                <span class="fg-upl-card-close"><i class="fa-solid fa-xmark"></i></span>
+                <button class="fg-upl-btn">+ Seleccionar archivo</button>
               </div>
-              <div class="fg-progress">
-                <div class="fg-progress-track"><div class="fg-progress-fill" style="width:64%;"></div></div>
-                <div class="fg-progress-detail"><span>Importando archivos -</span><span>50%</span></div>
-              </div>
+              <span class="variant-item__cap">El fondo pasa a celeste y el botón se ve atenuado mientras se arrastra el archivo.</span>
             </div>
           </div>
-          <div class="playground__controls"><span class="control-row__label" style="width:auto;">Reutiliza el componente Progress Bar. El botón (x) muestra el tooltip "Quitar archivo" en hover.</span></div>
+        </div>
+        <div class="variant-family">
+          <span class="variant-family__label">Archivo cargando</span>
+          <div class="variant-row">
+            <div class="variant-item">
+              <div class="fg-upl-card">
+                <div class="fg-upl-card-top">
+                  <div class="fg-upl-card-file">
+                    <span class="fg-upl-card-icon"><i class="fa-solid fa-file"></i></span>
+                    <div><div class="fg-upl-card-name">customers_Q5_2024.json</div><div class="fg-upl-card-size">200 KB</div></div>
+                  </div>
+                  <span class="fg-upl-card-close"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+                <div class="fg-progress">
+                  <div class="fg-progress-track"><div class="fg-progress-fill" style="width:64%;"></div></div>
+                  <div class="fg-progress-detail"><span>Importando archivos -</span><span>50%</span></div>
+                </div>
+              </div>
+              <span class="variant-item__cap">Reutiliza el componente Progress Bar. El botón (x) muestra el tooltip "Quitar archivo" en hover.</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Indicar el formato y tamaño máximo de archivo permitido antes de que la persona intente subirlo.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Dar feedback visual claro cuando se está arrastrando un archivo sobre la zona (estado Activo).</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mostrar el progreso de carga y permitir cancelar o quitar el archivo mientras sube.</p></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado de la zona</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Activo</code></td><td class="spec-desc">Activo es el estado mientras se arrastra un archivo sobre la zona.</td></tr><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Horizontal</code><code class="spec-tag">Vertical</code></td><td class="spec-desc">Misma zona de drop, proporción vertical (388px) u horizontal (1046px).</td></tr><tr><td class="spec-prop">Card de archivo</td><td class="spec-values"><code class="spec-tag">Grande</code><code class="spec-tag">Chico</code></td><td class="spec-desc">Muestra nombre, tamaño, progreso y acción de quitar el archivo.</td></tr></tbody></table>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Comunicar el tipo o tamaño permitido recién después de un error.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Dejar el archivo cargado sin la opción de reemplazarlo o quitarlo.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Ocultar el nombre o peso del archivo una vez cargado.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--molecula">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Estado de la zona</span><span class="anatomy-row__desc">Valores: Default, Activo — Activo es el estado mientras se arrastra un archivo sobre la zona.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Tipo</span><span class="anatomy-row__desc">Valores: Horizontal, Vertical — Misma zona de drop, proporción vertical (388px) u horizontal (1046px).</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Card de archivo</span><span class="anatomy-row__desc">Valores: Grande, Chico — Muestra nombre, tamaño, progreso y acción de quitar el archivo.</span></div>
+        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

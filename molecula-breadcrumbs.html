@@ -28,70 +28,47 @@
         <span class="current">Breadcrumbs</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
-        <h1 class="page-title">Breadcrumbs</h1>
-        <p class="page-desc">Ruta de navegación jerárquica. Muestra el camino desde la página raíz hasta la actual. Cada ítem es clickeable excepto el último (página actual). A partir de 5 niveles los ítems intermedios se truncan, y a partir de 7 se colapsan en "...".</p>
+      <div class="head-band head-band--molecula">
+        <span class="head-badge head-badge--molecula"><i class="fa-solid fa-diagram-project"></i> Molécula</span>
+        <h1 class="head-title">Breadcrumbs</h1>
+        <p class="head-desc">Ruta de navegación jerárquica. Muestra el camino desde la página raíz hasta la actual. Cada ítem es clickeable excepto el último (página actual). A partir de 5 niveles los ítems intermedios se truncan, y a partir de 7 se colapsan en "...".</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Muestra la ubicación actual dentro de la jerarquía de navegación y permite volver a cualquier nivel superior con un clic.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Usarlo en jerarquías de 3 niveles o más, donde se puede perder de vista dónde se está.</li>
-              <li>En jerarquías muy profundas, truncar o colapsar los niveles intermedios — priorizando inicio, nivel anterior y actual.</li>
-              <li>Dejar el último nivel (la página actual) sin link, ya que no tiene a dónde navegar.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Usarlo en flujos de un solo nivel o pantallas sin jerarquía real de navegación.</li>
-              <li>Usarlo como sustituto de un botón "Volver" en un flujo lineal — para eso está el Stepper.</li>
-              <li>Mostrar más de 6-7 niveles sin activar el tipo Contracción.</li>
-            </ul>
-          </div>
-        </div>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Composición de 2 niveles</p>
+        <div class="preview-box"><div class="fg-bc"><span class="fg-bc__item">Item</span><span class="fg-bc__arrow">›</span><span class="fg-bc__item select">Item</span></div></div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-angles-right"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
-        </div>
-        <div class="playground">
-          <span class="playground__label">Estados de un ítem</span>
-          <div class="playground__stage" style="justify-content:flex-start; gap:32px;">
-            <div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item">Item</span></div>
-            <div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item hover">Item</span></div>
-            <div class="fg-bc__group"><span class="fg-bc__item select">Item</span></div>
-          </div>
-          <div class="playground__controls"><span class="control-row__label" style="width:auto;">default · hover · select (ítem actual)</span></div>
-        </div>
-        <div class="playground" style="margin-top:16px;">
-          <span class="playground__label">Tipo truncado — con tooltip en hover/select</span>
-          <div class="playground__stage" style="justify-content:flex-start; gap:32px;">
-            <div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item">Item...</span></div>
-            <div class="fg-bc__tt-wrap"><div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item hover">Item...</span></div><div class="fg-bc__tooltip">Ítem extendido</div></div>
-            <div class="fg-bc__tt-wrap"><div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item select">Item...</span></div><div class="fg-bc__tooltip">Ítem extendido</div></div>
+      <div class="sec">
+        <h2 class="sec-title">Grilla de variantes</h2>
+        <p class="sec-sub">Estados de ítem, tipos y composición según cantidad de niveles</p>
+        <div class="variant-family">
+          <span class="variant-family__label">Estado de ítem</span>
+          <div class="variant-row">
+            <div class="variant-item"><div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item">Item</span></div><span class="variant-item__cap">Default</span></div>
+            <div class="variant-item"><div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item hover">Item</span></div><span class="variant-item__cap">Hover</span></div>
+            <div class="variant-item"><div class="fg-bc__group"><span class="fg-bc__item select">Item</span></div><span class="variant-item__cap">Select (ítem actual)</span></div>
           </div>
         </div>
-        <div class="playground" style="margin-top:16px;">
-          <span class="playground__label">Tipo contracción — colapsa niveles intermedios (+6 niveles)</span>
-          <div class="playground__stage" style="justify-content:flex-start; gap:32px;">
-            <div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item">...</span></div>
-            <div class="fg-bc__tt-wrap"><div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item hover">...</span></div><div class="fg-bc__tooltip">Ítem extendido</div></div>
+        <div class="variant-family">
+          <span class="variant-family__label">Tipo truncado — con tooltip en hover/select</span>
+          <div class="variant-row">
+            <div class="variant-item"><div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item">Item...</span></div></div>
+            <div class="variant-item"><div class="fg-bc__tt-wrap"><div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item hover">Item...</span></div><div class="fg-bc__tooltip">Ítem extendido</div></div></div>
+            <div class="variant-item"><div class="fg-bc__tt-wrap"><div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item select">Item...</span></div><div class="fg-bc__tooltip">Ítem extendido</div></div></div>
           </div>
         </div>
-        <div class="playground" style="margin-top:16px;">
-          <span class="playground__label">Composición según cantidad de niveles</span>
-          <div class="playground__stage" style="flex-direction:column; align-items:flex-start; gap:14px;">
+        <div class="variant-family">
+          <span class="variant-family__label">Tipo contracción — colapsa niveles intermedios (+6 niveles)</span>
+          <div class="variant-row">
+            <div class="variant-item"><div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item">...</span></div></div>
+            <div class="variant-item"><div class="fg-bc__tt-wrap"><div class="fg-bc__group"><span class="fg-bc__arrow">›</span><span class="fg-bc__item hover">...</span></div><div class="fg-bc__tooltip">Ítem extendido</div></div></div>
+          </div>
+        </div>
+        <div class="variant-family">
+          <span class="variant-family__label">Composición según cantidad de niveles</span>
+          <div class="variant-row" style="flex-direction:column; align-items:flex-start; gap:14px;">
             <div class="fg-bc"><span class="fg-bc__item">Item</span><span class="fg-bc__arrow">›</span><span class="fg-bc__item select">Item</span></div>
             <div class="fg-bc"><span class="fg-bc__item">Item</span><span class="fg-bc__arrow">›</span><span class="fg-bc__item">Item</span><span class="fg-bc__arrow">›</span><span class="fg-bc__item select">Item</span></div>
             <div class="fg-bc"><span class="fg-bc__item">Item</span><span class="fg-bc__arrow">›</span><span class="fg-bc__item">Item</span><span class="fg-bc__arrow">›</span><span class="fg-bc__item">Item</span><span class="fg-bc__arrow">›</span><span class="fg-bc__item select">Item</span></div>
@@ -101,11 +78,29 @@
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usarlo en jerarquías de 3 niveles o más, donde se puede perder de vista dónde se está.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">En jerarquías muy profundas, truncar o colapsar los niveles intermedios — priorizando inicio, nivel anterior y actual.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Dejar el último nivel (la página actual) sin link, ya que no tiene a dónde navegar.</p></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Estado</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Hover</code><code class="spec-tag">Select</code></td><td class="spec-desc">Select es el ítem actual: no clickeable, color más oscuro, subrayado.</td></tr><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Truncado</code><code class="spec-tag">Contracción</code></td><td class="spec-desc">Truncado acorta el texto de un ítem intermedio; Contracción colapsa varios niveles en "...". Ambos muestran un tooltip fijo ("Ítem extendido") al hacer hover.</td></tr></tbody></table>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo en flujos de un solo nivel o pantallas sin jerarquía real de navegación.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo como sustituto de un botón "Volver" en un flujo lineal — para eso está el Stepper.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Mostrar más de 6-7 niveles sin activar el tipo Contracción.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--molecula">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Estado</span><span class="anatomy-row__desc">Valores: Default, Hover, Select — Select es el ítem actual: no clickeable, color más oscuro, subrayado.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Tipo</span><span class="anatomy-row__desc">Valores: Default, Truncado, Contracción — Truncado acorta el texto de un ítem intermedio; Contracción colapsa varios niveles en "...". Ambos muestran un tooltip fijo ("Ítem extendido") al hacer hover.</span></div>
+        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

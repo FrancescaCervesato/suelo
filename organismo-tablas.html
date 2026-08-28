@@ -28,45 +28,33 @@
         <span class="current">Tablas</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--organismo"><span class="icon-badge icon-badge--sm page-badge--organismo" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-table-cells-large"></i></span> Organismo</span>
-        <h1 class="page-title">Tablas</h1>
-        <p class="page-desc">Componente para mostrar datos tabulares. La cabecera soporta orden y filtro por columna; las celdas tienen 8 tipos de campo y hasta 4 niveles de indentación para filas jerárquicas.</p>
+      <div class="head-band head-band--organismo">
+        <span class="head-badge head-badge--organismo"><i class="fa-solid fa-table-cells-large"></i> Organismo</span>
+        <h1 class="head-title">Tablas</h1>
+        <p class="head-desc">Componente para mostrar datos tabulares. La cabecera soporta orden y filtro por columna; las celdas tienen 8 tipos de campo y hasta 4 niveles de indentación para filas jerárquicas.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--organismo"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Elegir el tipo de campo (Texto, Número, Link, Chip, Editable) según el dato real que representa cada columna.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar los niveles de indentación solo cuando los datos tienen una jerarquía real (ej. cartera → instrumento).</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Fijar la columna de acciones y evitar más de una acción visible por fila — el resto va en un desplegable.</p></div>
         </div>
-        <p class="comp-block__desc" style="max-width:none;">Organiza datos estructurados en filas y columnas, permitiendo comparar, ordenar, filtrar y actuar sobre múltiples registros a la vez.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Elegir el tipo de campo (Texto, Número, Link, Chip, Editable) según el dato real que representa cada columna.</li>
-              <li>Usar los niveles de indentación solo cuando los datos tienen una jerarquía real (ej. cartera → instrumento).</li>
-              <li>Fijar la columna de acciones y evitar más de una acción visible por fila — el resto va en un desplegable.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Usar el tipo Chip para un valor que en realidad es un estado semántico — para eso ya existe el átomo Tag.</li>
-              <li>Usar el tipo Editable sin un indicador claro de que el campo se puede modificar.</li>
-              <li>Usar una tabla para mostrar un solo registro — ahí una Card comunica mejor.</li>
-            </ul>
-          </div>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usar el tipo Chip para un valor que en realidad es un estado semántico — para eso ya existe el átomo Tag.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usar el tipo Editable sin un indicador claro de que el campo se puede modificar.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usar una tabla para mostrar un solo registro — ahí una Card comunica mejor.</p></div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--organismo"><i class="fa-solid fa-table"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
-        </div>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Tabla con jerarquía y distintos tipos de campo</p>
         <div class="playground">
-          <span class="playground__label">Tabla con jerarquía y distintos tipos de campo</span>
+          <span class="playground__label">Ejemplo interactivo</span>
           <div class="playground__stage" style="justify-content:flex-start; overflow-x:auto;">
             <div class="fg-tbl">
               <div class="fg-tbl-row fg-tbl-head">
@@ -111,11 +99,14 @@
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--organismo">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Propiedad</span><span class="anatomy-row__value">Tipo de campo</span><span class="anatomy-row__desc">Valores: Texto, Número, Link, Chip, Editable, Checkbox, Icono, Vacío — Texto admite avatar, ícono, chevron de expansión y descripción secundaria opcionales.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Propiedad</span><span class="anatomy-row__value">Nivel</span><span class="anatomy-row__desc">Valores: 0, 1, 2, 3 — Indentación creciente (8 / 24 / 48 / 64px) para representar filas anidadas.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Propiedad</span><span class="anatomy-row__value">Header</span><span class="anatomy-row__desc">Valores: Default, Hover ícono, Hover header, Checkbox — Hover ícono resalta los botones de orden/filtro; Hover header los muestra sin resaltar.</span></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo de campo</td><td class="spec-values"><code class="spec-tag">Texto</code><code class="spec-tag">Número</code><code class="spec-tag">Link</code><code class="spec-tag">Chip</code><code class="spec-tag">Editable</code><code class="spec-tag">Checkbox</code><code class="spec-tag">Icono</code><code class="spec-tag">Vacío</code></td><td class="spec-desc">Texto admite avatar, ícono, chevron de expansión y descripción secundaria opcionales.</td></tr><tr><td class="spec-prop">Nivel</td><td class="spec-values"><code class="spec-tag">0</code><code class="spec-tag">1</code><code class="spec-tag">2</code><code class="spec-tag">3</code></td><td class="spec-desc">Indentación creciente (8 / 24 / 48 / 64px) para representar filas anidadas.</td></tr><tr><td class="spec-prop">Header</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Hover ícono</code><code class="spec-tag">Hover header</code><code class="spec-tag">Checkbox</code></td><td class="spec-desc">Hover ícono resalta los botones de orden/filtro; Hover header los muestra sin resaltar.</td></tr></tbody></table>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

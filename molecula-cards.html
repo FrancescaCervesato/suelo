@@ -27,54 +27,43 @@
         <span class="current">Cards</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
-        <h1 class="page-title">Cards</h1>
-        <p class="page-desc">Contenedor visual para agrupar información relacionada. Puede incluir encabezado, cuerpo y acciones. Variantes para distintos contextos: datos, acciones, resumen.</p>
+      <div class="head-band head-band--molecula">
+        <span class="head-badge head-badge--molecula"><i class="fa-solid fa-diagram-project"></i> Molécula</span>
+        <h1 class="head-title">Cards</h1>
+        <p class="head-desc">Contenedor visual para agrupar información relacionada. Puede incluir encabezado, cuerpo y acciones. Variantes para distintos contextos: datos, acciones, resumen.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Agrupa visualmente información y acciones relacionadas dentro de un contenedor propio, separándola del resto del contenido de la página.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Mantener una sola acción primaria por card.</li>
-              <li>Usar un título claro que resuma el contenido en pocas palabras.</li>
-              <li>Elegir la variante (Datos, Acciones, Resumen) según lo que realmente contiene.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Agrupar más de dos o tres acciones — si necesitás más, dividí en varias cards.</li>
-              <li>Anidar cards dentro de cards.</li>
-              <li>Usarla como reemplazo de una tabla cuando hay muchos registros similares.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-clone"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
-        </div>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Ejemplo interactivo — cambiá la variante</p>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
           <div class="playground__stage demo-stage" data-variante="datos"><div class="demo-card"><strong>Cosecha estimada</strong><span style="font-size:22px; font-weight:700; color:var(--color-primario);">3.240 tn</span><div class="demo-card-actions"><button class="control-btn">Ver detalle</button></div></div></div><div class="playground__controls"><div class="control-row"><span class="control-row__label">Variante</span><button class="control-btn is-active" onclick="pgSet(this,'variante','datos')">Datos</button><button class="control-btn" onclick="pgSet(this,'variante','acciones')">Acciones</button></div></div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mantener una sola acción primaria por card.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar un título claro que resuma el contenido en pocas palabras.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Elegir la variante (Datos, Acciones, Resumen) según lo que realmente contiene.</p></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Variante</td><td class="spec-values"><code class="spec-tag">Datos</code><code class="spec-tag">Acciones</code><code class="spec-tag">Resumen</code></td><td class="spec-desc">Contexto de uso de la card.</td></tr></tbody></table>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Agrupar más de dos o tres acciones — si necesitás más, dividí en varias cards.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Anidar cards dentro de cards.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarla como reemplazo de una tabla cuando hay muchos registros similares.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--molecula">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Variante</span><span class="anatomy-row__desc">Valores: Datos, Acciones, Resumen — Contexto de uso de la card.</span></div>
+        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

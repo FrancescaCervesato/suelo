@@ -28,43 +28,15 @@
         <span class="current">Navbar / Navegación superior</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--organismo"><span class="icon-badge icon-badge--sm page-badge--organismo" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-table-cells-large"></i></span> Organismo</span>
-        <h1 class="page-title">Navbar / Navegación superior</h1>
-        <p class="page-desc">Barra superior global de la aplicación, fondo azul oscuro. Incluye botón de menú, logo, selector de empresa, empresa y persona activas, notificaciones y avatar.</p>
+      <div class="head-band head-band--organismo">
+        <span class="head-badge head-badge--organismo"><i class="fa-solid fa-table-cells-large"></i> Organismo</span>
+        <h1 class="head-title">Navbar / Navegación superior</h1>
+        <p class="head-desc">Barra superior global de la aplicación, fondo azul oscuro. Incluye botón de menú, logo, selector de empresa, empresa y persona activas, notificaciones y avatar.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--organismo"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Mantiene visible en todo momento el acceso a la marca, el contexto de cuenta activa y las acciones globales (notificaciones, perfil), sin importar en qué pantalla esté la persona.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Mantener el orden logo → contexto de cuenta → acciones globales en todas las pantallas.</li>
-              <li>Usar el selector de empresa cuando la persona pueda operar sobre más de una cuenta.</li>
-              <li>Mostrar el punto de notificaciones solo cuando hay novedades reales sin leer.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Agregar navegación de una sola pantalla a la barra superior — eso vive en el Sidebar o en Tabs locales.</li>
-              <li>Duplicar acciones que ya están disponibles en el Sidebar.</li>
-              <li>Sumar más de un selector de contexto sin dejar claro cuál es cuál.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--organismo"><i class="fa-solid fa-window-maximize"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
-        </div>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Ejemplo interactivo</p>
         <div class="playground">
           <span class="playground__label">Ejemplo interactivo</span>
           <div class="playground__stage" style="padding:0;">
@@ -86,11 +58,29 @@
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mantener el orden logo → contexto de cuenta → acciones globales en todas las pantallas.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar el selector de empresa cuando la persona pueda operar sobre más de una cuenta.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mostrar el punto de notificaciones solo cuando hay novedades reales sin leer.</p></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Elementos</td><td class="spec-values"><code class="spec-tag">Menú hamburguesa</code><code class="spec-tag">Logo + "by Primary"</code><code class="spec-tag">Selector de empresa</code><code class="spec-tag">Empresa activa</code><code class="spec-tag">Persona activa</code><code class="spec-tag">Notificaciones</code><code class="spec-tag">Avatar</code></td><td class="spec-desc">Todos configurables como visibles/ocultos de forma independiente.</td></tr><tr><td class="spec-prop">Color de fondo</td><td class="spec-values"><code class="spec-tag">Azul oscuro</code></td><td class="spec-desc">Único color de fondo documentado para la barra ("Navegacion superior/Azul").</td></tr></tbody></table>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Agregar navegación de una sola pantalla a la barra superior — eso vive en el Sidebar o en Tabs locales.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Duplicar acciones que ya están disponibles en el Sidebar.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Sumar más de un selector de contexto sin dejar claro cuál es cuál.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--organismo">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Propiedad</span><span class="anatomy-row__value">Elementos</span><span class="anatomy-row__desc">Valores: Menú hamburguesa, Logo + "by Primary", Selector de empresa, Empresa activa, Persona activa, Notificaciones, Avatar — Todos configurables como visibles/ocultos de forma independiente.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Propiedad</span><span class="anatomy-row__value">Color de fondo</span><span class="anatomy-row__desc">Valores: Azul oscuro — Único color de fondo documentado para la barra ("Navegacion superior/Azul").</span></div>
+        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>

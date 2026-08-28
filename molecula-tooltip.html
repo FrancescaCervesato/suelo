@@ -28,67 +28,65 @@
         <span class="current">Tooltip</span>
       </div>
 
-      <div class="page-header">
-        <span class="page-badge page-badge--molecula"><span class="icon-badge icon-badge--sm page-badge--molecula" style="background:transparent; width:16px; height:16px; font-size:12px;"><i class="fa-solid fa-diagram-project"></i></span> Molécula</span>
-        <h1 class="page-title">Tooltip</h1>
-        <p class="page-desc">Texto de ayuda contextual que aparece al hacer hover sobre un elemento. Tipo Default para un texto corto, o Compuesto para título, descripción y acción.</p>
+      <div class="head-band head-band--molecula">
+        <span class="head-badge head-badge--molecula"><i class="fa-solid fa-diagram-project"></i> Molécula</span>
+        <h1 class="head-title">Tooltip</h1>
+        <p class="head-desc">Texto de ayuda contextual que aparece al hacer hover sobre un elemento. Tipo Default para un texto corto, o Compuesto para título, descripción y acción.</p>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-compass"></i></span>
-          <h2 class="comp-block__title">Cómo usarlo</h2>
-        </div>
-        <p class="comp-block__desc" style="max-width:none;">Agrega una aclaración breve y contextual sobre un elemento, visible solo al pasar el mouse o enfocar, sin ocupar espacio permanente en la pantalla.</p>
-        <div class="usage-grid">
-          <div class="usage-card usage-card--si">
-            <span class="usage-card__label">✓ Hacer</span>
-            <ul>
-              <li>Usar el tipo Default para una aclaración corta de una línea.</li>
-              <li>Usar el tipo Compuesto cuando necesite título, más de una línea o una acción asociada.</li>
-              <li>Mantener el texto breve — si no entra en dos líneas, es señal de que necesitás otro componente.</li>
-            </ul>
-          </div>
-          <div class="usage-card usage-card--no">
-            <span class="usage-card__label">✕ Evitar</span>
-            <ul>
-              <li>Poner información crítica solo en un tooltip — en mobile o touch no siempre es accesible.</li>
-              <li>Usarlo para una acción que requiere algo más que leer — para eso está el Compuesto con botón, o un Modal.</li>
-              <li>Encadenar tooltips sobre tooltips.</li>
-            </ul>
-          </div>
-        </div>
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Tipo Default</p>
+        <div class="preview-box tight"><div class="fg-tt-default">Solicitar pronta aplicación</div></div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <span class="icon-badge page-badge--molecula"><i class="fa-solid fa-comment"></i></span>
-          <h2 class="comp-block__title">Probalo</h2>
-        </div>
-        <div class="playground">
-          <span class="playground__label">Tipo Default</span>
-          <div class="playground__stage" style="justify-content:flex-start;">
-            <div class="fg-tt-default">Solicitar pronta aplicación</div>
+      <div class="sec">
+        <h2 class="sec-title">Grilla de variantes</h2>
+        <p class="sec-sub">Los 2 tipos documentados</p>
+        <div class="variant-family">
+          <span class="variant-family__label">Default</span>
+          <div class="variant-row">
+            <div class="variant-item"><div class="fg-tt-default">Solicitar pronta aplicación</div></div>
           </div>
         </div>
-        <div class="playground" style="margin-top:16px;">
-          <span class="playground__label">Tipo Compuesto</span>
-          <div class="playground__stage" style="justify-content:flex-start;">
-            <div class="fg-tt-compuesto">
-              <span class="fg-tt-close"><i class="fa-solid fa-xmark"></i></span>
-              <div class="fg-tt-header"><i class="fa-solid fa-triangle-exclamation"></i><span class="fg-tt-title">Atención</span></div>
-              <div class="fg-tt-desc">La fecha del sistema es distinta de la fecha actual.</div>
-              <span class="fg-tt-link">Actualizar fecha</span>
+        <div class="variant-family">
+          <span class="variant-family__label">Compuesto</span>
+          <div class="variant-row">
+            <div class="variant-item">
+              <div class="fg-tt-compuesto">
+                <span class="fg-tt-close"><i class="fa-solid fa-xmark"></i></span>
+                <div class="fg-tt-header"><i class="fa-solid fa-triangle-exclamation"></i><span class="fg-tt-title">Atención</span></div>
+                <div class="fg-tt-desc">La fecha del sistema es distinta de la fecha actual.</div>
+                <span class="fg-tt-link">Actualizar fecha</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="comp-block">
-        <div class="comp-block__head">
-          <h2 class="comp-block__title" style="font-size:16px;">Propiedades documentadas</h2>
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar el tipo Default para una aclaración corta de una línea.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar el tipo Compuesto cuando necesite título, más de una línea o una acción asociada.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mantener el texto breve — si no entra en dos líneas, es señal de que necesitás otro componente.</p></div>
         </div>
-        <table class="spec-table"><thead><tr><th>Propiedad</th><th>Valores</th><th>Descripción</th></tr></thead><tbody><tr><td class="spec-prop">Tipo</td><td class="spec-values"><code class="spec-tag">Default</code><code class="spec-tag">Compuesto</code></td><td class="spec-desc">Default es solo texto; Compuesto agrega ícono, título, cierre y un link de acción.</td></tr><tr><td class="spec-prop">Flecha (solo Default)</td><td class="spec-values"><code class="spec-tag">Arriba</code><code class="spec-tag">Abajo</code></td><td class="spec-desc">Apunta hacia el elemento anclado.</td></tr></tbody></table>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Poner información crítica solo en un tooltip — en mobile o touch no siempre es accesible.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo para una acción que requiere algo más que leer — para eso está el Compuesto con botón, o un Modal.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Encadenar tooltips sobre tooltips.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--molecula">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Tipo</span><span class="anatomy-row__desc">Valores: Default, Compuesto — Default es solo texto; Compuesto agrega ícono, título, cierre y un link de acción.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--molecula">Propiedad</span><span class="anatomy-row__value">Flecha (solo Default)</span><span class="anatomy-row__desc">Valores: Arriba, Abajo — Apunta hacia el elemento anclado.</span></div>
+        </div>
       </div>
 
       <div class="rule" style="margin-top: var(--space-1);"></div>
