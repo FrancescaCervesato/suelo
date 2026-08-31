@@ -51,6 +51,8 @@
 .fg-radio-empty{width:14px;height:14px;border:2px solid var(--fg-borde-default);border-radius:50%;}
 .fg-icon-marcado{width:18px;height:18px;display:block;color:var(--fg-texto-color-primario);}
 .fg-icon-marcado.disabled{color:var(--fg-texto-light-2);}
+.fg-cb-row{display:flex;gap:4px;align-items:center;}
+.fg-cb-label{font-family:var(--font-body,'Noto Sans',sans-serif);font-weight:400;font-size:14px;line-height:16px;color:var(--fg-texto-default);white-space:nowrap;}
 
 /* ===== CHIPS / TAG ===== */
 .fg-chip{display:inline-flex;align-items:center;gap:4px;border-radius:var(--fg-radius-pill);font-weight:700;font-size:11px;line-height:16px;padding:0 8px;height:20px;}
