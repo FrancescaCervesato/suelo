@@ -95,7 +95,9 @@
 .fg-field-box .fg-ic{color:var(--fg-texto-light-2);font-size:12px;margin-left:auto;}
 .fg-field-hint-error{font-size:12px;color:var(--fg-rojo);}
 .fg-field-textarea{height:80px;align-items:flex-start;padding-top:8px;}
-.fg-field-chip{display:inline-flex;align-items:center;gap:4px;background:var(--fg-elev-2);color:var(--fg-texto-light);border-radius:var(--fg-radius);height:24px;padding:0 4px;font-size:14px;}
+.fg-field-chip{display:inline-flex;align-items:center;gap:8px;background:var(--fg-elev-2);color:var(--fg-texto-light);border-radius:var(--fg-radius);height:24px;padding:0 4px;font-size:14px;font-weight:500;}
+.fg-field-chip i{font-size:12px;cursor:pointer;}
+.fg-field-chips{display:flex;gap:8px;align-items:center;flex:1;flex-wrap:wrap;min-width:0;}
 
 /* ===== TOGGLE ===== */
 .fg-toggle{border:none;border-radius:10px;display:inline-flex;align-items:center;cursor:pointer;position:relative;padding:2px;}

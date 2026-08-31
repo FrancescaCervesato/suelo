@@ -32,25 +32,60 @@
       <div class="head-band head-band--atomo">
         <span class="head-badge head-badge--atomo"><i class="fa-solid fa-atom"></i> Átomo</span>
         <h1 class="head-title">Select</h1>
-        <p class="head-desc">Selector desplegable de una opción. Estados: default, abierto, con valor, deshabilitado. Se usa cuando hay 5 o más opciones disponibles.</p>
+        <p class="head-desc">Selector desplegable con soporte para selección única y múltiple. Estados: default, focus (con lista y filtro), loading, con valor, deshabilitado y error. Se usa cuando hay 5 o más opciones disponibles.</p>
       </div>
 
       <div class="sec">
         <h2 class="sec-title">Vista previa</h2>
         <p class="sec-sub">Estado por defecto</p>
-        <div class="preview-box"><div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box">Seleccioná una provincia <span class="fg-ic">⌄</span></div></div></div>
+        <div class="preview-box"><div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box">Seleccioná una provincia <i class="fa-solid fa-chevron-down fg-ic"></i></div></div></div>
       </div>
 
       <div class="sec">
         <h2 class="sec-title">Grilla de variantes</h2>
-        <p class="sec-sub">Los estados documentados</p>
+        <p class="sec-sub">Los estados documentados, en selección simple y múltiple</p>
         <div class="variant-family">
-          <span class="variant-family__label">Estado</span>
+          <span class="variant-family__label">Selección simple</span>
           <div class="variant-row">
-            <div class="variant-item"><div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box">Seleccioná una provincia <span class="fg-ic">⌄</span></div></div><span class="variant-item__cap">Default</span></div>
-            <div class="variant-item"><div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box activo">Buenos Aires <span class="fg-ic">⌄</span></div></div><span class="variant-item__cap">Con valor</span></div>
-            <div class="variant-item"><div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box noeditable">Seleccioná una provincia <span class="fg-ic">⌄</span></div></div><span class="variant-item__cap">Deshabilitado</span></div>
-            <div class="variant-item"><div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box error">Seleccioná una provincia <span class="fg-ic">⌄</span></div><span class="fg-field-hint-error">Este campo es obligatorio.</span></div><span class="variant-item__cap">Error</span></div>
+            <div class="variant-item"><div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box">Seleccioná una provincia <i class="fa-solid fa-chevron-down fg-ic"></i></div></div><span class="variant-item__cap">Default</span></div>
+            <div class="variant-item"><div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box activo">Buenos Aires <i class="fa-solid fa-chevron-down fg-ic"></i></div></div><span class="variant-item__cap">Con valor</span></div>
+            <div class="variant-item"><div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box noeditable">Seleccioná una provincia <i class="fa-solid fa-chevron-down fg-ic"></i></div></div><span class="variant-item__cap">Deshabilitado</span></div>
+            <div class="variant-item"><div class="fg-field"><label>Provincia<span class="fg-req">*</span></label><div class="fg-field-box error">Seleccioná una provincia <i class="fa-solid fa-chevron-down fg-ic"></i></div><span class="fg-field-hint-error">Este campo es obligatorio.</span></div><span class="variant-item__cap">Error</span></div>
+            <div class="variant-item">
+              <div class="fg-field">
+                <label>Provincia<span class="fg-req">*</span></label>
+                <div class="fg-field-box activo">Buenos Aire<i class="fa-solid fa-magnifying-glass fg-ic"></i></div>
+                <div class="fg-dd-menu" style="width:100%;"><div class="fg-dd-item default"><div class="fg-dd-txt"><span class="fg-dd-main">Buenos Aires</span></div></div></div>
+              </div>
+              <span class="variant-item__cap">Focus (filtrando)</span>
+            </div>
+            <div class="variant-item">
+              <div class="fg-field">
+                <label>Provincia<span class="fg-req">*</span></label>
+                <div class="fg-field-box activo">Buenos Aire<div class="fg-spinner gris" style="width:12px; height:12px; border-width:2px;"></div></div>
+                <div class="fg-dd-menu" style="width:100%;"><div class="fg-dd-item default"><div class="fg-dd-txt"><span class="fg-dd-main">Buenos Aires</span></div></div></div>
+              </div>
+              <span class="variant-item__cap">Loading</span>
+            </div>
+          </div>
+        </div>
+        <div class="variant-family">
+          <span class="variant-family__label">Selección múltiple</span>
+          <div class="variant-row">
+            <div class="variant-item">
+              <div class="fg-field" style="width:280px;">
+                <label>Provincias<span class="fg-req">*</span></label>
+                <div class="fg-field-box activo">
+                  <div class="fg-field-chips">
+                    <span class="fg-field-chip">Buenos Aires <i class="fa-solid fa-xmark"></i></span>
+                    <span class="fg-field-chip">Córdoba <i class="fa-solid fa-xmark"></i></span>
+                    <span class="fg-field-chip">+2...</span>
+                  </div>
+                  <i class="fa-solid fa-chevron-down fg-ic"></i>
+                </div>
+              </div>
+              <span class="variant-item__cap">Con valor</span>
+            </div>
           </div>
         </div>
       </div>
@@ -62,12 +97,13 @@
           <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usarlo cuando hay 5 opciones o más, o cuando el espacio disponible es limitado.</p></div>
           <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Ordenar las opciones de forma predecible (alfabético, o por frecuencia de uso).</p></div>
           <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mostrar un estado vacío claro ("Seleccioná una provincia") cuando no hay valor elegido.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar selección múltiple cuando la persona necesite elegir más de una opción — el modo Multi muestra chips con una cruz para eliminar cada uno.</p></div>
         </div>
         <p class="dd-label">No hacer</p>
         <div class="dd-grid">
           <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo con menos de 5 opciones si podés mostrarlas todas a la vez — un Radio button se escanea más rápido.</p></div>
           <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Precargar una opción como si fuera elegida por la persona cuando en realidad es solo un placeholder.</p></div>
-          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Usarlo para selección múltiple — para eso está el Seleccionador múltiple.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">Abrir la lista automáticamente al eliminar un valor con la cruz (✕) de un chip — la persona vuelve al estado default y decide si reabrirla.</p></div>
         </div>
       </div>
 
@@ -75,7 +111,8 @@
         <h2 class="sec-title">Anatomía</h2>
         <p class="sec-sub">Propiedades documentadas de este componente</p>
         <div class="anatomy anatomy--atomo">
-          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--atomo">Propiedad</span><span class="anatomy-row__value">Estado</span><span class="anatomy-row__desc">Valores: Default, Abierto, Con valor, Deshabilitado — Estado de interacción del selector.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--atomo">Propiedad</span><span class="anatomy-row__value">Estado</span><span class="anatomy-row__desc">Valores: Default, Empty, Loading, Focus, Activo, Hover — Estado de interacción del selector.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--atomo">Propiedad</span><span class="anatomy-row__value">Multi</span><span class="anatomy-row__desc">Valores: Selección simple (No), Selección múltiple (Si) — En modo Multi, los valores elegidos se muestran como chips con botón de eliminar.</span></div>
         </div>
       </div>
 
