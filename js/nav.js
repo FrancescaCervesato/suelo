@@ -34,7 +34,6 @@
     { label: "Desplegable", href: "molecula-desplegable.html", page: "molecula-desplegable" },
     { label: "Datepicker", href: "molecula-datepicker.html", page: "molecula-datepicker" },
     { label: "Empty state", href: "molecula-empty-state.html", page: "molecula-empty-state" },
-    { label: "Modal", href: "molecula-modal.html", page: "molecula-modal" },
     { label: "Paginador", href: "molecula-paginador.html", page: "molecula-paginador" },
     { label: "Progress bar", href: "molecula-progress-bar.html", page: "molecula-progress-bar" },
     { label: "Stepper", href: "molecula-stepper.html", page: "molecula-stepper" },
@@ -47,6 +46,7 @@
     { group: "ORGANISMOS" },
     { label: "Sidebar / Navegación lateral", href: "organismo-sidebar.html", page: "organismo-sidebar" },
     { label: "Navbar / Navegación superior", href: "organismo-navbar.html", page: "organismo-navbar" },
+    { label: "Modal", href: "organismo-modal.html", page: "organismo-modal" },
     { label: "Tablas", href: "organismo-tablas.html", page: "organismo-tablas" },
     { label: "Gráfico de torta", href: "organismo-grafico-torta.html", page: "organismo-grafico-torta" },
   ];
