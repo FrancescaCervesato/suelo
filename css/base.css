@@ -139,6 +139,7 @@ a.card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px)
 .tag {
   display: inline-flex; align-items: center; gap: 6px; height: 22px; padding: 0 var(--space-05);
   border-radius: var(--radius-sm); font-size: var(--caption2-size); font-weight: 700;
+  flex-shrink: 0; white-space: nowrap;
 }
 .tag--verde { background: var(--elevacion-verde-bg); color: var(--texto-status-verde); }
 .tag--azul { background: var(--elevacion-primario-light); color: var(--color-primario-dark); }
@@ -257,7 +258,7 @@ a.card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px)
 .states-note { font-size: 12.5px; color: var(--texto-light-2); }
 
 /* ---------- Navegación mobile: botón hamburguesa + overlay + drawer ---------- */
-/* OCL: sidebar colapsable — en mobile queda oculta fuera de pantalla (off-canvas)
+/* Sidebar colapsable — en mobile queda oculta fuera de pantalla (off-canvas)
    y se abre como drawer con el botón hamburguesa, en vez de apilarse arriba del
    contenido (obligaba a scrollear ~30 links antes de llegar a la página). */
 .mobile-nav-toggle {
@@ -309,4 +310,18 @@ a.card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px)
   .main { padding: var(--space-4) var(--space-05) var(--space-2); }
   .head-title { font-size: 24px; }
   .card, .cat-card, .comp-block { padding: var(--space-1); }
+}
+
+/* ---------- Nav "Anterior / Siguiente" al pie de cada página de componente ---------- */
+/* 29 páginas repiten este bloque con min-width:220px por card, hardcodeado
+   inline — con dos cards eso suma 456px+gap y en mobile fuerza el wrap, quedando
+   una tarjeta arriba de la otra en vez de lado a lado. Se apunta al estilo inline
+   (idéntico en las 29 páginas) para corregirlo sin editar cada archivo. */
+@media (max-width: 640px) {
+  a.card[style*="min-width:220px"] {
+    min-width: 0 !important;
+    flex: 1 1 0 !important;
+    padding: var(--space-1) !important;
+  }
+  a.card[style*="min-width:220px"] .card__title { font-size: 14px; }
 }

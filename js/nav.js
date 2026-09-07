@@ -76,7 +76,7 @@
 
   var SCROLL_KEY = 'suelo-sidebar-scroll';
 
-  // OCL: sidebar colapsable en mobile — drawer off-canvas con botón
+  // Sidebar colapsable en mobile — drawer off-canvas con botón
   // hamburguesa y overlay, para que en celular no haya que scrollear
   // los 30+ links del menú antes de llegar al contenido de la página.
   function closeDrawer(sidebar, overlay, toggleBtn) {
