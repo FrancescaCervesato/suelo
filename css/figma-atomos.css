@@ -357,6 +357,20 @@
 .fg-tbl-nivel1{padding-left:24px;}
 .fg-tbl-nivel2{padding-left:48px;}
 
+/* Grilla en mobile: columnas y fuente más chicas para que entre más tabla
+   antes de tener que scrollear horizontalmente (sigue siendo scrolleable —
+   una grilla de datos real no se puede "aplastar" a 1 columna). */
+@media (max-width: 640px) {
+  .fg-tbl-cell { height: 36px; font-size: 12px; padding: 0 6px; }
+  .fg-tbl-head .fg-tbl-cell { font-size: 10px; }
+  .fg-tbl-cell.texto { width: 160px; }
+  .fg-tbl-cell.link { width: 100px; font-size: 13px; }
+  .fg-tbl-cell.chip { width: 100px; }
+  .fg-tbl-cell.numero { width: 84px; }
+  .fg-tbl-cell.editable { width: 90px; }
+  .fg-tbl-cell .fg-tbl-avatar { width: 26px; height: 26px; font-size: 10px; }
+}
+
 /* ===== TABS ===== */
 .fg-tabs{display:flex;align-items:center;}
 .fg-tab{display:flex;align-items:center;justify-content:center;height:40px;box-sizing:border-box;padding:8px 24px;border-bottom:3px solid var(--fg-borde-default);font-family:var(--font-body,'Noto Sans',sans-serif);font-weight:500;font-size:16px;line-height:24px;color:var(--fg-texto-default);}

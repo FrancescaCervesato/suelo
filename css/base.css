@@ -264,11 +264,14 @@ a.card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px)
 .mobile-nav-toggle {
   display: none;
   position: fixed; top: var(--space-1); left: var(--space-1); z-index: 1001;
-  width: 44px; height: 44px; border: none; border-radius: var(--radius-md);
-  background: var(--gris-10); color: #fff; font-size: 17px;
+  width: 40px; height: 40px; border: 1px solid var(--borde-default); border-radius: var(--radius-md);
+  background: var(--blanco); color: var(--texto-light); font-size: 15px;
   align-items: center; justify-content: center; cursor: pointer;
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: var(--shadow-card);
+  transition: background .12s ease, color .12s ease;
 }
+.mobile-nav-toggle:hover,
+.mobile-nav-toggle:active { background: var(--gris-1); color: var(--texto-default); }
 .sidebar-overlay {
   display: none;
   position: fixed; inset: 0; z-index: 999;
@@ -311,6 +314,17 @@ a.card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px)
   .head-title { font-size: 24px; }
   .card, .cat-card, .comp-block { padding: var(--space-1); }
 }
+
+/* ---------- Contenido ancho (grillas/tablas) que scrollea horizontal en mobile ---------- */
+.h-scroll-fade { position: relative; }
+.h-scroll-fade::after {
+  content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 28px;
+  background: linear-gradient(to right, rgba(255,255,255,0), var(--blanco));
+  pointer-events: none; border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+.scroll-hint { display: none; align-items: center; gap: 6px; font-size: var(--caption-size); color: var(--texto-light-2); margin-top: -4px; }
+.scroll-hint i { font-size: 11px; }
+@media (max-width: 640px) { .scroll-hint { display: flex; } }
 
 /* ---------- Nav "Anterior / Siguiente" al pie de cada página de componente ---------- */
 /* 29 páginas repiten este bloque con min-width:220px por card, hardcodeado
