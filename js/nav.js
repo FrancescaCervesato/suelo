@@ -79,11 +79,18 @@
   // Sidebar colapsable en mobile — drawer off-canvas con botón
   // hamburguesa y overlay, para que en celular no haya que scrollear
   // los 30+ links del menú antes de llegar al contenido de la página.
+  function setToggleIcon(toggleBtn, open) {
+    var icon = toggleBtn.querySelector('i');
+    if (!icon) return;
+    icon.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+  }
+
   function closeDrawer(sidebar, overlay, toggleBtn) {
     sidebar.classList.remove('is-open');
     overlay.classList.remove('is-visible');
     document.body.style.overflow = '';
     toggleBtn.setAttribute('aria-expanded', 'false');
+    setToggleIcon(toggleBtn, false);
   }
 
   function openDrawer(sidebar, overlay, toggleBtn) {
@@ -91,6 +98,7 @@
     overlay.classList.add('is-visible');
     document.body.style.overflow = 'hidden';
     toggleBtn.setAttribute('aria-expanded', 'true');
+    setToggleIcon(toggleBtn, true);
   }
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -119,7 +127,7 @@
     toggleBtn.className = 'mobile-nav-toggle';
     toggleBtn.setAttribute('aria-label', 'Abrir menú de navegación');
     toggleBtn.setAttribute('aria-expanded', 'false');
-    toggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    toggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i><span class="mobile-nav-toggle__brand">suelo</span>';
 
     var overlay = document.createElement('div');
     overlay.className = 'sidebar-overlay';
