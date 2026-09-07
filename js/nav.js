@@ -76,6 +76,23 @@
 
   var SCROLL_KEY = 'suelo-sidebar-scroll';
 
+  // OCL: sidebar colapsable en mobile — drawer off-canvas con botón
+  // hamburguesa y overlay, para que en celular no haya que scrollear
+  // los 30+ links del menú antes de llegar al contenido de la página.
+  function closeDrawer(sidebar, overlay, toggleBtn) {
+    sidebar.classList.remove('is-open');
+    overlay.classList.remove('is-visible');
+    document.body.style.overflow = '';
+    toggleBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  function openDrawer(sidebar, overlay, toggleBtn) {
+    sidebar.classList.add('is-open');
+    overlay.classList.add('is-visible');
+    document.body.style.overflow = 'hidden';
+    toggleBtn.setAttribute('aria-expanded', 'true');
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     var mount = document.getElementById('sidebar-root');
     if (!mount) return;
@@ -95,6 +112,34 @@
     }
     mount.addEventListener('scroll', function () {
       try { sessionStorage.setItem(SCROLL_KEY, mount.scrollTop); } catch (e) {}
+    });
+
+    var toggleBtn = document.createElement('button');
+    toggleBtn.type = 'button';
+    toggleBtn.className = 'mobile-nav-toggle';
+    toggleBtn.setAttribute('aria-label', 'Abrir menú de navegación');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+
+    var overlay = document.createElement('div');
+    overlay.className = 'sidebar-overlay';
+
+    document.body.appendChild(toggleBtn);
+    document.body.appendChild(overlay);
+
+    toggleBtn.addEventListener('click', function () {
+      if (mount.classList.contains('is-open')) {
+        closeDrawer(mount, overlay, toggleBtn);
+      } else {
+        openDrawer(mount, overlay, toggleBtn);
+      }
+    });
+    overlay.addEventListener('click', function () { closeDrawer(mount, overlay, toggleBtn); });
+    mount.addEventListener('click', function (e) {
+      if (e.target.closest('.sidebar-link')) closeDrawer(mount, overlay, toggleBtn);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeDrawer(mount, overlay, toggleBtn);
     });
   });
 })();

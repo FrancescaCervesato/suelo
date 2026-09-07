@@ -4,6 +4,11 @@
    ============================================================ */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .sidebar { transition: none !important; }
+}
 body {
   font-family: var(--font-body);
   background: var(--fondo-pagina);
@@ -251,9 +256,57 @@ a.card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px)
 .states-row { display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: flex-start; }
 .states-note { font-size: 12.5px; color: var(--texto-light-2); }
 
+/* ---------- Navegación mobile: botón hamburguesa + overlay + drawer ---------- */
+/* OCL: sidebar colapsable — en mobile queda oculta fuera de pantalla (off-canvas)
+   y se abre como drawer con el botón hamburguesa, en vez de apilarse arriba del
+   contenido (obligaba a scrollear ~30 links antes de llegar a la página). */
+.mobile-nav-toggle {
+  display: none;
+  position: fixed; top: var(--space-1); left: var(--space-1); z-index: 1001;
+  width: 44px; height: 44px; border: none; border-radius: var(--radius-md);
+  background: var(--gris-10); color: #fff; font-size: 17px;
+  align-items: center; justify-content: center; cursor: pointer;
+  box-shadow: var(--shadow-card-hover);
+}
+.sidebar-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 999;
+  background: rgba(27, 36, 49, 0.5);
+  opacity: 0; pointer-events: none;
+  transition: opacity .2s ease;
+}
+.sidebar-overlay.is-visible { opacity: 1; pointer-events: auto; }
+
 @media (max-width: 900px) {
   .app-shell { flex-direction: column; }
-  .sidebar { position: relative; height: auto; width: 100%; }
-  .main { padding: var(--space-2) var(--space-1) var(--space-3); }
+  .mobile-nav-toggle { display: flex; }
+  .sidebar-overlay { display: block; }
+
+  .sidebar {
+    position: fixed; top: 0; left: 0; z-index: 1000;
+    width: min(280px, 84vw); height: 100dvh;
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+    box-shadow: var(--shadow-card-hover);
+    -webkit-overflow-scrolling: touch;
+  }
+  .sidebar.is-open { transform: translateX(0); }
+
+  .main { padding: var(--space-4) var(--space-1) var(--space-3); }
   .grid--4, .grid--3, .grid--2, .usage-grid, .dd-grid { grid-template-columns: 1fr; }
+
+  /* Jerarquía: en pantallas chicas los títulos/paddings de desktop se sienten
+     desproporcionados — se reducen para que la info del componente respire. */
+  .head-band { padding: var(--space-15); gap: 10px; }
+  .head-title { font-size: 28px; }
+  .sec-title { font-size: 21px; }
+  .anatomy { padding: var(--space-15) var(--space-1); }
+  .variant-row { gap: var(--space-1); padding: var(--space-1); }
+  .comp-block { padding: var(--space-15); }
+}
+
+@media (max-width: 480px) {
+  .main { padding: var(--space-4) var(--space-05) var(--space-2); }
+  .head-title { font-size: 24px; }
+  .card, .cat-card, .comp-block { padding: var(--space-1); }
 }
