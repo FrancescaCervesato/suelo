@@ -257,22 +257,26 @@ a.card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px)
 .states-row { display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: flex-start; }
 .states-note { font-size: 12.5px; color: var(--texto-light-2); }
 
-/* ---------- Navegación mobile: botón hamburguesa + overlay + drawer ---------- */
+/* ---------- Navegación mobile: menú embebido en el banner + overlay + drawer ---------- */
 /* Sidebar colapsable — en mobile queda oculta fuera de pantalla (off-canvas)
-   y se abre como drawer con el botón hamburguesa, en vez de apilarse arriba del
-   contenido (obligaba a scrollear ~30 links antes de llegar a la página). */
+   y se abre como drawer, en vez de apilarse arriba del contenido (obligaba a
+   scrollear ~30 links antes de llegar a la página). El botón que la abre no
+   es una barra propia: vive embebido adentro del banner de cada página
+   (hero-cover en el inicio, head-band en las páginas de componente), que a
+   su vez se estira a los bordes de la pantalla arriba/izq/der conservando el
+   radio solo abajo. */
 .mobile-nav-toggle {
   display: none;
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1002;
-  height: 52px; padding: 0 var(--space-1); border: none;
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  background: var(--gris-10); color: #fff;
-  align-items: center; gap: 10px; cursor: pointer;
-  box-shadow: var(--shadow-card-hover);
+  position: absolute; top: var(--space-1); left: var(--space-1); z-index: 3;
+  width: 36px; height: 36px; border: none; background: transparent;
+  color: #fff; align-items: center; justify-content: center; cursor: pointer;
 }
-.mobile-nav-toggle i { font-size: 17px; }
-.mobile-nav-toggle__brand { font-family: var(--font-display); font-weight: 700; font-size: 15px; }
-.mobile-nav-toggle:active { background: var(--gris-9); }
+.mobile-nav-toggle i { font-size: 19px; }
+.mobile-nav-toggle:active { background: rgba(255,255,255,0.15); border-radius: var(--radius-sm); }
+/* Fallback para páginas sin banner de color (Fundamentos/Tokens: page-header
+   sobre el fondo de la página) — el ícono pasa a oscuro para tener contraste. */
+.mobile-nav-toggle--plain { color: var(--texto-default); }
+.mobile-nav-toggle--plain:active { background: var(--gris-1); }
 .sidebar-overlay {
   display: none;
   position: fixed; inset: 0; z-index: 999;
@@ -290,23 +294,29 @@ a.card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px)
   .sidebar {
     position: fixed; top: 0; left: 0; z-index: 1000;
     width: min(280px, 84vw); height: 100dvh;
-    padding-top: 64px;
     transform: translateX(-100%);
     transition: transform .25s ease;
     box-shadow: var(--shadow-card-hover);
     -webkit-overflow-scrolling: touch;
   }
   .sidebar.is-open { transform: translateX(0); }
-  /* La marca "suelo" ya la muestra la barra fija de arriba — evita duplicarla
-     y que se solape/desalinee con el botón hamburguesa al abrir el drawer. */
-  .sidebar .sidebar-brand, .sidebar .sidebar-divider { display: none; }
 
-  .main { padding: var(--space-4) var(--space-1) var(--space-3); }
+  .main { padding: var(--space-2) var(--space-1) var(--space-3); }
   .grid--4, .grid--3, .grid--2, .usage-grid, .dd-grid { grid-template-columns: 1fr; }
+
+  /* Banner de la página estirado a los bordes (arriba/izq/der), radio solo abajo. */
+  .hero-cover, .head-band, .page-header { position: relative; }
+  .hero-cover, .head-band {
+    margin: calc(-1 * var(--space-2)) calc(-1 * var(--space-1)) 0;
+    padding-top: calc(var(--space-1) + 36px + var(--space-05)) !important;
+  }
+  .hero-cover { border-radius: 0 0 var(--radius-xl) var(--radius-xl) !important; }
+  .head-band { border-radius: 0 0 var(--radius-lg) var(--radius-lg) !important; }
+  .page-header { padding-top: calc(36px + var(--space-05)); }
 
   /* Jerarquía: en pantallas chicas los títulos/paddings de desktop se sienten
      desproporcionados — se reducen para que la info del componente respire. */
-  .head-band { padding: var(--space-15); gap: 10px; }
+  .head-band { padding-left: var(--space-15); padding-right: var(--space-15); padding-bottom: var(--space-15); gap: 10px; }
   .head-title { font-size: 28px; }
   .sec-title { font-size: 21px; }
   .anatomy { padding: var(--space-15) var(--space-1); }
@@ -315,7 +325,8 @@ a.card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-1px)
 }
 
 @media (max-width: 480px) {
-  .main { padding: var(--space-4) var(--space-05) var(--space-2); }
+  .main { padding: var(--space-2) var(--space-05) var(--space-2); }
+  .hero-cover, .head-band { margin-left: calc(-1 * var(--space-05)); margin-right: calc(-1 * var(--space-05)); }
   .head-title { font-size: 24px; }
   .card, .cat-card, .comp-block { padding: var(--space-1); }
 }

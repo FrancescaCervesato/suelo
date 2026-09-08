@@ -122,17 +122,28 @@
       try { sessionStorage.setItem(SCROLL_KEY, mount.scrollTop); } catch (e) {}
     });
 
+    // El botón vive embebido dentro del banner de la página (hero-cover en el
+    // inicio, head-band en las páginas de componente); si la página no tiene
+    // ninguno (Fundamentos/Tokens usan page-header, sin fondo de color), cae
+    // a page-header con un ícono oscuro en vez de blanco.
+    var bannerEl = document.querySelector('.hero-cover') || document.querySelector('.head-band');
+    var isPlain = false;
+    if (!bannerEl) {
+      bannerEl = document.querySelector('.page-header');
+      isPlain = true;
+    }
+
     var toggleBtn = document.createElement('button');
     toggleBtn.type = 'button';
-    toggleBtn.className = 'mobile-nav-toggle';
+    toggleBtn.className = 'mobile-nav-toggle' + (isPlain ? ' mobile-nav-toggle--plain' : '');
     toggleBtn.setAttribute('aria-label', 'Abrir menú de navegación');
     toggleBtn.setAttribute('aria-expanded', 'false');
-    toggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i><span class="mobile-nav-toggle__brand">suelo</span>';
+    toggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
 
     var overlay = document.createElement('div');
     overlay.className = 'sidebar-overlay';
 
-    document.body.appendChild(toggleBtn);
+    if (bannerEl) bannerEl.insertBefore(toggleBtn, bannerEl.firstChild);
     document.body.appendChild(overlay);
 
     toggleBtn.addEventListener('click', function () {
