@@ -49,6 +49,8 @@
     { label: "Modal", href: "organismo-modal.html", page: "organismo-modal" },
     { label: "Tablas", href: "organismo-tablas.html", page: "organismo-tablas" },
     { label: "Gráfico de torta", href: "organismo-grafico-torta.html", page: "organismo-grafico-torta" },
+    { label: "Side sheet", href: "organismo-side-sheet.html", page: "organismo-side-sheet" },
+    { label: "Bottom sheet", href: "organismo-bottom-sheet.html", page: "organismo-bottom-sheet" },
   ];
 
   function buildSidebar(currentPage) {

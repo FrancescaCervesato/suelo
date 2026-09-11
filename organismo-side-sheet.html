@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+<title>suelo — Side sheet</title>
+<meta name="description" content="suelo — Panel lateral deslizable con contenido configurable mediante slot." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
+</head>
+<body data-page="organismo-side-sheet">
+<div class="app-shell">
+  <nav class="sidebar" id="sidebar-root"></nav>
+
+  <main class="main">
+    <div class="main-inner">
+      <div class="breadcrumbs">
+        <a class="brand" href="index.html">suelo</a>
+        <span class="sep">›</span>
+        <a class="brand" href="index.html#componentes">Organismos</a>
+        <span class="sep">›</span>
+        <span class="current">Side sheet</span>
+      </div>
+
+      <div class="head-band head-band--organismo">
+        <span class="head-badge head-badge--organismo"><i class="fa-solid fa-house-chimney"></i> Organismo</span>
+        <h1 class="head-title">Side sheet</h1>
+      </div>
+
+      <div class="page-tip">
+        <div class="page-tip__rule"></div>
+        <p class="page-tip__text">Panel lateral deslizable para flujos secundarios, con 4 tamaños y una única parte que cambia entre usos: el <strong>slot de contenido</strong>. El header, el divisor y el footer con acciones son siempre los mismos — lo que va en el medio se arma con un formulario, una lista o cualquier otro flujo que no necesite navegación completa.</p>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Estado por defecto — Tamaño Chico, slot vacío</p>
+        <div class="playground">
+          <span class="playground__label">Ejemplo interactivo — el slot en acción</span>
+          <div class="playground__stage" style="justify-content:flex-end; overflow-x:auto; padding:0; background:var(--gris-2); min-height:480px;">
+            <div class="demo-stage" data-slot="vacio" style="height:480px; display:flex;">
+              <div class="fg-sidesheet">
+                <div class="fg-sidesheet-header">
+                  <span class="fg-sidesheet-title">Titulo</span>
+                  <button class="fg-btn fg-btn-32 fg-btn-sutil" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="fg-sidesheet-content">
+                  <div data-slot-content="formulario" style="display:flex; flex-direction:column; gap:16px;">
+                    <div class="fg-slot-field"><label>Nombre de la cartera</label><input class="demo-input" style="width:100%;" /></div>
+                    <div class="fg-slot-field"><label>Moneda</label><div class="demo-select" style="width:100%;"><span>Seleccionar…</span><i class="fa-solid fa-chevron-down" style="font-size:11px;"></i></div></div>
+                    <div class="fg-slot-field"><label>Monto inicial</label><input class="demo-input" style="width:100%;" /></div>
+                  </div>
+                  <div data-slot-content="lista" class="fg-slot-list">
+                    <div class="fg-slot-list-item"><i class="fa-solid fa-wallet"></i> Cartera Pesos <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="fg-slot-list-item"><i class="fa-solid fa-wallet"></i> Renta fija <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="fg-slot-list-item"><i class="fa-solid fa-wallet"></i> Renta fija en pesos <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="fg-slot-list-item"><i class="fa-solid fa-wallet"></i> Instrumentos externos <i class="fa-solid fa-chevron-right"></i></div>
+                  </div>
+                  <div data-slot-content="grafico" class="fg-slot-bars">
+                    <i style="height:55%;"></i><i style="height:80%;"></i><i style="height:40%;"></i><i style="height:95%;"></i><i style="height:65%;"></i><i style="height:30%;"></i>
+                  </div>
+                </div>
+                <div class="fg-sidesheet-divider"></div>
+                <div class="fg-sidesheet-footer">
+                  <button class="fg-btn fg-btn-40 fg-btn-default">Cancelar</button>
+                  <button class="fg-btn fg-btn-40 fg-btn-primario">Confirmar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="playground__controls">
+            <div class="control-row">
+              <span class="control-row__label">Slot</span>
+              <button class="control-btn is-active" onclick="pgSet(this,'slot','vacio')">Vacío (default)</button>
+              <button class="control-btn" onclick="pgSet(this,'slot','formulario')">Formulario</button>
+              <button class="control-btn" onclick="pgSet(this,'slot','lista')">Lista</button>
+              <button class="control-btn" onclick="pgSet(this,'slot','grafico')">Gráfico</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Grilla de variantes</h2>
+        <p class="sec-sub">Mostrando las 4 variantes de tamaño disponibles</p>
+        <div class="playground__stage" style="justify-content:flex-start; overflow-x:auto; gap:24px; background:transparent; padding:0;">
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; flex-shrink:0;">
+            <div class="fg-sidesheet" style="height:360px;">
+              <div class="fg-sidesheet-header"><span class="fg-sidesheet-title">Titulo</span><button class="fg-btn fg-btn-32 fg-btn-sutil"><i class="fa-solid fa-xmark"></i></button></div>
+              <div class="fg-sidesheet-content"></div>
+              <div class="fg-sidesheet-divider"></div>
+              <div class="fg-sidesheet-footer"><button class="fg-btn fg-btn-40 fg-btn-default">Cancelar</button><button class="fg-btn fg-btn-40 fg-btn-primario">Confirmar</button></div>
+            </div>
+            <span class="variant-item__cap">Chico · 364px</span>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; flex-shrink:0;">
+            <div class="fg-sidesheet tamano-mediano" style="height:360px;">
+              <div class="fg-sidesheet-header"><span class="fg-sidesheet-title">Titulo</span><button class="fg-btn fg-btn-32 fg-btn-sutil"><i class="fa-solid fa-xmark"></i></button></div>
+              <div class="fg-sidesheet-content"></div>
+              <div class="fg-sidesheet-divider"></div>
+              <div class="fg-sidesheet-footer"><button class="fg-btn fg-btn-40 fg-btn-default">Cancelar</button><button class="fg-btn fg-btn-40 fg-btn-primario">Confirmar</button></div>
+            </div>
+            <span class="variant-item__cap">Mediano · 548px</span>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; flex-shrink:0;">
+            <div class="fg-sidesheet tamano-grande" style="height:360px;">
+              <div class="fg-sidesheet-header"><span class="fg-sidesheet-title">Titulo</span><button class="fg-btn fg-btn-32 fg-btn-sutil"><i class="fa-solid fa-xmark"></i></button></div>
+              <div class="fg-sidesheet-content"></div>
+              <div class="fg-sidesheet-divider"></div>
+              <div class="fg-sidesheet-footer"><button class="fg-btn fg-btn-40 fg-btn-default">Cancelar</button><button class="fg-btn fg-btn-40 fg-btn-primario">Confirmar</button></div>
+            </div>
+            <span class="variant-item__cap">Grande · 730px</span>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:8px; flex-shrink:0;">
+            <div class="fg-sidesheet tamano-xl" style="height:360px;">
+              <div class="fg-sidesheet-header"><span class="fg-sidesheet-title">Titulo</span><button class="fg-btn fg-btn-32 fg-btn-sutil"><i class="fa-solid fa-xmark"></i></button></div>
+              <div class="fg-sidesheet-content"></div>
+              <div class="fg-sidesheet-divider"></div>
+              <div class="fg-sidesheet-footer"><button class="fg-btn fg-btn-40 fg-btn-default">Cancelar</button><button class="fg-btn fg-btn-40 fg-btn-primario">Confirmar</button></div>
+            </div>
+            <span class="variant-item__cap">Extra Grande · 912px</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar el tamaño apropiado al contenido: Chico para formularios simples, Grande o Extra Grande para contenido complejo como tablas o listados extensos.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Incluir siempre acciones en el footer. Los botones Cancelar y Confirmar guían al usuario y se mantienen consistentes en todos los tamaños.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Utilizar el slot para contenido relevante: formularios, listas, o cualquier flujo secundario que no requiera navegación completa.</p></div>
+        </div>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">No usar Side sheet para contenido mínimo. Si la información cabe en un modal, tooltip o popover, no hace falta este componente.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">No anidar Side sheets dentro de otros. La superposición de paneles laterales crea confusión en la navegación.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">No ocultar acciones críticas en el Side sheet. Las acciones principales de la página deben permanecer visibles afuera.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--organismo">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Tamaños</span><span class="anatomy-row__value">4 variantes</span><span class="anatomy-row__desc">Chico (364px), Mediano (548px), Grande (730px), Extra Grande (912px).</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Estructura</span><span class="anatomy-row__value">Header, Content (slot), Divider, Footer</span><span class="anatomy-row__desc">El slot es la única parte que varía entre usos del componente.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Propiedades</span><span class="anatomy-row__value">Content (slot), Tamaño (variante)</span><span class="anatomy-row__desc">Tamaño define el ancho; content reemplaza el cuerpo completo.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Componentes anidados</span><span class="anatomy-row__value">Titulo, Boton cerrar, Boton default, Boton primario</span><span class="anatomy-row__desc">Boton cerrar (Sutil, 32) en el header; Boton default + Boton primario (40) en el footer.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Header</span><span class="anatomy-row__value">Título del panel + botón de cierre (xmark)</span><span class="anatomy-row__desc">—</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Footer</span><span class="anatomy-row__value">Botón Cancelar (default) + Botón Confirmar (primario)</span><span class="anatomy-row__desc">—</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Accesibilidad</span><span class="anatomy-row__value">Focus trap + Escape</span><span class="anatomy-row__desc">El foco queda contenido dentro del panel mientras está abierto; Escape lo cierra.</span></div>
+        </div>
+      </div>
+
+      <div class="rule" style="margin-top: var(--space-1);"></div>
+      <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+        <a class="card" style="flex:1; min-width:220px; " href="organismo-grafico-torta.html"><div class="card__desc" style="text-transform:uppercase; font-size:11px; letter-spacing:0.04em; font-weight:700;">← Anterior</div><div class="card__title">Gráfico de torta</div></a>
+        <a class="card" style="flex:1; min-width:220px; text-align:right;" href="organismo-bottom-sheet.html"><div class="card__desc" style="text-transform:uppercase; font-size:11px; letter-spacing:0.04em; font-weight:700;">Siguiente →</div><div class="card__title">Bottom sheet</div></a>
+      </div>
+    </div>
+  </main>
+</div>
+<div class="accent-bar" style="position:fixed; bottom:0; left:0; right:0;"></div>
+<script src="js/nav.js"></script>
+<script src="js/playground.js"></script>
+</body>
+</html>

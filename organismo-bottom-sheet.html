@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+<title>suelo — Bottom sheet</title>
+<meta name="description" content="suelo — Panel que sube desde abajo, pensado para mobile, con contenido configurable mediante slot." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
+</head>
+<body data-page="organismo-bottom-sheet">
+<div class="app-shell">
+  <nav class="sidebar" id="sidebar-root"></nav>
+
+  <main class="main">
+    <div class="main-inner">
+      <div class="breadcrumbs">
+        <a class="brand" href="index.html">suelo</a>
+        <span class="sep">›</span>
+        <a class="brand" href="index.html#componentes">Organismos</a>
+        <span class="sep">›</span>
+        <span class="current">Bottom sheet</span>
+      </div>
+
+      <div class="head-band head-band--organismo">
+        <span class="head-badge head-badge--organismo"><i class="fa-solid fa-house-chimney"></i> Organismo</span>
+        <h1 class="head-title">Bottom sheet</h1>
+      </div>
+
+      <div class="page-tip">
+        <div class="page-tip__rule"></div>
+        <p class="page-tip__text">Equivalente mobile del Side sheet: sube desde abajo en vez de deslizar desde el costado. El handle de arrastre, el cierre y el footer se mantienen fijos — el <strong>slot del body</strong> es lo único que cambia según el flujo (una confirmación, una selección rápida, un resumen).</p>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Ancho fijo 390px — no tiene variantes de tamaño como el Side sheet</p>
+        <div class="playground">
+          <span class="playground__label">Ejemplo interactivo — el slot en acción</span>
+          <div class="playground__stage" style="justify-content:center; align-items:flex-end; background:var(--gris-2); min-height:340px;">
+            <div class="demo-stage" data-slot="titulo">
+              <div class="fg-btmsheet">
+                <div class="fg-btmsheet-head">
+                  <span class="fg-btmsheet-spacer"></span>
+                  <span class="fg-btmsheet-handle"></span>
+                  <button class="fg-btn fg-btn-24 fg-btn-sutil" aria-label="Cerrar"><i class="fa-solid fa-xmark" style="font-size:11px;"></i></button>
+                </div>
+                <div class="fg-btmsheet-body">
+                  <div data-slot-content="titulo" style="display:flex; flex-direction:column; gap:8px;">
+                    <span class="titulo">Titulo</span>
+                    <span class="descripcion">Descripción</span>
+                  </div>
+                  <div data-slot-content="confirmacion" style="flex-direction:column; align-items:flex-start; gap:8px;">
+                    <span class="fg-slot-confirm-icon"><i class="fa-solid fa-check"></i></span>
+                    <span class="titulo">¿Confirmar la operación?</span>
+                    <span class="descripcion">Vas a dar de baja el instrumento AL30 de esta cartera.</span>
+                  </div>
+                  <div data-slot-content="selector" style="flex-direction:column;">
+                    <div class="fg-slot-radio checked"><span class="fg-slot-radio-dot"></span> Transferencia bancaria</div>
+                    <div class="fg-slot-radio"><span class="fg-slot-radio-dot"></span> Cheque</div>
+                    <div class="fg-slot-radio"><span class="fg-slot-radio-dot"></span> Efectivo</div>
+                  </div>
+                  <div data-slot-content="detalle" style="flex-direction:column;">
+                    <div class="fg-slot-kv"><span>Instrumento</span><span>AL30</span></div>
+                    <div class="fg-slot-kv"><span>Cantidad</span><span>451.565</span></div>
+                    <div class="fg-slot-kv"><span>Precio</span><span>1.903,79</span></div>
+                  </div>
+                </div>
+                <div class="fg-btmsheet-footer">
+                  <button class="fg-btn fg-btn-40 fg-btn-sutil">Cancelar</button>
+                  <button class="fg-btn fg-btn-40 fg-btn-primario"><i class="fa-solid fa-plus" style="font-size:12px;"></i> Botón</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="playground__controls">
+            <div class="control-row">
+              <span class="control-row__label">Slot</span>
+              <button class="control-btn is-active" onclick="pgSet(this,'slot','titulo')">Título (default)</button>
+              <button class="control-btn" onclick="pgSet(this,'slot','confirmacion')">Confirmación</button>
+              <button class="control-btn" onclick="pgSet(this,'slot','selector')">Selector</button>
+              <button class="control-btn" onclick="pgSet(this,'slot','detalle')">Detalle</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Reservarlo para mobile — es el equivalente mobile del Side sheet; en desktop preferí ese componente.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar contenido corto y accionable en el slot: confirmaciones, selección rápida, un resumen.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mantener el handle visible — es la señal de que el panel se puede arrastrar/deslizar.</p></div>
+        </div>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">No usarlo para flujos largos. Si el contenido necesita scroll extenso, un Side sheet o una pantalla completa es mejor.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">No apilar Bottom sheets — igual que el Side sheet, no anidar paneles.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">No omitir el botón de cierre, aunque tenga gesto de swipe — siempre debe poder cerrarse con un tap.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <p class="draft-note" style="font-size:12.5px; color:var(--texto-light-2); font-style:italic; margin:-8px 0 0;">Este componente todavía no tiene una sección de handoff completa en Figma (a diferencia del Side sheet) — anatomía extraída de la estructura real vía get_design_context.</p>
+        <div class="anatomy anatomy--organismo">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Ancho</span><span class="anatomy-row__value">390px fijo</span><span class="anatomy-row__desc">No tiene variantes de tamaño, a diferencia del Side sheet.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Estructura</span><span class="anatomy-row__value">head interacción, body (slot), Footer</span><span class="anatomy-row__desc">head interacción: spacer 24×24 + handle 100×6 + botón cerrar 24×24. Radio 8px solo arriba.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Propiedades</span><span class="anatomy-row__value">children (slot "body")</span><span class="anatomy-row__desc">Por defecto muestra Título + Descripción; se reemplaza completo con el contenido del slot.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Footer</span><span class="anatomy-row__value">Botón Cancelar (Sutil) + Botón primario</span><span class="anatomy-row__desc">Cancelar es variante Sutil (sin fondo) — distinta del Cancelar del Side sheet. El botón primario trae ícono "+" y texto configurable.</span></div>
+        </div>
+      </div>
+
+      <div class="rule" style="margin-top: var(--space-1);"></div>
+      <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+        <a class="card" style="flex:1; min-width:220px; " href="organismo-side-sheet.html"><div class="card__desc" style="text-transform:uppercase; font-size:11px; letter-spacing:0.04em; font-weight:700;">← Anterior</div><div class="card__title">Side sheet</div></a>
+        <span></span>
+      </div>
+    </div>
+  </main>
+</div>
+<div class="accent-bar" style="position:fixed; bottom:0; left:0; right:0;"></div>
+<script src="js/nav.js"></script>
+<script src="js/playground.js"></script>
+</body>
+</html>
