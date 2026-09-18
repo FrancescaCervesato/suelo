@@ -38,7 +38,7 @@
     { label: "Progress bar", href: "molecula-progress-bar.html", page: "molecula-progress-bar" },
     { label: "Stepper", href: "molecula-stepper.html", page: "molecula-stepper" },
     { label: "Tabs", href: "molecula-tabs.html", page: "molecula-tabs" },
-    { label: "Toast / Sticker", href: "molecula-toast.html", page: "molecula-toast" },
+    { label: "Sticker", href: "molecula-sticker.html", page: "molecula-sticker" },
     { label: "Tooltip", href: "molecula-tooltip.html", page: "molecula-tooltip" },
     { label: "Selector múltiple", href: "molecula-selector-multiple.html", page: "molecula-selector-multiple" },
     { label: "Uploader", href: "molecula-uploader.html", page: "molecula-uploader" },
@@ -51,6 +51,7 @@
     { label: "Gráfico de torta", href: "organismo-grafico-torta.html", page: "organismo-grafico-torta" },
     { label: "Side sheet", href: "organismo-side-sheet.html", page: "organismo-side-sheet" },
     { label: "Bottom sheet", href: "organismo-bottom-sheet.html", page: "organismo-bottom-sheet" },
+    { label: "Toast", href: "organismo-toast.html", page: "organismo-toast" },
   ];
 
   function buildSidebar(currentPage) {

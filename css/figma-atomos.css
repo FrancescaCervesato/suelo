@@ -377,14 +377,16 @@
 .fg-tab.hover{border-bottom-color:var(--fg-elev-4);}
 .fg-tab.select{border-bottom-color:var(--fg-primario);}
 
-/* ===== TOAST ADVERTENCIA ===== */
-.fg-toast{display:inline-flex;align-items:center;gap:8px;padding:4px 8px;border:1px solid;border-radius:var(--fg-radius);font-family:var(--font-body,'Noto Sans',sans-serif);font-size:14px;line-height:16px;}
-.fg-toast i{font-size:14px;width:18px;text-align:center;flex-shrink:0;}
-.fg-toast.rojo{background:var(--fg-rojo-bg);border-color:var(--fg-rojo);color:var(--fg-rojo);}
-.fg-toast.default{background:var(--fg-elev-1);border-color:var(--fg-texto-light);color:var(--fg-texto-light);}
-.fg-toast.verde{background:var(--fg-verde-bg);border-color:var(--fg-verde);color:var(--fg-verde);}
-.fg-toast.primario{background:var(--fg-elev-primario-light);border-color:var(--fg-texto-color-invertido);color:var(--fg-texto-color-invertido);}
-.fg-toast.amarillo{background:var(--fg-amarillo-bg);border-color:var(--fg-amarillo-texto);color:var(--fg-amarillo-texto);align-items:flex-start;}
+/* ===== STICKER =====
+   Renombrado de "Toast" a "Sticker" — el componente Toast real es otro,
+   mas completo (icono+titulo+descripcion+botones+cierre), ver mas abajo. */
+.fg-sticker{display:inline-flex;align-items:center;gap:8px;padding:4px 8px;border:1px solid;border-radius:var(--fg-radius);font-family:var(--font-body,'Noto Sans',sans-serif);font-size:14px;line-height:16px;}
+.fg-sticker i{font-size:14px;width:18px;text-align:center;flex-shrink:0;}
+.fg-sticker.rojo{background:var(--fg-rojo-bg);border-color:var(--fg-rojo);color:var(--fg-rojo);}
+.fg-sticker.default{background:var(--fg-elev-1);border-color:var(--fg-texto-light);color:var(--fg-texto-light);}
+.fg-sticker.verde{background:var(--fg-verde-bg);border-color:var(--fg-verde);color:var(--fg-verde);}
+.fg-sticker.primario{background:var(--fg-elev-primario-light);border-color:var(--fg-texto-color-invertido);color:var(--fg-texto-color-invertido);}
+.fg-sticker.amarillo{background:var(--fg-amarillo-bg);border-color:var(--fg-amarillo-texto);color:var(--fg-amarillo-texto);align-items:flex-start;}
 
 /* ===== UPLOADER ===== */
 .fg-upl-drop{box-sizing:border-box;background:var(--fg-white);border:1px dashed var(--fg-primario);border-radius:8px;display:flex;flex-direction:column;align-items:center;gap:24px;padding:48px;width:100%;}
@@ -462,7 +464,13 @@
 .demo-stage[data-slot="grafico"] [data-slot-content="grafico"],
 .demo-stage[data-slot="confirmacion"] [data-slot-content="confirmacion"],
 .demo-stage[data-slot="selector"] [data-slot-content="selector"],
-.demo-stage[data-slot="detalle"] [data-slot-content="detalle"]{display:flex;}
+.demo-stage[data-slot="detalle"] [data-slot-content="detalle"],
+.demo-stage[data-variante="default-verde"] [data-slot-content="default-verde"],
+.demo-stage[data-variante="default-rojo"] [data-slot-content="default-rojo"],
+.demo-stage[data-variante="default-primario"] [data-slot-content="default-primario"],
+.demo-stage[data-variante="bg-verde"] [data-slot-content="bg-verde"],
+.demo-stage[data-variante="bg-rojo"] [data-slot-content="bg-rojo"],
+.demo-stage[data-variante="bg-amarillo"] [data-slot-content="bg-amarillo"]{display:flex;}
 
 .fg-slot-field{display:flex;flex-direction:column;gap:6px;}
 .fg-slot-field label{font-size:12px;font-weight:700;color:var(--fg-texto-default);}
@@ -480,4 +488,30 @@
 .fg-slot-radio-dot{width:16px;height:16px;border-radius:50%;border:2px solid var(--fg-borde-default);flex-shrink:0;}
 .fg-slot-radio.checked .fg-slot-radio-dot{border-color:var(--fg-primario);background:radial-gradient(var(--fg-primario) 0 40%, transparent 42%);}
 .fg-slot-confirm-icon{width:44px;height:44px;border-radius:50%;background:var(--fg-elev-primario-light);color:var(--fg-primario-dark);display:flex;align-items:center;justify-content:center;font-size:18px;}
+
+/* ===== TOAST =====
+   1:1 con get_design_context sobre el nodo 659:856 (Figma "Sistema de
+   diseño 1.0", node-id 659-856, dentro del canvas "🏠 Toast"). Distinto
+   del Sticker: flota (drop-shadow), tiene titulo+descripcion+botones+
+   cierre opcionales, y 6 variantes de color/fondo. */
+.fg-toast{position:relative;box-sizing:border-box;display:flex;flex-direction:column;gap:8px;width:407px;max-width:100%;padding:16px;border-radius:var(--fg-radius);box-shadow:0 0 12px rgba(27,36,49,.2);font-family:var(--font-body,'Noto Sans',sans-serif);}
+.fg-toast.bg-verde{background:var(--fg-verde-bg);border:1px solid var(--fg-verde-border);}
+.fg-toast.bg-rojo{background:var(--fg-rojo-bg);border:1px solid var(--fg-rojo-border);}
+.fg-toast.bg-amarillo{background:var(--fg-amarillo-bg);border:1px solid var(--fg-amarillo);}
+.fg-toast.default-verde,.fg-toast.default-rojo,.fg-toast.default-primario{background:var(--fg-white);}
+.fg-toast-head{display:flex;align-items:center;gap:16px;width:100%;}
+.fg-toast-icon{font-size:20px;flex-shrink:0;}
+.fg-toast-icon.verde-bg{color:var(--fg-verde-dark);}
+.fg-toast-icon.verde{color:var(--fg-verde);}
+.fg-toast-icon.rojo{color:var(--fg-rojo);}
+.fg-toast-icon.amarillo{color:var(--fg-amarillo-texto);}
+.fg-toast-icon.primario{color:var(--fg-primario-dark);}
+.fg-toast-title{flex:1 1 0;min-width:0;font-weight:600;font-size:14px;line-height:16px;color:var(--fg-texto-default);}
+.fg-toast-close{width:24px;height:24px;padding:4px;box-sizing:border-box;border-radius:var(--fg-radius);display:flex;align-items:center;justify-content:center;color:var(--fg-texto-default);font-size:14px;flex-shrink:0;cursor:pointer;border:none;background:transparent;}
+.fg-toast-close:hover{background:rgba(27,36,49,.06);}
+.fg-toast-desc{padding-left:36px;font-size:14px;line-height:16px;color:var(--fg-texto-default);font-weight:400;}
+.fg-toast-actions{display:flex;gap:16px;padding-left:36px;}
+.fg-toast-actions.end{justify-content:flex-end;}
+.fg-toast-link{font-size:12px;line-height:18px;color:var(--fg-texto-color-primario);cursor:pointer;background:none;border:none;font-family:inherit;padding:0;}
+.fg-toast-link.danger{color:var(--fg-rojo);}
 .fg-modal-close:hover{background:var(--fg-elev-2);}

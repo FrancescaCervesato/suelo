@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+<title>suelo — Toast</title>
+<meta name="description" content="suelo — Notificación flotante con título, descripción y acciones opcionales." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/figma-atomos.css" />
+</head>
+<body data-page="organismo-toast">
+<div class="app-shell">
+  <nav class="sidebar" id="sidebar-root"></nav>
+
+  <main class="main">
+    <div class="main-inner">
+      <div class="breadcrumbs">
+        <a class="brand" href="index.html">suelo</a>
+        <span class="sep">›</span>
+        <a class="brand" href="index.html#componentes">Organismos</a>
+        <span class="sep">›</span>
+        <span class="current">Toast</span>
+      </div>
+
+      <div class="head-band head-band--organismo">
+        <span class="head-badge head-badge--organismo"><i class="fa-solid fa-house-chimney"></i> Organismo</span>
+        <h1 class="head-title">Toast</h1>
+      </div>
+
+      <div class="page-tip">
+        <div class="page-tip__rule"></div>
+        <p class="page-tip__text">Notificación flotante que confirma el resultado de una acción, con ícono, título, descripción y acciones opcionales según el caso. A diferencia del <a href="molecula-sticker.html" style="color:var(--color-primario); font-weight:600;">Sticker</a> (que vive dentro del flujo de la página), el Toast flota sobre el contenido con una sombra propia — por eso es un organismo: combina varias piezas (ícono, texto, botones, cierre) en una unidad que se posiciona por fuera del layout normal.</p>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Vista previa</h2>
+        <p class="sec-sub">Variante Default · Verde</p>
+        <div class="playground">
+          <span class="playground__label">Ejemplo interactivo</span>
+          <div class="playground__stage" style="background:var(--gris-1);">
+            <div class="demo-stage" data-variante="default-verde">
+              <div data-slot-content="default-verde" class="fg-toast default-verde">
+                <div class="fg-toast-head">
+                  <i class="fa-solid fa-circle-check fg-toast-icon verde"></i>
+                  <span class="fg-toast-title">Creaste correctamente la oferta n° 15236.</span>
+                  <button class="fg-toast-close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p class="fg-toast-desc">Descripción del sticker.</p>
+                <div class="fg-toast-actions"><button class="fg-toast-link">Ver oferta</button></div>
+              </div>
+              <div data-slot-content="default-rojo" class="fg-toast default-rojo">
+                <div class="fg-toast-head">
+                  <i class="fa-solid fa-trash-can fg-toast-icon rojo"></i>
+                  <span class="fg-toast-title">Creaste correctamente la oferta n° 15236.</span>
+                  <button class="fg-toast-close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p class="fg-toast-desc">Descripción del sticker.</p>
+                <div class="fg-toast-actions"><button class="fg-toast-link">Ver oferta</button></div>
+              </div>
+              <div data-slot-content="default-primario" class="fg-toast default-primario">
+                <div class="fg-toast-head">
+                  <i class="fa-solid fa-circle-info fg-toast-icon primario"></i>
+                  <span class="fg-toast-title">Creaste correctamente la oferta n° 15236.</span>
+                  <button class="fg-toast-close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p class="fg-toast-desc">Descripción del sticker.</p>
+                <div class="fg-toast-actions"><button class="fg-toast-link">Ver oferta</button></div>
+              </div>
+              <div data-slot-content="bg-verde" class="fg-toast bg-verde">
+                <div class="fg-toast-head">
+                  <i class="fa-solid fa-circle-check fg-toast-icon verde-bg"></i>
+                  <span class="fg-toast-title">Creaste correctamente la oferta n° 15236.</span>
+                  <button class="fg-toast-close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p class="fg-toast-desc">Descripción del sticker.</p>
+                <div class="fg-toast-actions"><button class="fg-toast-link">Botón</button><button class="fg-toast-link">Botón</button></div>
+              </div>
+              <div data-slot-content="bg-rojo" class="fg-toast bg-rojo">
+                <div class="fg-toast-head">
+                  <i class="fa-solid fa-circle-xmark fg-toast-icon rojo"></i>
+                  <span class="fg-toast-title">Creaste correctamente la oferta n° 15236.</span>
+                  <button class="fg-toast-close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p class="fg-toast-desc">Descripción del sticker.</p>
+                <div class="fg-toast-actions"><button class="fg-toast-link danger">Botón</button><button class="fg-toast-link danger">Botón</button></div>
+              </div>
+              <div data-slot-content="bg-amarillo" class="fg-toast bg-amarillo">
+                <div class="fg-toast-head">
+                  <i class="fa-solid fa-clock fg-toast-icon amarillo"></i>
+                  <span class="fg-toast-title">El COE está en proceso de confirmación</span>
+                  <button class="fg-toast-close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p class="fg-toast-desc">Asignaste el COE de los recibos seleccionados. ARCA lo está validando, te avisamos apenas quede confirmado.</p>
+                <div class="fg-toast-actions end"><button class="fg-toast-link">Aceptar</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="playground__controls">
+            <div class="control-row">
+              <span class="control-row__label">Variante</span>
+              <button class="control-btn is-active" onclick="pgSet(this,'variante','default-verde')">Default · Verde</button>
+              <button class="control-btn" onclick="pgSet(this,'variante','default-rojo')">Default · Rojo</button>
+              <button class="control-btn" onclick="pgSet(this,'variante','default-primario')">Default · Primario</button>
+              <button class="control-btn" onclick="pgSet(this,'variante','bg-verde')">Fondo · Verde</button>
+              <button class="control-btn" onclick="pgSet(this,'variante','bg-rojo')">Fondo · Rojo</button>
+              <button class="control-btn" onclick="pgSet(this,'variante','bg-amarillo')">Fondo · Amarillo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Qué hacer y qué no</h2>
+        <p class="draft-note" style="font-size:12.5px; color:var(--texto-light-2); font-style:italic; margin:-4px 0 4px;">Este componente todavía no tiene una sección de Do's/Don'ts documentada en Figma — propuesta a validar.</p>
+        <p class="dd-label">Hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Usar el color/ícono según la severidad real del resultado, igual que en el Sticker.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Mostrar un solo Toast a la vez — si aparece uno nuevo, reemplaza al anterior en vez de apilarse.</p></div>
+          <div class="dd-card dd-card--do"><span class="dd-card__icon"><i class="fa-solid fa-check"></i></span><p class="dd-card__text">Incluir siempre el botón de cierre, incluso si el Toast se auto-oculta después de un tiempo.</p></div>
+        </div>
+        <p class="dd-label">No hacer</p>
+        <div class="dd-grid">
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">No usarlo para contenido que requiere permanecer visible o que el usuario necesita revisar con calma — para eso está el Sticker, que vive en el flujo.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">No usar más de dos acciones en el footer — si necesita más, probablemente no sea un caso de Toast.</p></div>
+          <div class="dd-card dd-card--dont"><span class="dd-card__icon"><i class="fa-solid fa-xmark"></i></span><p class="dd-card__text">No bloquear interacción con el resto de la página mientras el Toast está visible.</p></div>
+        </div>
+      </div>
+
+      <div class="sec">
+        <h2 class="sec-title">Anatomía</h2>
+        <p class="sec-sub">Propiedades documentadas de este componente</p>
+        <div class="anatomy anatomy--organismo">
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Variantes</span><span class="anatomy-row__value">6 en total</span><span class="anatomy-row__desc">backgroud-green, backgroud-red, background-amarillo, default-green, default-red, default-primary.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Ancho</span><span class="anatomy-row__value">407px fijo</span><span class="anatomy-row__desc">Flota sobre el contenido con sombra propia (0 0 12px rgba(27,36,49,.2)) — a diferencia del Sticker, que no tiene elevación.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Estructura</span><span class="anatomy-row__value">Header (ícono + título + cierre), Descripción, Acciones</span><span class="anatomy-row__desc">Descripción y Acciones son opcionales según el caso de uso.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Propiedades</span><span class="anatomy-row__value">variante, tieneDescripcion, tieneBotones</span><span class="anatomy-row__desc">tieneDescripcion y tieneBotones son booleanos — permiten un Toast de solo título.</span></div>
+          <div class="anatomy-row"><span class="anatomy-row__label anatomy-row__label--organismo">Acciones</span><span class="anatomy-row__value">1-2 botones de texto (link)</span><span class="anatomy-row__desc">Color azul en variantes verde/primario/amarillo; color rojo (Link danger) en la variante roja de fondo.</span></div>
+        </div>
+      </div>
+
+      <div class="rule" style="margin-top: var(--space-1);"></div>
+      <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+        <a class="card" style="flex:1; min-width:220px; " href="organismo-bottom-sheet.html"><div class="card__desc" style="text-transform:uppercase; font-size:11px; letter-spacing:0.04em; font-weight:700;">← Anterior</div><div class="card__title">Bottom sheet</div></a>
+        <span></span>
+      </div>
+    </div>
+  </main>
+</div>
+<div class="accent-bar" style="position:fixed; bottom:0; left:0; right:0;"></div>
+<script src="js/nav.js"></script>
+<script src="js/playground.js"></script>
+</body>
+</html>
